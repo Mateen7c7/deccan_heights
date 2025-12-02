@@ -155,7 +155,7 @@ export default function ServicesSection() {
                             <h3 className="mb-3 text-xl font-semibold text-[#3C3C3C] group-hover:text-[#C6A15B] transition-colors duration-300">
                                 {service.title}
                             </h3>
-                            <p className="text-sm leading-relaxed text-[#BDBDBD] group-hover:text-[#3C3C3C] transition-colors duration-300">
+                            <p className="text-sm leading-relaxed text-[#555555] group-hover:text-[#3C3C3C] transition-colors duration-300">
                                 {service.description}
                             </p>
                         </motion.div>
