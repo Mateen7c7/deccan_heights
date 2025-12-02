@@ -1,4 +1,4 @@
-
+import ActiveVenturesSection from "@/components/home/ActiveVenturesSection";
 import Hero from "@/components/Hero";
 import TrustValue from "@/components/TrustValue";
 
@@ -7,6 +7,7 @@ export default function Home() {
     <div className="">
       <Hero />
       <TrustValue />
+      <ActiveVenturesSection />
     </div>
   );
 }
