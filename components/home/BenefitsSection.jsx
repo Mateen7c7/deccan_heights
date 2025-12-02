@@ -61,30 +61,6 @@ const benefits = [
     },
 ];
 
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.15,
-            delayChildren: 0.2,
-        },
-    },
-};
-
-const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            type: 'spring',
-            stiffness: 50,
-            damping: 15,
-        },
-    },
-};
-
 export default function BenefitsSection() {
     return (
         <section className="py-20 px-6 md:px-12 lg:px-20 bg-[#F8F8F8] overflow-hidden">
@@ -108,18 +84,33 @@ export default function BenefitsSection() {
 
                 {/* Benefits Grid */}
                 <motion.div
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: '-50px' }}
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{
+                        duration: 0.7,
+                        ease: [0.22, 1, 0.36, 1],
+                    }}
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                     {benefits.map((benefit, index) => (
                         <motion.div
                             key={index}
-                            variants={cardVariants}
-                            whileHover={{ y: -8, transition: { duration: 0.3 } }}
-                            className="bg-white p-8 rounded-xl border border-[#BDBDBD]/30 shadow-sm hover:shadow-xl transition-shadow duration-300 group"
+                            initial={{ opacity: 0, y: 60, scale: 0.9, rotateX: -8 }}
+                            whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+                            viewport={{ once: true, amount: 0.3 }}
+                            transition={{
+                                duration: 0.8,
+                                ease: [0.22, 1, 0.36, 1],
+                                delay: index * 0.12,
+                            }}
+                            whileHover={{
+                                y: -10,
+                                scale: 1.02,
+                                boxShadow: '0 18px 40px rgba(0,0,0,0.12)',
+                                transition: { duration: 0.35, ease: 'easeOut' },
+                            }}
+                            className="bg-white p-8 rounded-xl border border-[#BDBDBD]/30 shadow-sm hover:shadow-xl transition-[box-shadow,transform] duration-300 group will-change-transform"
                         >
                             <div className="flex flex-col h-full">
                                 <div className="mb-6 p-3 bg-[#F8F8F8] w-fit rounded-lg text-[#C6A15B] group-hover:bg-[#C6A15B] group-hover:text-white transition-colors duration-300">
