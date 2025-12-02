@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+
 import VentureCard from "./VentureCard";
 
 const ventures = [
@@ -28,70 +28,29 @@ const ventures = [
     },
 ];
 
-const headerVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6, ease: "easeOut" }
-    },
-};
 
-const gridVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: {
-            staggerChildren: 0.3,
-        },
-    },
-};
 
 export default function ActiveVenturesSection() {
     return (
         <section className="bg-[#F8F8F8] py-20 px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-7xl">
                 {/* Section Header */}
-                <motion.div
-                    className="mb-12 text-center"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    variants={headerVariants}
-                >
+                <div className="mb-12 text-center">
                     <h2 className="text-3xl font-bold text-[#C6A15B] sm:text-4xl md:text-5xl">
                         Our Active Ventures
                     </h2>
-                    <motion.div
-                        className="mx-auto mt-4 h-1 w-24 bg-[#C6A15B] rounded-full"
-                        initial={{ width: 0, opacity: 0 }}
-                        whileInView={{ width: 96, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    />
-                    <motion.p
-                        className="mx-auto mt-4 max-w-2xl text-[#3C3C3C] text-lg"
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
-                    >
+                    <div className="mx-auto mt-4 h-1 w-24 bg-[#C6A15B] rounded-full" />
+                    <p className="mx-auto mt-4 max-w-2xl text-[#3C3C3C] text-lg">
                         Discover our premium ongoing projects that redefine luxury living.
-                    </motion.p>
-                </motion.div>
+                    </p>
+                </div>
 
                 {/* Cards Grid */}
-                <motion.div
-                    className="grid gap-8 md:grid-cols-2 lg:gap-12 max-w-5xl mx-auto"
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, margin: "-50px" }}
-                    variants={gridVariants}
-                >
+                <div className="grid gap-8 md:grid-cols-2 lg:gap-12 max-w-5xl mx-auto">
                     {ventures.map((venture) => (
                         <VentureCard key={venture.id} venture={venture} />
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );
