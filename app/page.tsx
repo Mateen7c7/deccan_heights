@@ -2,6 +2,7 @@ import ActiveVenturesSection from "@/components/home/ActiveVenturesSection";
 import Hero from "@/components/Hero";
 import TrustValue from "@/components/TrustValue";
 import LeadCaptureStrip from "@/components/LeadCaptureStrip";
+import BenefitsSection from "@/components/home/BenefitsSection";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Hero />
       <TrustValue />
       <ActiveVenturesSection />
-      <LeadCaptureStrip />
+      <BenefitsSection />
+      <LeadCaptureStrip />      {/* <BenefitsSection/> */}
     </div>
   );
 }
