@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -92,9 +93,17 @@ export default function VentureCard({ venture }) {
                 </div>
 
                 {/* CTA Button */}
-                <button className="mt-auto w-full cursor-pointer rounded-lg bg-[#C6A15B] px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-[#3C3C3C] hover:text-[#C6A15B]">
-                    View Details
-                </button>
+                {venture.link ? (
+                    <Link href={venture.link} className="mt-auto block w-full">
+                        <button className="w-full cursor-pointer rounded-lg bg-[#C6A15B] px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-[#3C3C3C] hover:text-[#C6A15B]">
+                            View Details
+                        </button>
+                    </Link>
+                ) : (
+                    <button className="mt-auto w-full cursor-pointer rounded-lg bg-[#C6A15B] px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-[#3C3C3C] hover:text-[#C6A15B]">
+                        View Details
+                    </button>
+                )}
             </div>
         </motion.div>
     );
