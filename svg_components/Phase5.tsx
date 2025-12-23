@@ -30,10 +30,19 @@ const Phase5 = () => {
       111, 114, 117, 120, 123, 126, 129, 132, 135, 138, 141, 144, 147,
     ];
 
+    const holdIds = [108, 111, 114, 117, 120, 123, 126, 129, 132, 135, 138, 141, 144, 147];
+
     soldIds.forEach((id) => {
       const path = document.getElementById(id.toString());
       if (path) {
         path.setAttribute("fill", "#F87C63");
+      }
+    });
+
+    holdIds.forEach((id) => {
+      const path = document.getElementById(id.toString());
+      if (path) {
+        path.setAttribute("fill", "#EEF863");
       }
     });
   }, []);
@@ -46,7 +55,7 @@ const Phase5 = () => {
       fill="none"
       version="1.1"
       id="svg1402"
-      className="border"
+      className=""
     >
       <defs id="defs1406" />
 

@@ -132,21 +132,7 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="pt-4">
-              <h4 className="text-sm font-medium text-white mb-2">
-                Subscribe to our newsletter
-              </h4>
-              <div className="relative">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="w-full bg-white/5 border border-white/10 rounded-lg py-3 px-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-gold-500 transition-colors"
-                />
-                <button className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-gold-500 rounded text-charcoal-500 hover:bg-gold-600 transition-colors">
-                  <ArrowRight size={16} />
-                </button>
-              </div>
-            </div>
+            
           </div>
         </div>
 

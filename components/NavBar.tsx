@@ -59,9 +59,15 @@ export default function NavBar() {
               sizes="(max-width: 768px) 48px, 48px"
             />
           </div>
-          <span className="text-2xl font-serif text-charcoal-500 tracking-wide group-hover:text-gold-500 transition-colors duration-300">
-            Deccan Heights
-          </span>
+          <div className="relative w-48 h-12">
+            <Image
+              src="/dht-removebg.png"
+              alt="Deccan Heights"
+              fill
+              className="object-contain object-left"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
