@@ -6,6 +6,7 @@ import BenefitsSection from "@/components/home/BenefitsSection";
 // import OurServicess from "@/components/home/OurServicess";
 import ServicesSection from "@/components/ServicesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import WhyHyderabad from "@/components/home/WhyHyderabad";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <LeadCaptureStrip />
       <ServicesSection />
       <TestimonialsSection />
+      <WhyHyderabad />
       {/* <OurServicess/>     */}
     </div>
   );
