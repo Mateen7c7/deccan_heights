@@ -5,15 +5,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "Ventures", href: "/ventures" },
+  {
+    name: "Ventures",
+    href: "/ventures",
+    submenu: [
+      { name: "Phase 5", href: "/ventures/phase-1" },
+      { name: "Phase II", href: "/ventures/phase-2" },
+      { name: "Phase 5 Interactive Map", href: "/maps/phase5" },
+    ],
+  },
   { name: "Gallery", href: "/gallery" },
   { name: "About Us", href: "/about" },
   { name: "Our Team", href: "/team" },
-  { name: "Phase 5", href: "/maps/phase5" },
+  // { name: "Phase 5", href: "/maps/phase5" },
   { name: "Services", href: "/services" },
   { name: "Contact", href: "/contact" },
 ];
@@ -21,6 +29,7 @@ const navLinks = [
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const pathname = usePathname();
 
   // Handle scroll effect
@@ -74,23 +83,45 @@ export default function NavBar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive =
+              pathname === link.href ||
+              link.submenu?.some((sub) => pathname === sub.href);
+            const hasSubmenu = !!link.submenu;
+
             return (
-              <Link
+              <div
                 key={link.name}
-                href={link.href}
                 className="relative group py-2"
+                onMouseEnter={() => hasSubmenu && setHoveredLink(link.name)}
+                onMouseLeave={() => hasSubmenu && setHoveredLink(null)}
               >
-                <motion.span
-                  className={`text-base font-medium transition-colors duration-300 ${
-                    isActive
-                      ? "text-gold-500"
-                      : "text-charcoal-500 group-hover:text-gold-500"
-                  }`}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  {link.name}
-                </motion.span>
+                <div className="flex items-center gap-1 cursor-pointer">
+                  <Link href={link.href} className="flex items-center gap-1">
+                    <motion.span
+                      className={`text-base font-medium transition-colors duration-300 ${
+                        isActive
+                          ? "text-gold-500"
+                          : "text-charcoal-500 group-hover:text-gold-500"
+                      }`}
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      {link.name}
+                    </motion.span>
+                  </Link>
+                  {hasSubmenu && (
+                    <ChevronDown
+                      size={14}
+                      className={`transition-transform duration-300 ${
+                        hoveredLink === link.name ? "rotate-180" : ""
+                      } ${
+                        isActive
+                          ? "text-gold-500"
+                          : "text-charcoal-500 group-hover:text-gold-500"
+                      }`}
+                    />
+                  )}
+                </div>
+
                 {/* Underline animation */}
                 <span
                   className={`absolute bottom-0 left-0 w-full h-0.5 bg-gold-500 transform origin-left transition-transform duration-300 ease-out ${
@@ -99,7 +130,36 @@ export default function NavBar() {
                       : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 />
-              </Link>
+
+                {/* Dropdown Menu */}
+                {hasSubmenu && (
+                  <AnimatePresence>
+                    {hoveredLink === link.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-xl border border-gray-100 py-2 z-50"
+                      >
+                        {link.submenu.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            href={sub.href}
+                            className={`block px-5 py-3 text-sm font-medium transition-colors ${
+                              pathname === sub.href
+                                ? "text-gold-500 bg-gold-50/50"
+                                : "text-charcoal-500 hover:text-gold-500 hover:bg-gray-50"
+                            }`}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                )}
+              </div>
             );
           })}
         </div>
@@ -124,28 +184,54 @@ export default function NavBar() {
             animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="md:hidden fixed inset-0 bg-white/98 backdrop-blur-xl overflow-hidden flex flex-col items-center justify-center space-y-8 z-40"
+            className="md:hidden fixed inset-0 bg-white backdrop-blur-xl overflow-y-auto flex flex-col pt-24 pb-12 z-40"
           >
-            {navLinks.map((link, index) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 + index * 0.1, duration: 0.4 }}
-              >
-                <Link
-                  href={link.href}
-                  className={`text-2xl font-medium tracking-wide ${
-                    pathname === link.href
-                      ? "text-gold-500"
-                      : "text-charcoal-500"
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </motion.div>
-            ))}
+            <div className="container mx-auto px-6 flex flex-col space-y-4">
+              {navLinks.map((link, index) => {
+                const hasSubmenu = !!link.submenu;
+                return (
+                  <motion.div
+                    key={link.name}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 + index * 0.05, duration: 0.4 }}
+                    className="flex flex-col"
+                  >
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href={link.href}
+                        className={`text-2xl font-medium tracking-wide ${
+                          pathname === link.href
+                            ? "text-gold-500"
+                            : "text-charcoal-500"
+                        }`}
+                        onClick={() => !hasSubmenu && setIsOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    </div>
+                    {hasSubmenu && (
+                      <div className="mt-2 ml-4 flex flex-col space-y-3 border-l-2 border-gold-100 pl-4">
+                        {link.submenu.map((sub) => (
+                          <Link
+                            key={sub.name}
+                            href={sub.href}
+                            className={`text-lg font-medium ${
+                              pathname === sub.href
+                                ? "text-gold-500"
+                                : "text-charcoal-400"
+                            }`}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {sub.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </motion.div>
+                );
+              })}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
