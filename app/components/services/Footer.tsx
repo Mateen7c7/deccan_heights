@@ -111,9 +111,9 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-[#C6A15B] shrink-0" />
                 <span>
-                  Road No. 12, NBT Nagar, Banjara Hills,
+                  Downtown Mall, Unit 4 & 5, Ground floor, Veer Nagar, Lakdikapul
                   <br />
-                  Hyderabad, Telangana 500034
+                  Hyderabad, Telangana 500004
                 </span>
               </li>
               <li className="flex items-center gap-3">

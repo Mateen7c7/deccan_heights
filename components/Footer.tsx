@@ -118,13 +118,12 @@ export default function Footer() {
               <div className="flex items-start gap-3 text-silver-500">
                 <MapPin className="shrink-0 text-gold-500 mt-1" size={18} />
                 <span className="text-sm">
-                  Road No. 12, NBT Nagar, Banjara Hills, Hyderabad, Telangana
-                  500034
+                  Downtown Mall, Unit 4 & 5, Ground floor, Veer Nagar, Lakdikapul, Hyderabad, Telangana 500004
                 </span>
               </div>
               <div className="flex items-center gap-3 text-silver-500">
                 <Phone className="shrink-0 text-gold-500" size={18} />
-                <span className="text-sm">+91 98765 43210</span>
+                <span className="text-sm">+91 95158 87213</span>
               </div>
               <div className="flex items-center gap-3 text-silver-500">
                 <Mail className="shrink-0 text-gold-500" size={18} />

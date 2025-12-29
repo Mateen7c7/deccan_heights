@@ -108,9 +108,9 @@ export default function ContactLeadCapture() {
                   <div>
                     <p className="font-semibold text-white">Head Office</p>
                     <p className="text-gray-400 text-sm">
-                      Road No. 12, NBT Nagar,
+                      Downtown Mall, Unit 4 & 5, Ground floor, Veer Nagar, Lakdikapul
                       <br />
-                      Banjara Hills, Hyderabad, 500034
+                      Hyderabad, Telangana 500004
                     </p>
                   </div>
                 </div>
