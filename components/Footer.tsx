@@ -93,7 +93,7 @@ export default function Footer() {
           </div>
 
           {/* Projects */}
-          <div>
+          {/* <div>
             <h3 className="text-lg font-semibold mb-6 text-gold-500">
               Featured Projects
             </h3>
@@ -109,7 +109,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact & Newsletter */}
           <div className="space-y-6">

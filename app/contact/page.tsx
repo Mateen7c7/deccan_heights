@@ -311,7 +311,7 @@ const ContactForm = () => {
         />
       </motion.div>
 
-      <motion.div variants={fadeInUp} className="mb-8">
+      {/* <motion.div variants={fadeInUp} className="mb-8">
         <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
           Upload Documents (Optional)
         </label>
@@ -321,11 +321,11 @@ const ContactForm = () => {
             Click to upload PDF or Images
           </p>
         </div>
-      </motion.div>
+      </motion.div> */}
 
-      <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-8">
+      {/* <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-8">
         <div className="w-6 h-6 border rounded bg-gray-100 flex items-center justify-center text-xs text-gray-500">
-          {/* Placeholder for CAPTCHA */}
+          
           <span>🤖</span>
         </div>
         <span className="text-xs text-[#BDBDBD]">
@@ -342,7 +342,7 @@ const ContactForm = () => {
             Accept GDPR & Privacy Policy
           </label>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       <motion.button
         variants={fadeInUp}
