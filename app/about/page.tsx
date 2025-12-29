@@ -19,7 +19,7 @@ const AboutHero = () => {
     <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-slate-900">
       {/* Background with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-slate-900/60 z-10" />
+        <div className="absolute inset-0 bg-linear-to-r from-slate-900 via-slate-900/80 to-slate-900/60 z-10" />
         {/* Placeholder for a real image, using a dark pattern/gradient for now if no image is available */}
         {/* Using one of the provided plot images as background */}
         <div className="absolute inset-0 bg-[url('/plot4.webp')] bg-cover bg-center opacity-40 grayscale" />
@@ -32,7 +32,7 @@ const AboutHero = () => {
           transition={{ duration: 0.6 }}
           className="inline-block py-1 px-4 mb-6 rounded-full border border-[#C6A15B]/40 bg-[#C6A15B]/10 text-[#C6A15B] font-medium tracking-wide uppercase text-sm backdrop-blur-sm"
         >
-          Since 1995
+          Since 2005
         </motion.span>
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -79,15 +79,16 @@ const StorySection = () => {
               <p>
                 Founded with a singular vision to transform the landscape of
                 Hyderabad, Deccan Heights has grown from a modest beginning into
-                one of the region's most trusted real estate brands.
+                one of the region&apos;s most trusted real estate brands.
               </p>
               <p>
-                For over three decades, we have focused on one thing:{" "}
+                For over two decades, we have focused on one thing:{" "}
                 <strong className="text-[#3C3C3C]">Value</strong>. We understand
-                that buying land is not just a transaction; it's an emotional
-                investment and a financial cornerstone for your family's future.
-                That’s why we meticulously select locations that promise high
-                appreciation and develop them with top-tier infrastructure.
+                that buying land is not just a transaction; it&apos;s an
+                emotional investment and a financial cornerstone for your
+                family&apos;s future. That’s why we meticulously select
+                locations that promise high appreciation and develop them with
+                top-tier infrastructure.
               </p>
               <p>
                 Today, our name is synonymous with integrity, transparency, and
@@ -97,7 +98,7 @@ const StorySection = () => {
 
             <div className="mt-10 pt-8 border-t border-gray-100 grid grid-cols-2 gap-8">
               <div>
-                <p className="text-4xl font-bold text-[#C6A15B] mb-1">30+</p>
+                <p className="text-4xl font-bold text-[#C6A15B] mb-1">20+</p>
                 <p className="text-sm text-slate-500 uppercase tracking-wider">
                   Years of Experience
                 </p>
@@ -113,7 +114,7 @@ const StorySection = () => {
 
           {/* Vision/Mission Cards - Visual Element */}
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-tr from-[#C6A15B]/20 to-transparent rounded-[2rem] blur-2xl opacity-60" />
+            <div className="absolute -inset-4 bg-linear-to-tr from-[#C6A15B]/20 to-transparent rounded-4xl blur-2xl opacity-60" />
             <div className="grid gap-6 relative z-10">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -166,7 +167,7 @@ const ValueCard = ({
   description,
   delay,
 }: {
-  icon: any;
+  icon: React.ReactNode;
   title: string;
   description: string;
   delay: number;
@@ -227,8 +228,8 @@ const WhyChooseUs = () => {
             The Deccan Heights Advantage
           </h2>
           <p className="text-slate-600 text-lg">
-            We don't just sell land; we sell certainty. Here is why thousands of
-            families trust us with their life savings.
+            We don&apos;t just sell land; we sell certainty. Here is why
+            thousands of families trust us with their life savings.
           </p>
         </div>
 
