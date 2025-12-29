@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 interface VentureStats {
@@ -18,6 +17,7 @@ interface VentureData {
   stats: VentureStats[];
   amenities: string[];
   locationHighlights: string[];
+  mapEmbedUrl?: string;
 }
 
 export default function VenturePageTemplate({ data }: { data: VentureData }) {
@@ -120,7 +120,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
               Designed for those who appreciate quality and long-term value,
               this project offers a secure and appreciative asset. With rapid
               development in the surrounding areas, investing here is not just
-              buying land; it's securing your future.
+              buying land; it&apos;s securing your future.
             </p>
           </div>
 
@@ -166,7 +166,8 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
               </h2>
               <p className="text-gray-300 mb-8 max-w-lg">
                 Situated in a high-growth corridor, ensuring your investment
-                appreciates while keeping you connected to the city's landmarks.
+                appreciates while keeping you connected to the city&apos;s
+                landmarks.
               </p>
               <ul className="space-y-4">
                 {data.locationHighlights.map((highlight, idx) => (
@@ -178,14 +179,29 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
               </ul>
             </div>
             <div className="h-[400px] w-full bg-gray-800 rounded-2xl overflow-hidden relative border border-white/10 group">
-              {/* Placeholder for Map */}
-              <div className="absolute inset-0 flex items-center justify-center bg-[#2C2C2C]">
-                <span className="text-gray-500 font-mono text-sm">
-                  Interactive Map Integration
-                </span>
-              </div>
-              {/* Stylized Overlay */}
-              <div className="absolute inset-0 bg-linear-to-br from-[#C6A15B]/20 to-transparent pointer-events-none" />
+              {data.mapEmbedUrl ? (
+                <iframe
+                  src={data.mapEmbedUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="grayscale hover:grayscale-0 transition-all duration-700"
+                />
+              ) : (
+                <>
+                  {/* Placeholder for Map */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-[#2C2C2C]">
+                    <span className="text-gray-500 font-mono text-sm">
+                      Interactive Map Integration
+                    </span>
+                  </div>
+                  {/* Stylized Overlay */}
+                  <div className="absolute inset-0 bg-linear-to-br from-[#C6A15B]/20 to-transparent pointer-events-none" />
+                </>
+              )}
             </div>
           </div>
         </div>

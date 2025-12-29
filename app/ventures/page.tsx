@@ -8,7 +8,7 @@ import Image from "next/image";
 const ongoingVentures = [
   {
     id: 1,
-    title: "Deccan Heights Phase I",
+    title: "Deccan Heights Phase 5",
     description:
       "Experience luxury living in the heart of nature with our premium plots designed for your dream home. A perfect blend of tranquility and modern amenities.",
     image: "/plot1.webp",

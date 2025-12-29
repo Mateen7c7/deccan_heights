@@ -12,7 +12,7 @@ const phase1Data = {
   title: "Deccan Heights Phase 5",
   subtitle: "A sanctuary of peace meticulously designed for your legacy.",
   description:
-    "Phase I offers an exclusive opportunity to own premium land in one of Hyderabad's fastest-growing corridors. Perfectly positioned for high appreciation, these plots are fully approved and ready for registration. With wide expansive roads and lush greenery, it provides the perfect canvas for your dream home or a secure investment portfolio.",
+    "Phase 5 offers an exclusive opportunity to own premium land in one of Hyderabad's fastest-growing corridors. Perfectly positioned for high appreciation, these plots are fully approved and ready for registration. With wide expansive roads and lush greenery, it provides the perfect canvas for your dream home or a secure investment portfolio.",
   image: "/plot1.webp",
   stats: [
     { label: "Plot Size", value: "9 acres" },
@@ -51,6 +51,8 @@ const phase1Data = {
     "Connectivity to Proposed Regional Ring Road",
     "Near Industrial Hubs (Kothur, Jepedcherla)",
   ],
+  mapEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3977.412537972301!2d78.06275!3d17.094694399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDA1JzQwLjkiTiA3OMKwMDMnNDUuOSJF!5e1!3m2!1sen!2sin!4v1767023319552!5m2!1sen!2sin",
 };
 
 export default function Phase1Page() {
