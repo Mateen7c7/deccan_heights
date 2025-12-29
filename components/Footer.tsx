@@ -118,8 +118,8 @@ export default function Footer() {
               <div className="flex items-start gap-3 text-silver-500">
                 <MapPin className="shrink-0 text-gold-500 mt-1" size={18} />
                 <span className="text-sm">
-                  123 Premium Plaza, Financial District, Hyderabad, Telangana
-                  500032
+                  Road No. 12, NBT Nagar, Banjara Hills, Hyderabad, Telangana
+                  500034
                 </span>
               </div>
               <div className="flex items-center gap-3 text-silver-500">
@@ -131,8 +131,6 @@ export default function Footer() {
                 <span className="text-sm">info@deccanheights.com</span>
               </div>
             </div>
-
-            
           </div>
         </div>
 

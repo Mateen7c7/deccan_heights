@@ -108,9 +108,9 @@ export default function ContactLeadCapture() {
                   <div>
                     <p className="font-semibold text-white">Head Office</p>
                     <p className="text-gray-400 text-sm">
-                      Deccan Heights HQ, Road No. 45
+                      Road No. 12, NBT Nagar,
                       <br />
-                      Jubilee Hills, Hyderabad, 500033
+                      Banjara Hills, Hyderabad, 500034
                     </p>
                   </div>
                 </div>
@@ -136,12 +136,15 @@ export default function ContactLeadCapture() {
             </div>
 
             {/* Map Placeholder */}
-            <div className="mt-12 h-64 w-full bg-white/10 rounded-lg overflow-hidden relative grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-xs uppercase tracking-widest">
-                  Google Map Embed
-                </p>
-              </div>
+            <div className="mt-12 h-64 w-full rounded-lg overflow-hidden relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.742188127119!2d78.4608966!3d17.4044168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ff47383a9f%3A0x6f76bdabd8b9330a!2sDeccan%20Heights%20Homes%20%26%20Resorts%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1767017021317!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
         </div>

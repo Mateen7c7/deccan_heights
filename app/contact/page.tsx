@@ -371,7 +371,8 @@ const ContactInfoItems = () => (
       {
         icon: MapPin,
         title: "Visit Us",
-        content: "Deccan Heights HQ, Jubilee Hills, Hyderabad",
+        content:
+          "Deccan Heights Homes & Resorts PVT. LTD., Road No. 12, Banjara Hills, Hyderabad",
       },
       {
         icon: Clock,
@@ -504,7 +505,7 @@ export default function ContactPage() {
               className="relative rounded-xl overflow-hidden shadow-lg border border-[#BDBDBD]"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.495767228308!2d78.406!3d17.436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDI2JzA5LjYiTiA3OMKwMjQnMjEuNiJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.742188127119!2d78.4608966!3d17.4044168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ff47383a9f%3A0x6f76bdabd8b9330a!2sDeccan%20Heights%20Homes%20%26%20Resorts%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1767017021317!5m2!1sen!2sin"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
@@ -513,10 +514,12 @@ export default function ContactPage() {
               />
               <div className="bg-white p-4 flex justify-between items-center">
                 <span className="text-sm text-[#3C3C3C] font-medium">
-                  Jubilee Hills, Hyderabad
+                  Banjara Hills, Hyderabad
                 </span>
                 <a
-                  href="#"
+                  href="https://maps.app.goo.gl/kvUhbBVAWYTbLWsx6"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm text-[#C6A15B] font-bold hover:underline"
                 >
                   Get Directions
