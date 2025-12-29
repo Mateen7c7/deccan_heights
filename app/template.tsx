@@ -13,7 +13,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         It covers the screen initially, then slides up after a delay.
       */}
       <motion.div
-        className="fixed inset-0 z-100 bg-gold-500 origin-top pointer-events-none"
+        className="fixed inset-0 z-100 bg-black origin-top pointer-events-none"
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 0 }}
@@ -38,25 +38,25 @@ export default function Template({ children }: { children: React.ReactNode }) {
           initial={{ opacity: 0, scale: 0.5, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-          className="relative w-32 h-32 md:w-40 md:h-40"
+          className="relative w-64 h-48 md:w-96 md:h-72"
         >
           <Image
-            src="/logo.png"
-            alt="Deccan Heights Logo"
+            src="/deccan_heights_resorts.png"
+            alt="Deccan Heights Resorts"
             fill
             className="object-contain"
             priority
           />
         </motion.div>
 
-        <motion.h1
+        {/* <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
           className="text-white text-3xl md:text-5xl font-serif font-bold tracking-wide text-center"
         >
           Deccan Heights
-        </motion.h1>
+        </motion.h1> */}
       </motion.div>
 
       {/* Page Content Animation */}
