@@ -59,7 +59,7 @@ const PremiumPlots = () => {
     },
     {
       id: 2,
-      value: 15,
+      value: 20,
       suffix: "+",
       label: " Years",
       subtitle: "Years of Experience",
@@ -84,9 +84,9 @@ const PremiumPlots = () => {
     },
     {
       id: 3,
-      value: 500,
+      value: 15,
       suffix: "+",
-      label: " Plots Sold",
+      label: " Ventures",
       subtitle: "Happy Families",
       description:
         "Join a growing community of satisfied investors and homeowners.",

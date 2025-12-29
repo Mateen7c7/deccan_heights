@@ -42,7 +42,7 @@ const benefits = [
         ),
     },
     {
-        title: 'Trusted by 500+',
+        title: 'Trusted by 12000+',
         description: 'Join a growing community of satisfied families and investors who have found their dream plot with us.',
         icon: (
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8">
