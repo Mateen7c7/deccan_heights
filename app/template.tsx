@@ -13,7 +13,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         It covers the screen initially, then slides up after a delay.
       */}
       <motion.div
-        className="fixed inset-0 z-100 bg-black origin-top pointer-events-none"
+        className="fixed inset-0 z-100 bA-black origin-top pointer-events-none"
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 0 }}

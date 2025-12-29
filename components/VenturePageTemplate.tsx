@@ -1,7 +1,9 @@
 "use client";
 
+import Phase5 from "@/svg_components/Phase5";
 import { motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface VentureStats {
@@ -18,6 +20,7 @@ interface VentureData {
   amenities: string[];
   locationHighlights: string[];
   mapEmbedUrl?: string;
+  layoutPlanUrl?: string;
 }
 
 export default function VenturePageTemplate({ data }: { data: VentureData }) {
@@ -155,6 +158,45 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
           </div>
         </div>
       </section>
+
+      {/* --- MASTER PLAN --- */}
+      { (
+        <section className="py-24 bg-[#F8F8F8]">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#3C3C3C] mb-4">
+              Project <span className="text-[#C6A15B]">Master Plan</span>
+            </h2>
+            <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+              Explore the meticulously planned layout of {data.title}, designed
+              to provide maximum space, privacy, and aesthetic appeal.
+            </p>
+            <div className="relative w-full max-w-5xl mx-auto bg-white p-4 rounded-3xl shadow-xl border border-gray-100 overflow-hidden group">
+              <div className="relative aspect-4/3 w-full">
+                {/* <Image
+                  src={data.layoutPlanUrl}
+                  alt={`${data.title} Master Plan`}
+                  fill
+                  className="object-contain hover:scale-105 transition-transform duration-700 font-bold "
+                /> */}
+                <Phase5 width={300} height={300} />
+              </div>
+
+              {/* Overlay for interaction hint */}
+              <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none flex items-center justify-center">
+                <span className="bg-white/90 backdrop-blur-sm text-[#3C3C3C] px-6 py-2 rounded-full text-sm font-bold shadow-lg">
+                  View Full Layout
+                </span>
+              </div>
+
+              <Link
+                href="/maps/phase5"
+                className="absolute inset-0 z-10"
+                aria-label="View interactive map"
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* --- LOCATION --- */}
       <section className="py-24 bg-[#3C3C3C] text-white overflow-hidden relative">

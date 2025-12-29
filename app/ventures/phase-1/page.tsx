@@ -53,6 +53,7 @@ const phase1Data = {
   ],
   mapEmbedUrl:
     "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3977.412537972301!2d78.06275!3d17.094694399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTfCsDA1JzQwLjkiTiA3OMKwMDMnNDUuOSJF!5e1!3m2!1sen!2sin!4v1767023319552!5m2!1sen!2sin",
+  layoutPlanUrl: "/phase5wids.svg",
 };
 
 export default function Phase1Page() {

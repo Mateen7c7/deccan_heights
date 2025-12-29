@@ -1,22 +1,24 @@
 import { useEffect, useState } from "react";
 
-const Phase5 = () => {
+const Phase5 = ({width, height}: {width: number; height: number}) => {
   const [size, setSize] = useState({
-    width: 0,
-    height: 0,
+    width: width ? width : 0,
+    height: height ? height : 0,
   });
 
   useEffect(() => {
     const updateSize = () => {
-      setSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
+      if (!width && !height) {
+        setSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
     };
     updateSize();
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
-  }, []);
+  }, [width, height]);
 
   useEffect(() => {
     const path = document.getElementById("70");
