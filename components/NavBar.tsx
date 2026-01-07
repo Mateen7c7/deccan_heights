@@ -14,7 +14,6 @@ const navLinks = [
     href: "/ventures",
     submenu: [
       { name: "Phase 5", href: "/ventures/phase-1" },
-      { name: "Phase II", href: "/ventures/phase-2" },
       { name: "Phase 5 Interactive Map", href: "/maps/phase5" },
     ],
   },

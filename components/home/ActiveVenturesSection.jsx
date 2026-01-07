@@ -15,17 +15,6 @@ const ventures = [
             { label: "Location", value: "Shadnagar" },
         ],
     },
-    {
-        id: 2,
-        title: "Deccan Heights Phase II",
-        description: "A secure gated community offering world-class amenities and excellent connectivity to the city. Invest in a future that grows with you.",
-        image: "/plot2.webp",
-        stats: [
-            { label: "Area", value: "1500 Sq.ft" },
-            { label: "Price", value: "₹35L+" },
-            { label: "Location", value: "Shadnagar" },
-        ],
-    },
 ];
 
 

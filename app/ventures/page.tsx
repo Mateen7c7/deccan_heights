@@ -19,45 +19,106 @@ const ongoingVentures = [
       { label: "Location", value: "Shadnagar" },
     ],
   },
-  {
-    id: 2,
-    title: "Deccan Heights Phase II",
-    description:
-      "A secure gated community offering world-class amenities and excellent connectivity to the city. Invest in a future that grows with you.",
-    image: "/plot2.webp",
-    link: "/ventures/phase-2",
-    stats: [
-      { label: "Area", value: "1500 Sq.ft" },
-      { label: "Price", value: "₹35L+" },
-      { label: "Location", value: "Shadnagar" },
-    ],
-  },
 ];
 
 const completedProjects = [
   {
     id: 1,
-    title: "Urban Meadows",
+    title: "Basheera Bagh",
     description:
-      "A sold-out success featuring 50+ happy families in a gated layout.",
-    location: "Moinabad",
-    year: "2023",
+      "A premium residential development offering modern amenities and strategic connectivity.",
+    location: "Hyderabad",
+    year: "Completed",
     status: "Completed",
   },
   {
     id: 2,
-    title: "Green Valley",
-    description: "Premium farmland plots that delivered 200% ROI in 3 years.",
-    location: "Chevella",
-    year: "2021",
+    title: "Clock Tower Colony",
+    description:
+      "Centrally located residential project with focus on community living and accessibility.",
+    location: "Secunderabad",
+    year: "Completed",
     status: "Completed",
   },
   {
     id: 3,
-    title: "Serene Vilas",
-    description: "Exclusive villa community with state-of-the-art club house.",
+    title: "Shadnagar Venture",
+    description:
+      "Strategic investment plots in the rapidly developing corridor of Shadnagar.",
     location: "Shadnagar",
-    year: "2022",
+    year: "Completed",
+    status: "Completed",
+  },
+  {
+    id: 4,
+    title: "Brindawaan Nagar",
+    description:
+      "A serene residential layout designed for peaceful living within city reach.",
+    location: "Hyderabad",
+    year: "Completed",
+    status: "Completed",
+  },
+  {
+    id: 5,
+    title: "Empire City Shadnagar",
+    description:
+      "A landmark development in Shadnagar offering premium infrastructure and high ROI.",
+    location: "Shadnagar",
+    year: "Completed",
+    status: "Completed",
+  },
+  {
+    id: 6,
+    title: "5th Revenue Qutub",
+    description:
+      "High-demand plots featuring excellent urban connectivity and essential services.",
+    location: "Qutubullapur",
+    year: "Completed",
+    status: "Completed",
+  },
+  {
+    id: 7,
+    title: "Golden Villa Balapur",
+    description:
+      "Luxury villa plots in the tranquil environment of Balapur, perfect for homeowners.",
+    location: "Balapur",
+    year: "Completed",
+    status: "Completed",
+  },
+  {
+    id: 8,
+    title: "Deccan Heights Phase 1",
+    description:
+      "The foundation of our excellence, Phase 1 set the standard for quality layouts.",
+    location: "Shadnagar",
+    year: "Completed",
+    status: "Completed",
+  },
+  {
+    id: 9,
+    title: "Deccan Heights Phase 2",
+    description:
+      "Continuing our legacy of providing secure and premium gated communities.",
+    location: "Shadnagar",
+    year: "Completed",
+    status: "Completed",
+  },
+  {
+    id: 10,
+    title: "Deccan Heights Phase 3",
+    description:
+      "A successful expansion of the Deccan Heights family with 100% occupancy.",
+    location: "Shadnagar",
+    year: "Completed",
+    status: "Completed",
+  },
+  {
+    id: 11,
+    title: "Deccan Heights Phase 4",
+    description:
+      "Modern living integrated with nature, delivering happiness to hundreds of families.",
+    location: "Shadnagar",
+    year: "Completed",
     status: "Completed",
   },
 ];
