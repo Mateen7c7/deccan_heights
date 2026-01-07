@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const Phase5 = ({width, height}: {width: number; height: number}) => {
+const Phase5 = ({ width, height }: { width?: number; height?: number }) => {
   const [size, setSize] = useState({
     width: width ? width : 0,
     height: height ? height : 0,
@@ -32,7 +32,9 @@ const Phase5 = ({width, height}: {width: number; height: number}) => {
       111, 114, 117, 120, 123, 126, 129, 132, 135, 138, 141, 144, 147,
     ];
 
-    const holdIds = [108, 111, 114, 117, 120, 123, 126, 129, 132, 135, 138, 141, 144, 147];
+    const holdIds = [
+      108, 111, 114, 117, 120, 123, 126, 129, 132, 135, 138, 141, 144, 147,
+    ];
 
     soldIds.forEach((id) => {
       const path = document.getElementById(id.toString());
