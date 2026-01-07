@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   const scrollToServices = () => {
@@ -44,12 +45,12 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="px-8 py-4 bg-[#C6A15B] text-white font-semibold rounded-md shadow-lg hover:bg-[#b08d4b] transition-all transform hover:scale-105"
           >
-            Consult with Us
-          </a>
+            Consult  Us
+          </Link>
           <button
             onClick={scrollToServices}
             className="px-8 py-4 border border-[#BDBDBD] text-white font-semibold rounded-md hover:bg-white/10 transition-all flex items-center gap-2 group"

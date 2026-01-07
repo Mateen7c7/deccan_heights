@@ -65,9 +65,7 @@ export default function DetailedServices() {
                 </li>
               ))}
             </ul>
-            <button className="px-8 py-3 bg-[#C6A15B] text-white font-semibold rounded hover:bg-[#b08d4b] transition-colors shadow-lg">
-              View Available Plots
-            </button>
+          
           </motion.div>
         </div>
       </SectionWrapper>
@@ -168,11 +166,7 @@ export default function DetailedServices() {
           ))}
         </div>
 
-        <div className="flex justify-center">
-          <button className="px-8 py-3 bg-[#C6A15B] text-white font-semibold rounded hover:bg-[#b08d4b] transition-colors shadow-lg">
-            Start Property Search
-          </button>
-        </div>
+        
       </SectionWrapper>
 
       {/* D. Property Management */}
