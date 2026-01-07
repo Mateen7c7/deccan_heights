@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -407,13 +408,14 @@ const AgentCard = ({ agent }: { agent: (typeof AGENTS)[0] }) => (
     className="bg-white rounded-xl shadow-lg border border-[#BDBDBD]/20 overflow-hidden group"
   >
     <div className="relative h-64 overflow-hidden">
-      <img
+      <Image
         src={agent.image}
         alt={agent.name}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-110"
       />
       <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-        <button className="w-full py-2 bg-[#C6A15B] text-white rounded font-medium text-sm flex items-center justify-center gap-2 hover:bg-white hover:text-[#C6A15B] transition-colors">
+        <button className="w-ull py-2 bg-[#C6A15B] text-white rounded font-medium text-sm flex items-center justify-center gap-2 hover:bg-white hover:text-[#C6A15B] transition-colors">
           <MessageCircle className="w-4 h-4" /> Contact Agent
         </button>
       </div>
