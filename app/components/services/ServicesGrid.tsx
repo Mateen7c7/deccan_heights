@@ -103,9 +103,7 @@ export default function ServicesGrid() {
               <p className="text-[#3C3C3C]/70 mb-6 leading-relaxed text-sm">
                 {service.description}
               </p>
-              <span className="flex items-center text-[#C6A15B] font-semibold text-sm group-hover:gap-2 transition-all">
-                Learn More <ArrowRight className="w-4 h-4 ml-1" />
-              </span>
+             
             </motion.div>
           ))}
         </div>

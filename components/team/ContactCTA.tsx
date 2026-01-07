@@ -8,7 +8,7 @@ export default function ContactCTA() {
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#C6A15B]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
-      <div className="container mx-auto px-4 text-center relative z-10">
+      {/* <div className="container mx-auto px-4 text-center relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export default function ContactCTA() {
             </motion.button>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

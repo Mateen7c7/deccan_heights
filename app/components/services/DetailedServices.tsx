@@ -39,21 +39,7 @@ export default function DetailedServices() {
       {/* A. Residential Plot Sales */}
       <SectionWrapper id="residential-plots" className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="rounded-2xl overflow-hidden shadow-2xl h-[400px] bg-gray-100 relative group"
-          >
-            {/* Placeholder for Plot Map/Image */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-              <span className="text-gray-400 font-semibold">
-                Plot Map Visualization
-              </span>
-            </div>
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-500" />
-          </motion.div>
+         
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -134,20 +120,7 @@ export default function DetailedServices() {
               Request Valuation
             </button>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="order-1 lg:order-2 rounded-2xl overflow-hidden shadow-2xl h-[400px] bg-white relative"
-          >
-            {/* Placeholder */}
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-              <span className="text-gray-400 font-semibold">
-                Marketing Strategy Visual
-              </span>
-            </div>
-          </motion.div>
+          
         </div>
       </SectionWrapper>
 
@@ -278,7 +251,7 @@ export default function DetailedServices() {
             </div>
           </motion.div>
 
-          <div className="lg:col-span-2 grid grid-cols-2 gap-4">
+          {/* <div className="lg:col-span-2 grid grid-cols-2 gap-4">
             {[1, 2, 3, 4].map((item) => (
               <div
                 key={item}
@@ -292,7 +265,7 @@ export default function DetailedServices() {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </SectionWrapper>
 
@@ -333,9 +306,7 @@ export default function DetailedServices() {
             ))}
           </motion.div>
 
-          <button className="px-10 py-4 bg-[#C6A15B] text-white font-semibold rounded-full hover:bg-[#b08d4b] transition-colors shadow-lg">
-            Explore Holiday Properties
-          </button>
+        
         </div>
       </SectionWrapper>
     </div>

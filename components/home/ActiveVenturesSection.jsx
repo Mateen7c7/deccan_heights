@@ -12,7 +12,7 @@ const ventures = [
         link: "/ventures/phase-1",
         stats: [
             { label: "Area", value: "1200 Sq.ft" },
-            { label: "Price", value: "₹25L+" },
+            { label: "Price", value: "₹8500+" },
             { label: "Location", value: "Shadnagar" },
         ],
     },
