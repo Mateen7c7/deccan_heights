@@ -9,6 +9,7 @@ const ventures = [
         title: "Deccan Heights Phase 5",
         description: "Experience luxury living in the heart of nature with our premium plots designed for your dream home. A perfect blend of tranquility and modern amenities.",
         image: "/plot1.webp",
+        link: "/ventures/phase-1",
         stats: [
             { label: "Area", value: "1200 Sq.ft" },
             { label: "Price", value: "₹25L+" },
