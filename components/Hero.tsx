@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 const Hero = () => {
@@ -137,29 +138,34 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto items-center"
           >
             {/* Primary Button - Gold Gradient */}
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 0 30px rgba(198, 161, 91, 0.4)",
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="group relative px-8 py-4 bg-linear-to-r from-[#C6A15B] to-[#AA8540] text-white text-lg font-medium rounded-full shadow-xl transition-all duration-300 overflow-hidden cursor-pointer"
-            >
-              <span className="relative z-10">View Our Plot Ventures</span>
-              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-            </motion.button>
+
+            <Link href="/ventures">
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 30px rgba(198, 161, 91, 0.4)",
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="group relative px-8 py-4 bg-linear-to-r from-[#C6A15B] to-[#AA8540] text-white text-lg font-medium rounded-full shadow-xl transition-all duration-300 overflow-hidden cursor-pointer w-full sm:w-auto"
+              >
+                <span className="relative z-10">View Our Plot Ventures</span>
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              </motion.button>
+            </Link>
 
             {/* Secondary Button - Glassmorphism */}
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 bg-transparent border border-white/40 text-white text-lg font-medium rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-[#C6A15B] hover:text-[#C6A15B] hover:shadow-[0_0_20px_rgba(198,161,91,0.2)] cursor-pointer"
-            >
-              Schedule a Site Visit
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{
+                  scale: 1.05,
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-4 bg-transparent border border-white/40 text-white text-lg font-medium rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-[#C6A15B] hover:text-[#C6A15B] hover:shadow-[0_0_20px_rgba(198,161,91,0.2)] cursor-pointer w-full sm:w-auto text-center"
+              >
+                Schedule a Site Visit
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
