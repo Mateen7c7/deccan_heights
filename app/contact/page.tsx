@@ -553,37 +553,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA Strip */}
-      <section className="bg-white py-20 border-y border-[#BDBDBD]/10">
-        <div className="container mx-auto px-6 md:px-12">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
-            {[
-              { title: "Schedule a Consultation", icon: Calendar },
-              { title: "Request Valuation", icon: TrendingUp },
-              { title: "Book a Viewing", icon: Home },
-            ].map((cta, idx) => (
-              <motion.button
-                key={idx}
-                variants={scaleIn}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0px 10px 20px rgba(198, 161, 91, 0.2)",
-                }}
-                className="py-6 px-4 bg-[#C6A15B] text-white rounded-xl flex flex-col items-center justify-center gap-3 text-center transition-all shadow-md group"
-              >
-                <cta.icon className="w-8 h-8 opacity-90 group-hover:scale-110 transition-transform" />
-                <span className="font-bold text-lg">{cta.title}</span>
-              </motion.button>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+     
 
       {/* Agents Section */}
       <section className="py-24 px-6 md:px-12 bg-[#F8F8F8]">
