@@ -24,11 +24,11 @@ const leaders: TeamMember[] = [
   },
   {
     id: "l2",
-    name: "Priya Sharma",
+    name: "Adnan Ali Khan",
     title: "Managing Director",
-    image: "/team/agent-female.png", // Using the female placeholder
+    image: "/staff/adnan.jpeg", // Using the female placeholder
     summary:
-      "Priya leads our operational excellence, ensuring every project meets the Gold Standard of Deccan Heights. Her attention to detail and customer focus is unmatched.",
+      "Adnan leads our operational excellence, ensuring every project meets the Gold Standard of Deccan Heights. Her attention to detail and customer focus is unmatched.",
     bio: "Priya Sharma brings operational discipline and aesthetic finesse to Deccan Heights. Formerly a senior consultant at a top global firm, she pivoted to real estate to build communities, not just houses. She oversees project execution, legal compliance, and customer experience. Priya is also an advocate for sustainable architecture.",
     email: "priya@deccanheights.com",
     linkedin: "#",
@@ -41,17 +41,55 @@ const leaders: TeamMember[] = [
   },
   {
     id: "l3",
-    name: "Arjun Reddy",
-    title: "Head of Sales",
-    image: "/team/agent-male.png",
+    name: "Syed Zakir Quadri ",
+    title: "President (sales & Marketing)",
+    image: "/staff/SyedZakirQuadri.jpeg",
     summary:
-      "Arjun brings a dynamic approach to sales, focusing on building long-term relationships rather than just closing deals. He mentors our elite sales force.",
-    bio: "Arjun Reddy is the driving force behind our record-breaking sales figures. With a background in psychology and marketing, he understands the emotional journey of buying a home. He leads a team of 40+ agents and ensures that transparency remains the core of our sales process.",
-    email: "arjun@deccanheights.com",
+      "Zakir brings a dynamic approach to sales, focusing on building long-term relationships rather than just closing deals. He mentors our elite sales force.",
+    bio: "Sajid Ali is the driving force behind our record-breaking sales figures. With a background in psychology and marketing, he understands the emotional journey of buying a home. He leads a team of 40+ agents and ensures that transparency remains the core of our sales process.",
+    email: "zakir@deccanheights.com",
     linkedin: "#",
     expertises: ["Sales Strategy", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Sales Professional"],
   },
+  {
+    id: "l4",
+    name: "Mohammed irshad Ahmed",
+    title: "General manager",
+    image: "/staff/MohammedirshadAhmed.jpeg",
+    summary:
+      "Mohammed irshad Ahmed is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio: "Mohammed irshad Ahmed is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+    email: "mohammedirshad@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Operations Professional"],
+  },{
+    id: "l5",
+    name: "Syed jaleel Quadri",
+    title: "Asst general manager",
+    image: "/staff/SyedjaleelQuadri.jpeg",
+    summary:
+      "Jaleel brings a dynamic approach to sales, focusing on building long-term relationships rather than just closing deals. He mentors our elite sales force.",
+    bio: "Jaleel is the asst general manager of Deccan Heights. He is responsible for the overall sales of the company. He has a background in sales and has a proven track record of success in the real estate industry.",
+    email: "jaleel@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Sales Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Sales Asst General Manager"],
+  },{
+    id: "l6",
+    name: "Ashfak Ishaq Yin",
+    title: "Business Strategist ",
+    image: "/staff/AshfakIshaqYin.jpeg",
+    summary:
+      "Ashfak brings a dynamic approach to business, focusing on building long-term relationships rather than just closing deals. He mentors our elite business force.",
+    bio: "A Seasoned entrepreneur with a financial backbone, investor and business strategist with 30+ years of global experience across India, the Middle East, USA, Malaysia, and beyond. One who has worn many hats - CFO, Business Head, Director, Mentor, Co-founder across a remarkably diverse range of industries.Best at collaborating, building, structuring and strategically growing businesses, especially in early to mid stages.",
+    email: "ashfak@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Business Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Business Strategist"],
+  },
+  
 ];
 
 export default function LeadershipSection() {

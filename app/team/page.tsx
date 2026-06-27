@@ -16,8 +16,8 @@ export default function TeamPage() {
     <main className="min-h-screen bg-white">
       <TeamHero />
       <LeadershipSection />
-      <SalesTeamSection />
-      <LegalAdvisorsSection />
+      {/* <SalesTeamSection /> */}
+      {/* <LegalAdvisorsSection /> */}
       <Certifications />
       <ContactCTA />
     </main>
