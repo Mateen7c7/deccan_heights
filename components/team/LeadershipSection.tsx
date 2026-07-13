@@ -7,20 +7,15 @@ import { TeamMember } from "./types";
 const leaders: TeamMember[] = [
   {
     id: "l1",
-    name: "Rajesh Kumar",
+    name: "Arshad Ali Khan",
     title: "Founder & CEO",
-    image: "/team/agent-male.png", // Using the male placeholder
+    image: "/staff/Arshad ali khan.jpeg", // Using the male placeholder
     summary:
-      "With over 25 years of experience in luxury real estate, Rajesh has shaped the skyline of Deccan. His vision for sustainable, premium living helps drive our mission forward.",
-    bio: "Rajesh Kumar is the visionary Founder & CEO of Deccan Heights. Starting his career in 1998, he has overseen the development of over 50 premium residential projects. His leadership style focuses on integrity, innovation, and customer-centricity. Rajesh holds an MBA from IIM Bangalore and is a frequent speaker at national real estate summits.",
-    email: "rajesh@deccanheights.com",
-    linkedin: "#",
-    expertises: [
-      "Strategic Planning",
-      "Luxury Development",
-      "Investor Relations",
-    ],
-    certifications: ["RERA Certified", "CREDAI Member"],
+      "With over 25 years of experience in luxury real estate, Arshad Ali Khan  ` has shaped the skyline of Deccan. His vision for sustainable, premium living helps drive our mission forward.",
+    bio: "Arshad Ali Khan is the visionary Founder & CEO of Deccan Heights. Starting his career in 1998, he has overseen the development of over 50 premium residential projects. His leadership style focuses on integrity, innovation, and customer-centricity. Arshad Ali Khan holds an MBA from IIM Bangalore and is a frequent speaker at national real estate summits.",
+    email: "arshad@deccanheights.com",
+    linkedin: "#", 
+    certifications: ["RERA Certified"],
   },
   {
     id: "l2",
@@ -88,6 +83,57 @@ const leaders: TeamMember[] = [
     linkedin: "#",
     expertises: ["Business Strategy", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Business Strategist"],
+  },
+  {
+    id: "l7",
+    name: "Mohammed Akram",
+    title:"Chief Marketing Manager",
+    image: "/staff/Mohammed Akram.jpg",
+    summary:
+      "Mohammed Akram is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
+    bio: "Mohammed Akram is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
+    email: "akram@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Marketing Manager"],
+
+  },
+  {
+    id: "l8",
+    name: "Gulam Mustafa",
+    title: "General Manager",
+    image: "/staff/Gulam Mustafa.jpg",
+    summary:
+      "Gulam Mustafa is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio: "Gulam Mustafa is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+    email: "mustafa@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Operations Manager"],
+  },{
+    id: "l9",
+    name: "Imran Khan",
+    title: "Chief Marketing Manager",
+    image: "/staff/Imran Khan.jpg",
+    summary:
+      "Imran Khan is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
+    bio: "Imran Khan is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
+    email: "imran@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Marketing Manager"],
+  },{
+    id: "l10",
+    name: "Mohammed Abdul Mujeeb",
+    title: "Chief Marketing Manager",
+    image: "/staff/Mohammed abdul mujeeb.jpg",
+    summary:
+      "Mohammed Abdul Mujeeb is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
+    bio: "Mohammed Abdul Mujeeb is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
+    email: "mujeeb@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Marketing Manager"],
   },
   
 ];
