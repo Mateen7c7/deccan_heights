@@ -7,25 +7,25 @@ import { TeamMember } from "./types";
 const leaders: TeamMember[] = [
   {
     id: "l1",
-    name: "Arshad Ali Khan",
-    title: "Founder & CEO",
-    image: "/staff/Arshad ali khan.jpeg", // Using the male placeholder
+    name: "Mr. Arshad Ali Khan",
+    title: "Founder & Chairman",
+    image: "/staff/Arshad ali khan.jpeg",
     summary:
-      "With over 25 years of experience in luxury real estate, Arshad Ali Khan  ` has shaped the skyline of Deccan. His vision for sustainable, premium living helps drive our mission forward.",
-    bio: "Arshad Ali Khan is the visionary Founder & CEO of Deccan Heights. Starting his career in 1998, he has overseen the development of over 50 premium residential projects. His leadership style focuses on integrity, innovation, and customer-centricity. Arshad Ali Khan holds an MBA from IIM Bangalore and is a frequent speaker at national real estate summits.",
+      "With over 25 years of experience in luxury real estate, Mr. Arshad Ali Khan has shaped the skyline of Deccan. His vision for sustainable, premium living helps drive our mission forward.",
+    bio: "Mr. Arshad Ali Khan is the visionary Founder & Chairman of Deccan Heights. Starting his career in 1998, he has overseen the development of over 50 premium residential projects. His leadership style focuses on integrity, innovation, and customer-centricity.",
     email: "arshad@deccanheights.com",
     linkedin: "#", 
     certifications: ["RERA Certified"],
   },
   {
     id: "l2",
-    name: "Adnan Ali Khan",
+    name: "Mr. Adnan Ali Khan",
     title: "Managing Director",
-    image: "/staff/adnan.jpeg", // Using the female placeholder
+    image: "/staff/adnan.jpeg",
     summary:
-      "Adnan leads our operational excellence, ensuring every project meets the Gold Standard of Deccan Heights. Her attention to detail and customer focus is unmatched.",
-    bio: "Priya Sharma brings operational discipline and aesthetic finesse to Deccan Heights. Formerly a senior consultant at a top global firm, she pivoted to real estate to build communities, not just houses. She oversees project execution, legal compliance, and customer experience. Priya is also an advocate for sustainable architecture.",
-    email: "priya@deccanheights.com",
+      "Mr. Adnan Ali Khan leads our operational excellence, ensuring every project meets the Gold Standard of Deccan Heights. His attention to detail and customer focus is unmatched.",
+    bio: "Mr. Adnan Ali Khan serves as Managing Director of Deccan Heights, overseeing project execution, legal compliance, and customer experience. He brings operational discipline and a commitment to delivering premium real estate with transparency and integrity.",
+    email: "adnan@deccanheights.com",
     linkedin: "#",
     expertises: [
       "Operations Management",
