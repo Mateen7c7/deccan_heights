@@ -2,21 +2,7 @@
 
 
 import VentureCard from "./VentureCard";
-
-const ventures = [
-    {
-        id: 1,
-        title: "Deccan Heights Phase 5",
-        description: "Experience luxury living in the heart of nature with our premium plots designed for your dream home. A perfect blend of tranquility and modern amenities.",
-        image: "/plot1.webp",
-        link: "/ventures/phase-1",
-        stats: [
-            { label: "Area", value: "1200 Sq.ft" },
-            { label: "Price", value: "₹8500+" },
-            { label: "Location", value: "Shadnagar" },
-        ],
-    },
-];
+import { activeHomeVentures } from "@/data/plots";
 
 
 
@@ -37,7 +23,7 @@ export default function ActiveVenturesSection() {
 
                 {/* Cards Grid */}
                 <div className="grid gap-8 md:grid-cols-2 lg:gap-12 max-w-5xl mx-auto">
-                    {ventures.map((venture) => (
+                    {activeHomeVentures.map((venture) => (
                         <VentureCard key={venture.id} venture={venture} />
                     ))}
                 </div>
