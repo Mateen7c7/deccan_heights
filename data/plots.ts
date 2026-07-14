@@ -309,7 +309,90 @@ export const phase2Data: PlotVenture = {
   ],
 };
 
-export const allPlotVentures: PlotVenture[] = [phase5Data, phase2Data];
+export const phase3Data: PlotVenture = {
+  id: "phase-3",
+  slug: "phase-3",
+  title: "Deccan Heights Phase 3",
+  subtitle: "Premium open plots with world-class amenities.",
+  description:
+    "Deccan Heights Phase 3 is a premium residential layout located in the high-growth corridor of Shadnagar, Hyderabad. Connected via a 100' wide road just minutes from the NH-7 Bangalore Highway, Phase 3 is designed for exceptional living and high returns. Spanning a prime area with clear documentation and excellent infrastructure, it stands as an outstanding opportunity for investors and homeowners alike.",
+  image: "/plot3.webp",
+  status: "ongoing",
+  badge: "New Launch",
+  location: "Shadnagar, Hyderabad, Telangana",
+  priceRange: "₹8,000/sq.yd",
+  roiHighlight: "ROI: High Appreciation",
+  thumbnails: ["/plot3.webp", "/plot4.webp", "/plot1.webp"],
+  stats: [
+    { label: "Plot Size", value: "12 acres" },
+    { label: "Starting Price", value: "₹8000 per Sq.yard" },
+    { label: "Location", value: "Shadnagar" },
+  ],
+  aboutTitle: "About This Project",
+  aboutDescription:
+    "Deccan Heights Phase 3 offers beautifully developed premium plots at Shadnagar. The project is situated at the frontier of Shadnagar Mandal, coming under the High Rise Promotion Zone. The layout has excellent connectivity, located a short drive from the 300' 6-track NH-7 Bangalore Highway. With high commercial value and rapid infrastructure growth in the vicinity, this venture is perfect for immediate investment.",
+  aboutStats: [
+    { value: "₹8,00,000", label: "Outright starting price", sublabel: "Affordable entry investment" },
+    { value: "12 Ac", label: "Total project area", sublabel: "Mahadevpur Village" },
+    { value: "EMI", label: "₹10,000/mo.", sublabel: "Flexible payment options" },
+    { value: "100%", label: "Clear Documentation", sublabel: "Passbook eligible, clear title" },
+  ],
+  pricingTitle: "Plot Sizes & Pricing",
+  plotSizes: [
+    { size: "100 sq.yd", label: "Total investment", price: "₹8,00,000", rate: "@ ₹8,000/sq.yd", badge: "New Launch" },
+    { size: "200 sq.yd", label: "Total investment", price: "₹16,00,000", rate: "@ ₹8,000/sq.yd", badge: "New Launch" },
+    { size: "300 sq.yd", label: "Total investment", price: "₹24,00,000", rate: "@ ₹8,000/sq.yd", badge: "New Launch" },
+    { size: "500 sq.yd", label: "Total investment", price: "₹40,00,000", rate: "@ ₹8,000/sq.yd", badge: "New Launch" },
+  ],
+  customSize: {
+    title: "Custom Size",
+    subtitle: "Need a different plot size?",
+    description: "Custom plot sizes are available on request. Contact us to discuss your requirement.",
+  },
+  paymentPlans: [
+    { label: "per sq.yd (Outright)", value: "₹8,000" },
+    { label: "per sq.yd (EMI Plan)", value: "₹8,500" },
+    { label: "Booking Amount", value: "₹50,000" },
+    { label: "Down Payment", value: "₹2,00,000" },
+    { label: "EMI Duration", value: "12 Months" },
+  ],
+  layoutTitle: "Project Layout Plan",
+  layoutPlanUrl: "/DH_LAYOUT.pdf",
+  locationTitle: "Location Advantages",
+  locationAdvantages: [
+    { title: "Borders 150' Link Road", description: "Strategic road-facing property for high future commercial valuation." },
+    { title: "Near Bangalore Highway", description: "NH-7 Bangalore Highway Facing, offering rapid transit connectivity." },
+    { title: "Education Hub", description: "Near Symbiosis International University & TATA Institute of Social Science." },
+    { title: "Upcoming IT Corridors", description: "Close to Microsoft Data Center, SONY Electronics Park, and Elikatta IT Park." },
+    { title: "Industrial Parks", description: "Borders Apparel Park, Textile Park, and Aero Hub developments." },
+    { title: "Approved & Secure", description: "100% clear title property with registration eligibility." },
+  ],
+  quoteText: "Deccan Heights Phase 3 represents our continuous promise of delivering high-appreciation properties. Located in a high-demand, high-growth sector of Shadnagar, it is the perfect destination for your hard-earned capital.",
+  amenities: [
+    "Cricket Net Facility",
+    "Tennis Court",
+    "Open Park & Children's Play Area",
+    "Hospital & Shopping Mall Proximity",
+    "ICICI Bank & School Access",
+    "Electricity (with transformer & Street lights)",
+    "Grand Entrance Arch",
+    "Gated Community Infrastructure",
+    "Vaastu Compliant Plots",
+    "Avenue Plantation & Rain Water Pits",
+  ],
+  locationHighlights: [
+    "Within HMDA Limits (Pure Residential Zone)",
+    "Mahadevpur Village, Shadnagar (Survey Nos. 203, 206, 207, 209, 345-350)",
+    "Borders 150' Peripheral Ring Road",
+    "Near Symbiosis International University & TATA Institute of Social Science",
+    "Close to proposed IT Park at Elikatta & SONY Electronics Park",
+    "Adjacent to proposed Textile Park & Apparel Park",
+    "Near DLF, My Home, and AP Housing Board Mega Townships",
+    "Easy MMTS and APSRTC connectivity",
+  ],
+};
+
+export const allPlotVentures: PlotVenture[] = [phase5Data, phase3Data, phase2Data];
 
 export const ongoingVentures: VentureListing[] = [
   {
@@ -322,6 +405,19 @@ export const ongoingVentures: VentureListing[] = [
     stats: [
       { label: "Area", value: "9 Acres" },
       { label: "Price", value: "₹8500" },
+      { label: "Location", value: "Shadnagar" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Deccan Heights Phase 3",
+    description:
+      "A premium residential gated community layout offering highly appreciated plots with world-class amenities and high ROI potential.",
+    image: "/plot3.webp",
+    link: "/ventures/phase-3",
+    stats: [
+      { label: "Area", value: "12 Acres" },
+      { label: "Price", value: "₹8000" },
       { label: "Location", value: "Shadnagar" },
     ],
   },
@@ -338,6 +434,19 @@ export const activeHomeVentures: VentureListing[] = [
     stats: [
       { label: "Area", value: "1200 Sq.ft" },
       { label: "Price", value: "₹8500+" },
+      { label: "Location", value: "Shadnagar" },
+    ],
+  },
+  {
+    id: 2,
+    title: "Deccan Heights Phase 3",
+    description:
+      "A premium residential gated community layout offering highly appreciated plots with world-class amenities and high ROI potential.",
+    image: "/plot3.webp",
+    link: "/ventures/phase-3",
+    stats: [
+      { label: "Area", value: "12 Acres" },
+      { label: "Price", value: "₹8000+" },
       { label: "Location", value: "Shadnagar" },
     ],
   },

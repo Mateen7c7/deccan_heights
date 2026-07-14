@@ -335,89 +335,125 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                   {data.layoutTitle || "Project Layout Plan"}
                 </h2>
 
-                <TransformWrapper
-                  initialScale={1}
-                  minScale={0.5}
-                  maxScale={4}
-                  centerOnInit={true}
-                >
-                  {({ zoomIn, zoomOut, resetTransform }) => (
-                    <div className="w-full bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md">
-                      {/* Interactive Map Header */}
-                      <div className="bg-[#1E293B] text-white p-4 flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-[#C6A15B]/20 flex items-center justify-center text-[#C6A15B] font-bold">
-                            DH
-                          </div>
-                          <div>
-                            <h4 className="font-bold text-sm md:text-base leading-tight">
-                              {data.title} — Layout Plan
-                            </h4>
-                            <p className="text-xs text-gray-400">
-                              {data.location || "Shadnagar, Hyderabad"}
-                            </p>
-                          </div>
+                {data.layoutPlanUrl?.endsWith(".pdf") ? (
+                  <div className="w-full bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md">
+                    {/* PDF Header */}
+                    <div className="bg-[#1E293B] text-white p-4 flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-[#C6A15B]/20 flex items-center justify-center text-[#C6A15B] font-bold">
+                          DH
                         </div>
-                        <span className="bg-[#EA580C] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                          {data.status === "completed" ? "Completed" : "NEW LAUNCH"}
-                        </span>
-                      </div>
-
-                      {/* Control Strip */}
-                      <div className="bg-[#F8FAFC] border-b border-gray-200 px-4 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-gray-500 gap-2">
-                        <div className="flex items-center gap-2">
-                          <svg className="w-4 h-4 text-[#C6A15B] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                          </svg>
-                          <span>Drag to pan, double click or pinch to zoom.</span>
-                        </div>
-                        <div className="flex items-center justify-end gap-3 font-semibold text-[#3C3C3C]">
-                          <button 
-                            type="button"
-                            onClick={() => zoomOut()} 
-                            className="w-8 h-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 active:scale-95 transition-all cursor-pointer font-bold shadow-2xs"
-                            aria-label="Zoom Out"
-                          >
-                            —
-                          </button>
-                          <span className="w-12 text-center text-xs text-gray-500 font-bold">Scale</span>
-                          <button 
-                            type="button"
-                            onClick={() => zoomIn()} 
-                            className="w-8 h-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 active:scale-95 transition-all cursor-pointer font-bold shadow-2xs"
-                            aria-label="Zoom In"
-                          >
-                            +
-                          </button>
-                          <button 
-                            type="button"
-                            onClick={() => resetTransform()} 
-                            className="px-3 py-1.5 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 active:scale-95 transition-all cursor-pointer text-xs font-bold shadow-2xs"
-                          >
-                            Reset
-                          </button>
+                        <div>
+                          <h4 className="font-bold text-sm md:text-base leading-tight">
+                            {data.title} — Layout Plan
+                          </h4>
+                          <p className="text-xs text-gray-400">
+                            {data.location || "Shadnagar, Hyderabad"}
+                          </p>
                         </div>
                       </div>
-
-                      {/* Map Content */}
-                      <div className="bg-white p-4 flex items-center justify-center min-h-[400px] overflow-hidden cursor-grab active:cursor-grabbing">
-                        <TransformComponent wrapperClass="!w-full !h-full" contentClass="!w-full !h-full flex items-center justify-center">
-                          {data.id === "phase-5" ? (
-                            <div className="w-full max-w-[800px] flex items-center justify-center">
-                              <Phase5 width={800} height={600} />
-                            </div>
-                          ) : (
-                            <img 
-                              src={data.layoutPlanUrl || "/plot1.webp"} 
-                              alt={`${data.title} Layout Plan`}
-                              className="max-w-full max-h-[500px] object-contain transition-transform duration-300"
-                            />
-                          )}
-                        </TransformComponent>
-                      </div>
+                      <a 
+                        href={data.layoutPlanUrl} 
+                        download
+                        className="bg-[#C6A15B] hover:bg-[#b08e4f] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors cursor-pointer"
+                      >
+                        Download PDF
+                      </a>
                     </div>
-                  )}
-                </TransformWrapper>
+                    {/* PDF Content */}
+                    <div className="w-full h-[600px] bg-gray-100 flex items-center justify-center">
+                      <iframe
+                        src={`${data.layoutPlanUrl}#toolbar=1`}
+                        className="w-full h-full border-0"
+                        title={`${data.title} Layout Plan PDF`}
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <TransformWrapper
+                    initialScale={1}
+                    minScale={0.5}
+                    maxScale={4}
+                    centerOnInit={true}
+                  >
+                    {({ zoomIn, zoomOut, resetTransform }) => (
+                      <div className="w-full bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md">
+                        {/* Interactive Map Header */}
+                        <div className="bg-[#1E293B] text-white p-4 flex items-center justify-between">
+                          <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 rounded-lg bg-[#C6A15B]/20 flex items-center justify-center text-[#C6A15B] font-bold">
+                              DH
+                            </div>
+                            <div>
+                              <h4 className="font-bold text-sm md:text-base leading-tight">
+                                {data.title} — Layout Plan
+                              </h4>
+                              <p className="text-xs text-gray-400">
+                                {data.location || "Shadnagar, Hyderabad"}
+                              </p>
+                            </div>
+                          </div>
+                          <span className="bg-[#EA580C] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                            {data.status === "completed" ? "Completed" : "NEW LAUNCH"}
+                          </span>
+                        </div>
+
+                        {/* Control Strip */}
+                        <div className="bg-[#F8FAFC] border-b border-gray-200 px-4 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between text-xs text-gray-500 gap-2">
+                          <div className="flex items-center gap-2">
+                            <svg className="w-4 h-4 text-[#C6A15B] shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                            </svg>
+                            <span>Drag to pan, double click or pinch to zoom.</span>
+                          </div>
+                          <div className="flex items-center justify-end gap-3 font-semibold text-[#3C3C3C]">
+                            <button 
+                              type="button"
+                              onClick={() => zoomOut()} 
+                              className="w-8 h-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 active:scale-95 transition-all cursor-pointer font-bold shadow-2xs"
+                              aria-label="Zoom Out"
+                            >
+                              —
+                            </button>
+                            <span className="w-12 text-center text-xs text-gray-500 font-bold">Scale</span>
+                            <button 
+                              type="button"
+                              onClick={() => zoomIn()} 
+                              className="w-8 h-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 active:scale-95 transition-all cursor-pointer font-bold shadow-2xs"
+                              aria-label="Zoom In"
+                            >
+                              +
+                            </button>
+                            <button 
+                              type="button"
+                              onClick={() => resetTransform()} 
+                              className="px-3 py-1.5 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 active:scale-95 transition-all cursor-pointer text-xs font-bold shadow-2xs"
+                            >
+                              Reset
+                            </button>
+                          </div>
+                        </div>
+
+                        {/* Map Content */}
+                        <div className="bg-white p-4 flex items-center justify-center min-h-[400px] overflow-hidden cursor-grab active:cursor-grabbing">
+                          <TransformComponent wrapperClass="!w-full !h-full" contentClass="!w-full !h-full flex items-center justify-center">
+                            {data.id === "phase-5" ? (
+                              <div className="w-full max-w-[800px] flex items-center justify-center">
+                                <Phase5 width={800} height={600} />
+                              </div>
+                            ) : (
+                              <img 
+                                src={data.layoutPlanUrl || "/plot1.webp"} 
+                                alt={`${data.title} Layout Plan`}
+                                className="max-w-full max-h-[500px] object-contain transition-transform duration-300"
+                              />
+                            )}
+                          </TransformComponent>
+                        </div>
+                      </div>
+                    )}
+                  </TransformWrapper>
+                )}
               </div>
 
               {/* --- LOCATION ADVANTAGES --- */}
