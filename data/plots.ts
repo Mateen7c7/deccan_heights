@@ -392,7 +392,88 @@ export const phase3Data: PlotVenture = {
   ],
 };
 
-export const allPlotVentures: PlotVenture[] = [phase5Data, phase3Data, phase2Data];
+export const balapurBandraData: PlotVenture = {
+  id: "balapur-bandra",
+  slug: "balapur-bandra",
+  title: "Balapur Bandra",
+  subtitle: "A Reasonable Lavish Life",
+  description:
+    "Balapur Bandra is our premium gated community project, offering both luxurious villa plots and residential open plots. Located in Mallapur, near the Rajiv Gandhi International Airport, the project offers a serene, pollution-free living environment while maintaining close proximity to key commercial hubs and highways. Designed with 100% Vaastu compliance, clear titles, and premium amenities like underground drainage, water supply, and beautifully landscaped parks, it represents a golden investment opportunity with a special buy back policy.",
+  image: "/balapur_bandra_hero.png",
+  status: "ongoing",
+  badge: "New Launch",
+  location: "Mallapur, Near RGI Airport, Hyderabad, Telangana",
+  priceRange: "₹12,500/sq.yd",
+  roiHighlight: "ROI: High Appreciation",
+  thumbnails: ["/balapur_bandra_hero.png", "/plot2.webp", "/plot3.webp"],
+  stats: [
+    { label: "Plot Size", value: "150 - 400 sq.yds" },
+    { label: "Starting Price", value: "₹12,500 per Sq.yard" },
+    { label: "Location", value: "Mallapur" },
+  ],
+  aboutTitle: "About This Project",
+  aboutDescription:
+    "Balapur Bandra is our premium gated community project, offering both luxurious villa plots and residential open plots. Located in Mallapur, near the Rajiv Gandhi International Airport, the project offers a serene, pollution-free living environment while maintaining close proximity to key commercial hubs and highways. Designed with 100% Vaastu compliance, clear titles, and premium amenities like underground drainage, water supply, and beautifully landscaped parks, it represents a golden investment opportunity with a special buy back policy.",
+  aboutStats: [
+    { value: "₹12,500", label: "Outright price per sq.yd", sublabel: "Premium airport-zone pricing" },
+    { value: "Survey 144", label: "Land survey number", sublabel: "Clear title & registration ready" },
+    { value: "Buy Back", label: "Investment protection", sublabel: "100% secure buy back policy" },
+    { value: "100%", label: "Vaastu Compliant", sublabel: "Harmonious layout design" },
+  ],
+  pricingTitle: "Plot Sizes & Pricing",
+  plotSizes: [
+    { size: "150 sq.yd", label: "Total investment", price: "₹18,75,000", rate: "@ ₹12,500/sq.yd", badge: "Premium" },
+    { size: "200 sq.yd", label: "Total investment", price: "₹25,00,000", rate: "@ ₹12,500/sq.yd", badge: "Premium" },
+    { size: "300 sq.yd", label: "Total investment", price: "₹37,50,000", rate: "@ ₹12,500/sq.yd", badge: "Most Popular" },
+    { size: "400 sq.yd", label: "Total investment", price: "₹50,00,000", rate: "@ ₹12,500/sq.yd", badge: "Luxury" },
+  ],
+  customSize: {
+    title: "Custom Plot Sizes",
+    subtitle: "Need a custom layout size?",
+    description: "We offer custom villa plot sizes to suit your specific architectural plans. Get in touch with our team to discuss your customized plot requirements.",
+  },
+  paymentPlans: [
+    { label: "per sq.yd (Outright)", value: "₹12,500" },
+    { label: "per sq.yd (EMI Plan)", value: "₹13,000" },
+    { label: "Booking Amount", value: "₹1,00,000" },
+    { label: "Down Payment", value: "₹5,00,000" },
+    { label: "EMI Duration", value: "12 Months" },
+  ],
+  layoutTitle: "Project Layout Plan",
+  layoutPlanUrl: "/Balapur Bandra.pdf",
+  locationTitle: "Location Advantages",
+  locationAdvantages: [
+    { title: "Very Close to ORR", description: "Very close to the Outer Ring Road (ORR) exit for seamless connectivity." },
+    { title: "Near RGI Airport", description: "Strategically located very close to Rajiv Gandhi International Airport, Shamshabad." },
+    { title: "TCS & IT Hubs", description: "Just a 20-minute drive to TCS, Cognizant, and TATA Aerospace SEZ." },
+    { title: "Financial District", description: "Just 30 minutes drive from Financial District and 40 minutes from Hi-Tech City." },
+    { title: "Wonderla Nearby", description: "Very close to Wonderla Amusement Park, leisure zones, and premium restaurants." },
+    { title: "Educational Hub", description: "Surrounded by reputed engineering and management colleges, and international schools." },
+  ],
+  quoteText: "Balapur Bandra combines premium location advantages near the international airport with a secure buy-back policy, making it the perfect destination for both luxury living and high-return investments.",
+  amenities: [
+    "Aesthetically designed Main Entrance",
+    "50, 36 & 30 feet wide Black Top Roads",
+    "Underground Water supply for each plot",
+    "Underground Drainage System",
+    "Rain Water harvesting pits",
+    "Landscaped Parks with Avenue plantation",
+    "Designer Street Lights",
+    "Clear Title with 100% Vaastu compliance",
+    "Children play area & footpaths with curving stones",
+  ],
+  locationHighlights: [
+    "Very Close to the Outer Ring Road (ORR)",
+    "Very close to Rajiv Gandhi International Airport",
+    "Just 20 Minutes drive to TCS, Cognizant & TATA Aerospace",
+    "Just 30 Minutes drive from Financial District",
+    "Just 40 Minutes drive from Hi-Tech City",
+    "Adjacent to Sri Sailam State Highway and NH-7",
+    "Near Infosys, Jewellery SEZ, Fab City & RCI",
+  ],
+};
+
+export const allPlotVentures: PlotVenture[] = [phase5Data, phase3Data, balapurBandraData, phase2Data];
 
 export const ongoingVentures: VentureListing[] = [
   {
@@ -419,6 +500,19 @@ export const ongoingVentures: VentureListing[] = [
       { label: "Area", value: "12 Acres" },
       { label: "Price", value: "₹8000" },
       { label: "Location", value: "Shadnagar" },
+    ],
+  },
+  {
+    id: 3,
+    title: "Balapur Bandra",
+    description:
+      "A premium gated community offering luxury villa plots and residential open plots in Mallapur, near Rajiv Gandhi International Airport.",
+    image: "/balapur_bandra_hero.png",
+    link: "/ventures/balapur-bandra",
+    stats: [
+      { label: "Area", value: "Survey 144" },
+      { label: "Price", value: "₹12,500" },
+      { label: "Location", value: "Balapur" },
     ],
   },
 ];
@@ -448,6 +542,19 @@ export const activeHomeVentures: VentureListing[] = [
       { label: "Area", value: "12 Acres" },
       { label: "Price", value: "₹8000+" },
       { label: "Location", value: "Shadnagar" },
+    ],
+  },
+  {
+    id: 3,
+    title: "Balapur Bandra",
+    description:
+      "A premium gated community offering luxury villa plots and residential open plots in Mallapur, near Rajiv Gandhi International Airport.",
+    image: "/balapur_bandra_hero.png",
+    link: "/ventures/balapur-bandra",
+    stats: [
+      { label: "Area", value: "Survey 144" },
+      { label: "Price", value: "₹12,500+" },
+      { label: "Location", value: "Balapur" },
     ],
   },
 ];

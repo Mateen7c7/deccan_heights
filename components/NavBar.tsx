@@ -15,6 +15,7 @@ const navLinks = [
     submenu: [
       { name: "Phase 5", href: "/ventures/phase-1" },
       { name: "Phase 3", href: "/ventures/phase-3" },
+      { name: "Balapur Bandra", href: "/ventures/balapur-bandra" },
       { name: "Phase 5 Interactive Map", href: "/maps/phase5" },
     ],
   },
