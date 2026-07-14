@@ -65,7 +65,7 @@ export default function ProfileModal({
                 src={member.image}
                 alt={member.name}
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-charcoal-900/90 to-transparent text-white md:hidden">
                 <h2 className="text-2xl font-bold">{member.name}</h2>
