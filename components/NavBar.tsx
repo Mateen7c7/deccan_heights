@@ -58,23 +58,15 @@ export default function NavBar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 z-50 group">
-          <div className="relative w-12 h-12">
+        <Link href="/" className="flex items-center z-50 group">
+          <div className="relative w-40 h-14 transition-all duration-300">
             <Image
-              src="/logo.png"
+              src="/deccan_heights.png"
               alt="Deccan Heights Logo"
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 48px, 48px"
-            />
-          </div>
-          <div className="relative w-48 h-12">
-            <Image
-              src="/dht-removebg.png"
-              alt="Deccan Heights"
               fill
               className="object-contain object-left"
               priority
+              sizes="(max-width: 768px) 160px, 160px"
             />
           </div>
         </Link>
