@@ -14,6 +14,7 @@ const navLinks = [
     href: "/ventures",
     submenu: [
       { name: "Phase 5", href: "/ventures/phase-1" },
+      { name: "Phase 4", href: "/ventures/phase-4" },
       { name: "Phase 3", href: "/ventures/phase-3" },
       { name: "Balapur Bandra", href: "/ventures/balapur-bandra" },
       { name: "Phase 5 Interactive Map", href: "/maps/phase5" },
@@ -54,27 +55,31 @@ export default function NavBar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md py-3"
-          : "bg-white/70 backdrop-blur-md py-5"
+          ? "bg-white/90 backdrop-blur-md shadow-md py-2 md:py-3 lg:py-4"
+          : "bg-white/70 backdrop-blur-md py-4 md:py-5 lg:py-7"
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center z-50 group">
-          <div className="relative w-40 h-14 transition-all duration-300">
+          <div className={`relative transition-all duration-300 ${
+            scrolled
+              ? "w-40 h-12 md:w-44 md:h-14 lg:w-48 lg:h-16"
+              : "w-44 h-14 md:w-48 md:h-16 lg:w-56 lg:h-20"
+          }`}>
             <Image
-              src="/deccan_heights.png"
+              src="/logo_nobg.png"
               alt="Deccan Heights Logo"
               fill
               className="object-contain object-left"
               priority
-              sizes="(max-width: 768px) 160px, 160px"
+              sizes="(max-width: 768px) 176px, 224px"
             />
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6 lg:gap-8 xl:gap-10">
           {navLinks.map((link) => {
             const isActive =
               pathname === link.href ||
@@ -91,7 +96,7 @@ export default function NavBar() {
                 <div className="flex items-center gap-1 cursor-pointer">
                   <Link href={link.href} className="flex items-center gap-1">
                     <motion.span
-                      className={`text-base font-medium transition-colors duration-300 ${
+                      className={`text-sm lg:text-base xl:text-lg font-medium transition-colors duration-300 ${
                         isActive
                           ? "text-gold-500"
                           : "text-charcoal-500 group-hover:text-gold-500"
@@ -103,7 +108,7 @@ export default function NavBar() {
                   </Link>
                   {hasSubmenu && (
                     <ChevronDown
-                      size={14}
+                      size={16}
                       className={`transition-transform duration-300 ${
                         hoveredLink === link.name ? "rotate-180" : ""
                       } ${
@@ -177,7 +182,7 @@ export default function NavBar() {
             animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="md:hidden fixed inset-0 bg-white backdrop-blur-xl overflow-y-auto flex flex-col pt-24 pb-12 z-40"
+            className="md:hidden fixed inset-0 bg-white backdrop-blur-xl overflow-y-auto flex flex-col pt-28 pb-12 z-40"
           >
             <div className="container mx-auto px-6 flex flex-col space-y-4">
               {navLinks.map((link, index) => {

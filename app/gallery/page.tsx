@@ -109,7 +109,7 @@ export default function GalleryPage() {
       : galleryImages.filter((img) => img.category === filter);
 
   return (
-    <div className="pt-32 pb-20 min-h-screen bg-[#F8F8F8]">
+    <div className="pt-32 md:pt-36 lg:pt-40 pb-20 min-h-screen bg-[#F8F8F8]">
       <div className="container mx-auto px-6 md:px-12">
         {/* Header */}
         <div className="text-center mb-16">

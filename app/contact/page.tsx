@@ -137,7 +137,7 @@ const Header = () => (
     initial="hidden"
     animate="visible"
     variants={staggerContainer}
-    className="relative pt-32 pb-20 px-6 md:px-12 bg-white text-center"
+    className="relative pt-32 md:pt-36 lg:pt-40 pb-20 px-6 md:px-12 bg-white text-center"
   >
     <motion.h1
       variants={fadeInUp}
