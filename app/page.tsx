@@ -8,6 +8,7 @@ import FoundersSection from "@/components/home/FoundersSection";
 import ServicesSection from "@/components/ServicesSection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import WhyHyderabad from "@/components/home/WhyHyderabad";
+import BookSiteVisit from "@/components/home/BookSiteVisit";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <ServicesSection />
       <TestimonialsSection />
       <WhyHyderabad />
+      <BookSiteVisit />
       {/* <OurServicess/>     */}
     </div>
   );
