@@ -53,20 +53,18 @@ export default function NavBar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-md shadow-md py-2 md:py-3 lg:py-4"
-          : "bg-white/70 backdrop-blur-md py-4 md:py-5 lg:py-7"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${scrolled
+        ? "bg-white/90  shadow-md py-2 md:py-1 lg:py-1"
+        : "bg-white/0 py-4 md:py-1 lg:py-1"
+        }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center z-50 group">
-          <div className={`relative transition-all duration-300 ${
-            scrolled
-              ? "w-40 h-12 md:w-44 md:h-14 lg:w-48 lg:h-16"
-              : "w-44 h-14 md:w-48 md:h-16 lg:w-56 lg:h-20"
-          }`}>
+          <div className={`relative transition-all duration-300 ${scrolled
+            ? "w-40 h-12 md:w-44 md:h-14 lg:w-48 lg:h-16"
+            : "w-60 h-30 md:w-80 md:h-40 lg:w-90 lg:h-50"
+            }`}>
             <Image
               src="/logo_nobg.png"
               alt="Deccan Heights Logo"
@@ -96,11 +94,10 @@ export default function NavBar() {
                 <div className="flex items-center gap-1 cursor-pointer">
                   <Link href={link.href} className="flex items-center gap-1">
                     <motion.span
-                      className={`text-sm lg:text-base xl:text-lg font-medium transition-colors duration-300 ${
-                        isActive
-                          ? "text-gold-500"
-                          : "text-charcoal-500 group-hover:text-gold-500"
-                      }`}
+                      className={`text-sm lg:text-base xl:text-lg font-medium transition-colors duration-300 ${isActive
+                        ? "text-gold-500"
+                        : "text-charcoal-500 group-hover:text-gold-500"
+                        }`}
                       whileHover={{ scale: 1.05 }}
                     >
                       {link.name}
@@ -109,24 +106,21 @@ export default function NavBar() {
                   {hasSubmenu && (
                     <ChevronDown
                       size={16}
-                      className={`transition-transform duration-300 ${
-                        hoveredLink === link.name ? "rotate-180" : ""
-                      } ${
-                        isActive
+                      className={`transition-transform duration-300 ${hoveredLink === link.name ? "rotate-180" : ""
+                        } ${isActive
                           ? "text-gold-500"
                           : "text-charcoal-500 group-hover:text-gold-500"
-                      }`}
+                        }`}
                     />
                   )}
                 </div>
 
                 {/* Underline animation */}
                 <span
-                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-gold-500 transform origin-left transition-transform duration-300 ease-out ${
-                    isActive
-                      ? "scale-x-100"
-                      : "scale-x-0 group-hover:scale-x-100"
-                  }`}
+                  className={`absolute bottom-0 left-0 w-full h-0.5 bg-gold-500 transform origin-left transition-transform duration-300 ease-out ${isActive
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                    }`}
                 />
 
                 {/* Dropdown Menu */}
@@ -144,11 +138,10 @@ export default function NavBar() {
                           <Link
                             key={sub.name}
                             href={sub.href}
-                            className={`block px-5 py-3 text-sm font-medium transition-colors ${
-                              pathname === sub.href
-                                ? "text-gold-500 bg-gold-50/50"
-                                : "text-charcoal-500 hover:text-gold-500 hover:bg-gray-50"
-                            }`}
+                            className={`block px-5 py-3 text-sm font-medium transition-colors ${pathname === sub.href
+                              ? "text-gold-500 bg-gold-50/50"
+                              : "text-charcoal-500 hover:text-gold-500 hover:bg-gray-50"
+                              }`}
                           >
                             {sub.name}
                           </Link>
@@ -198,11 +191,10 @@ export default function NavBar() {
                     <div className="flex items-center justify-between">
                       <Link
                         href={link.href}
-                        className={`text-2xl font-medium tracking-wide ${
-                          pathname === link.href
-                            ? "text-gold-500"
-                            : "text-charcoal-500"
-                        }`}
+                        className={`text-2xl font-medium tracking-wide ${pathname === link.href
+                          ? "text-gold-500"
+                          : "text-charcoal-500"
+                          }`}
                         onClick={() => !hasSubmenu && setIsOpen(false)}
                       >
                         {link.name}
@@ -214,11 +206,10 @@ export default function NavBar() {
                           <Link
                             key={sub.name}
                             href={sub.href}
-                            className={`text-lg font-medium ${
-                              pathname === sub.href
-                                ? "text-gold-500"
-                                : "text-charcoal-400"
-                            }`}
+                            className={`text-lg font-medium ${pathname === sub.href
+                              ? "text-gold-500"
+                              : "text-charcoal-400"
+                              }`}
                             onClick={() => setIsOpen(false)}
                           >
                             {sub.name}
