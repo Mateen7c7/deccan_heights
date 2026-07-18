@@ -99,8 +99,8 @@ const BookSiteVisit = () => {
         
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#1e3a8a] tracking-tight">
-            Book Your Free Site Visit
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#3C3C3C] tracking-tight">
+            Book Your Free <span className="text-[#C6A15B]">Site Visit</span>
           </h2>
           <div className="h-[2px] w-12 bg-[#C6A15B] mx-auto mt-4" />
           <p className="text-[#3C3C3C]/80 mt-4 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
@@ -123,7 +123,7 @@ const BookSiteVisit = () => {
               <button 
                 type="button"
                 onClick={() => window.location.href = "tel:+917801052288"}
-                className="w-full bg-[#1e3a8a] hover:bg-[#152e6f] text-white p-4 rounded-xl flex items-center gap-4 transition-colors cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-[#1e3a8a]/50"
+                className="w-full bg-[#C6A15B] hover:bg-[#a48446] text-white p-4 rounded-xl flex items-center gap-4 transition-colors cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50"
               >
                 <div className="w-10 h-10 bg-white/15 rounded-lg flex items-center justify-center shrink-0">
                   <Phone className="w-5 h-5 text-white" />
@@ -154,8 +154,8 @@ const BookSiteVisit = () => {
                 onClick={() => window.location.href = "mailto:hkmcbuildersanddevelopers@gmail.com"}
                 className="w-full bg-[#F8F9FA] hover:bg-gray-200/50 border border-gray-200/60 text-[#3C3C3C] p-4 rounded-xl flex items-center gap-4 transition-colors cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-gray-300"
               >
-                <div className="w-10 h-10 bg-[#1e3a8a]/10 rounded-lg flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-[#1e3a8a]" />
+                <div className="w-10 h-10 bg-[#C6A15B]/10 rounded-lg flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5 text-[#C6A15B]" />
                 </div>
                 <div className="overflow-hidden">
                   <div className="text-[10px] uppercase tracking-wider text-[#3C3C3C]/60 font-semibold">Email Us</div>
@@ -167,7 +167,7 @@ const BookSiteVisit = () => {
             </div>
 
             {/* Why Act Now Card */}
-            <div className="bg-[#1e3a8a] text-white p-6 rounded-2xl shadow-md flex flex-col justify-between flex-1">
+            <div className="bg-[#3C3C3C] text-white p-6 rounded-2xl shadow-md flex flex-col justify-between flex-1">
               <div>
                 <h3 className="text-sm font-bold tracking-wider uppercase text-[#C6A15B] mb-5 border-b border-white/10 pb-2">
                   Why Act Now?
@@ -238,7 +238,7 @@ const BookSiteVisit = () => {
                           value={fullName}
                           onChange={(e) => setFullName(e.target.value)}
                           placeholder="Your name"
-                          className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a] transition-all"
+                          className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] transition-all"
                         />
                       </div>
                       <div>
@@ -255,7 +255,7 @@ const BookSiteVisit = () => {
                             if (phoneError) setPhoneError("");
                           }}
                           placeholder="10-digit number"
-                          className={`w-full px-3.5 py-2.5 rounded-lg border ${phoneError ? "border-red-500" : "border-gray-300"} text-[#3C3C3C] text-sm focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a] transition-all`}
+                          className={`w-full px-3.5 py-2.5 rounded-lg border ${phoneError ? "border-red-500" : "border-gray-300"} text-[#3C3C3C] text-sm focus:outline-none focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] transition-all`}
                         />
                         {phoneError && (
                           <p className="text-[10px] text-red-500 mt-1 flex items-center gap-1 font-medium">
@@ -277,7 +277,7 @@ const BookSiteVisit = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="your@email.com"
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a] transition-all"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] transition-all"
                       />
                     </div>
 
@@ -291,7 +291,7 @@ const BookSiteVisit = () => {
                           id="enquiryProject"
                           value={selectedProject}
                           onChange={(e) => setSelectedProject(e.target.value)}
-                          className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a] transition-all bg-white"
+                          className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] transition-all bg-white"
                         >
                           <option value="">Select Project</option>
                           {allPlotVentures.map((venture) => (
@@ -309,7 +309,7 @@ const BookSiteVisit = () => {
                           id="enquirySize"
                           value={selectedSize}
                           onChange={(e) => setSelectedSize(e.target.value)}
-                          className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a] transition-all bg-white"
+                          className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] transition-all bg-white"
                         >
                           <option value="">Select Size</option>
                           <option value="120 sq.yd">120 sq.yd</option>
@@ -336,7 +336,7 @@ const BookSiteVisit = () => {
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
                         placeholder="Any specific requirements or questions..."
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#1e3a8a] focus:ring-1 focus:ring-[#1e3a8a] transition-all resize-none"
+                        className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 text-[#3C3C3C] text-sm focus:outline-none focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] transition-all resize-none"
                       />
                     </div>
 
@@ -344,7 +344,7 @@ const BookSiteVisit = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full mt-4 bg-[#1e3a8a] hover:bg-[#152e6f] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md disabled:opacity-50 select-none"
+                      className="w-full mt-4 bg-[#C6A15B] hover:bg-[#a48446] text-white py-3 rounded-lg font-bold flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md disabled:opacity-50 select-none"
                     >
                       {isSubmitting ? (
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -369,8 +369,8 @@ const BookSiteVisit = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   className="h-full flex flex-col items-center justify-center text-center p-6"
                 >
-                  <div className="w-16 h-16 bg-[#1e3a8a]/10 rounded-full flex items-center justify-center mb-4">
-                    <CheckCircle2 className="w-8 h-8 text-[#1e3a8a]" />
+                  <div className="w-16 h-16 bg-[#C6A15B]/10 rounded-full flex items-center justify-center mb-4">
+                    <CheckCircle2 className="w-8 h-8 text-[#C6A15B]" />
                   </div>
                   <h3 className="text-xl font-bold text-[#3C3C3C] mb-2">
                     Site Visit Booked!
@@ -380,7 +380,7 @@ const BookSiteVisit = () => {
                   </p>
                   <button
                     onClick={resetForm}
-                    className="px-6 py-2.5 bg-[#1e3a8a]/10 hover:bg-[#1e3a8a]/20 text-[#1e3a8a] text-xs font-bold rounded-lg transition-colors cursor-pointer"
+                    className="px-6 py-2.5 bg-[#C6A15B]/10 hover:bg-[#C6A15B]/20 text-[#C6A15B] text-xs font-bold rounded-lg transition-colors cursor-pointer"
                   >
                     Send Another Enquiry
                   </button>
@@ -411,8 +411,8 @@ const BookSiteVisit = () => {
               {/* Address details */}
               <div className="p-5 flex-1 flex flex-col justify-between">
                 <div className="flex gap-3 items-start mb-4">
-                  <div className="w-8 h-8 rounded-lg bg-[#1e3a8a]/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <MapPin className="w-4.5 h-4.5 text-[#1e3a8a]" />
+                  <div className="w-8 h-8 rounded-lg bg-[#C6A15B]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin className="w-4.5 h-4.5 text-[#C6A15B]" />
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-[#3C3C3C]">
@@ -426,7 +426,7 @@ const BookSiteVisit = () => {
 
                 <button
                   onClick={() => window.open("https://maps.google.com/?q=HKMC+Builders+&+Developers+Pvt.+Ltd.+Lakdikapul+Hyderabad", "_blank")}
-                  className="w-full bg-[#F8F9FA] hover:bg-gray-200/50 border border-gray-200/60 text-[#1e3a8a] py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5"
+                  className="w-full bg-[#F8F9FA] hover:bg-gray-200/50 border border-gray-200/60 text-[#C6A15B] py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5"
                 >
                   <Navigation className="w-3.5 h-3.5" />
                   <span>Get Directions</span>
@@ -438,7 +438,7 @@ const BookSiteVisit = () => {
             <div className="bg-white p-5 rounded-2xl shadow-md border border-gray-100 flex flex-col justify-between flex-1">
               <div>
                 <div className="flex items-center gap-2.5 mb-4 border-b border-gray-100 pb-2">
-                  <Clock className="w-4.5 h-4.5 text-[#1e3a8a]" />
+                  <Clock className="w-4.5 h-4.5 text-[#C6A15B]" />
                   <h3 className="text-sm font-bold text-[#3C3C3C]">
                     Office Hours
                   </h3>
@@ -446,7 +446,7 @@ const BookSiteVisit = () => {
                 
                 <div className="flex justify-between items-center text-xs md:text-sm text-[#3C3C3C] py-2">
                   <span className="text-gray-500 font-medium">Monday – Saturday</span>
-                  <span className="font-bold text-[#1e3a8a]">10 AM – 6 PM</span>
+                  <span className="font-bold text-[#C6A15B]">10 AM – 6 PM</span>
                 </div>
               </div>
 
