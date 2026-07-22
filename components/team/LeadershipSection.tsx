@@ -139,6 +139,9 @@ const leaders: TeamMember[] = [
 ];
 
 export default function LeadershipSection() {
+  const topLeaders = leaders.slice(0, 2);
+  const otherLeaders = leaders.slice(2);
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -157,13 +160,32 @@ export default function LeadershipSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {leaders.map((leader, index) => (
+        {/* Top Tier (Founder & MD) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+          {topLeaders.map((leader, index) => (
             <motion.div
               key={leader.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <TeamCard member={leader} variant="leadership" isFeatured={true} />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Divider / spacing */}
+        <div className="h-px bg-gray-100 max-w-6xl mx-auto mb-16" />
+
+        {/* Secondary Tier (Other Executives) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {otherLeaders.map((leader, index) => (
+            <motion.div
+              key={leader.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
               viewport={{ once: true }}
             >
               <TeamCard member={leader} variant="leadership" />

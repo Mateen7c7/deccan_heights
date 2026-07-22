@@ -9,9 +9,10 @@ import { TeamMember } from "./types";
 interface TeamCardProps {
   member: TeamMember;
   variant?: "leadership" | "sales" | "legal";
+  isFeatured?: boolean;
 }
 
-export default function TeamCard({ member, variant = "sales" }: TeamCardProps) {
+export default function TeamCard({ member, variant = "sales", isFeatured = false }: TeamCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -25,7 +26,9 @@ export default function TeamCard({ member, variant = "sales" }: TeamCardProps) {
         onClick={() => setIsModalOpen(true)}
       >
         {/* Simple elegant card layout */}
-        <div className="relative h-72 w-full overflow-hidden bg-gray-100">
+        <div className={`relative w-full overflow-hidden bg-gray-100 ${
+          isFeatured ? "h-72 lg:h-96" : "h-72"
+        }`}>
           {/* Gradient Overlay on Hover */}
           <div className="absolute inset-0 bg-charcoal-900/0 group-hover:bg-charcoal-900/10 transition-colors z-10" />
 
@@ -39,10 +42,14 @@ export default function TeamCard({ member, variant = "sales" }: TeamCardProps) {
 
         <div className="p-6">
           <div className="mb-2">
-            <h3 className="text-xl font-bold text-charcoal-500 group-hover:text-gold-500 transition-colors">
+            <h3 className={`font-bold text-charcoal-500 group-hover:text-gold-500 transition-colors ${
+              isFeatured ? "text-xl lg:text-2xl" : "text-xl"
+            }`}>
               {member.name}
             </h3>
-            <p className="text-sm text-gold-500 font-medium uppercase tracking-wide">
+            <p className={`text-gold-500 font-medium uppercase tracking-wide ${
+              isFeatured ? "text-sm lg:text-base" : "text-sm"
+            }`}>
               {member.title}
             </p>
           </div>
