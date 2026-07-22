@@ -14,7 +14,7 @@ const leaders: TeamMember[] = [
       "With over 25 years of experience in luxury real estate, Mr. Arshad Ali Khan has shaped the skyline of Deccan. His vision for sustainable, premium living helps drive our mission forward.",
     bio: "Mr. Arshad Ali Khan is the visionary Founder & Chairman of Deccan Heights. Starting his career in 1998, he has overseen the development of over 50 premium residential projects. His leadership style focuses on integrity, innovation, and customer-centricity.",
     email: "arshad@deccanheights.com",
-    linkedin: "#", 
+    linkedin: "#",
     certifications: ["RERA Certified"],
   },
   {
@@ -59,7 +59,7 @@ const leaders: TeamMember[] = [
     linkedin: "#",
     expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Operations Professional"],
-  },{
+  }, {
     id: "l5",
     name: "Syed jaleel Quadri",
     title: "Asst general manager",
@@ -71,7 +71,7 @@ const leaders: TeamMember[] = [
     linkedin: "#",
     expertises: ["Sales Strategy", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Sales Asst General Manager"],
-  },{
+  }, {
     id: "l6",
     name: "Ashfak Ishaq Yin",
     title: "Business Strategist ",
@@ -87,7 +87,7 @@ const leaders: TeamMember[] = [
   {
     id: "l7",
     name: "Mohammed Akram",
-    title:"Chief Marketing Manager",
+    title: "Chief Marketing Manager",
     image: "/staff/Mohammed Akram.jpg",
     summary:
       "Mohammed Akram is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
@@ -110,11 +110,11 @@ const leaders: TeamMember[] = [
     linkedin: "#",
     expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Operations Manager"],
-  },{
+  }, {
     id: "l9",
     name: "Imran Khan",
     title: "Chief Marketing Manager",
-    image: "/staff/Imran Khan.jpg",
+    image: "/staff/ImranKhan.jpg",
     summary:
       "Imran Khan is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
     bio: "Imran Khan is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
@@ -122,7 +122,7 @@ const leaders: TeamMember[] = [
     linkedin: "#",
     expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Marketing Manager"],
-  },{
+  }, {
     id: "l10",
     name: "Mohammed Abdul Mujeeb",
     title: "Chief Marketing Manager",
@@ -135,7 +135,7 @@ const leaders: TeamMember[] = [
     expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Marketing Manager"],
   },
-  
+
 ];
 
 export default function LeadershipSection() {
