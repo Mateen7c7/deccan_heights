@@ -17,7 +17,8 @@ import {
   Layers,
   Clock,
   CheckCircle2,
-  ChevronDown
+  ChevronDown,
+  ExternalLink
 } from "lucide-react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { allPlotVentures } from "@/data/plots";
@@ -332,13 +333,25 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
               <div className="space-y-4">
                 <span className="text-xs font-bold text-[#C6A15B] uppercase tracking-widest block pl-2">Layout Plan</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#3C3C3C] pl-2 mb-2">
-                  {data.layoutTitle || "Project Layout Plan"}
+                  {data.layoutPlanUrl ? (
+                    <a 
+                      href={data.layoutPlanUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-[#C6A15B] transition-colors inline-flex items-center gap-2 group cursor-pointer"
+                    >
+                      <span>{data.layoutTitle || "Project Layout Plan"}</span>
+                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-[#C6A15B] transition-colors shrink-0" />
+                    </a>
+                  ) : (
+                    data.layoutTitle || "Project Layout Plan"
+                  )}
                 </h2>
 
                 {data.layoutPlanUrl?.endsWith(".pdf") ? (
                   <div className="w-full bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md">
                     {/* PDF Header */}
-                    <div className="bg-[#1E293B] text-white p-4 flex items-center justify-between">
+                    <div className="bg-[#1E293B] text-white p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg bg-[#C6A15B]/20 flex items-center justify-center text-[#C6A15B] font-bold">
                           DH
@@ -352,13 +365,24 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                           </p>
                         </div>
                       </div>
-                      <a 
-                        href={data.layoutPlanUrl} 
-                        download
-                        className="bg-[#C6A15B] hover:bg-[#b08e4f] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors cursor-pointer"
-                      >
-                        Download PDF
-                      </a>
+                      <div className="flex items-center gap-2">
+                        <a 
+                          href={data.layoutPlanUrl} 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          <span>Open in New Tab</span>
+                        </a>
+                        <a 
+                          href={data.layoutPlanUrl} 
+                          download
+                          className="bg-[#C6A15B] hover:bg-[#b08e4f] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors cursor-pointer whitespace-nowrap"
+                        >
+                          Download PDF
+                        </a>
+                      </div>
                     </div>
                     {/* PDF Content */}
                     <div className="w-full h-[600px] bg-gray-100 flex items-center justify-center">
@@ -379,7 +403,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                     {({ zoomIn, zoomOut, resetTransform }) => (
                       <div className="w-full bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-md">
                         {/* Interactive Map Header */}
-                        <div className="bg-[#1E293B] text-white p-4 flex items-center justify-between">
+                        <div className="bg-[#1E293B] text-white p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                           <div className="flex items-center gap-3">
                             <div className="w-10 h-10 rounded-lg bg-[#C6A15B]/20 flex items-center justify-center text-[#C6A15B] font-bold">
                               DH
@@ -393,9 +417,22 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                               </p>
                             </div>
                           </div>
-                          <span className="bg-[#EA580C] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                            {data.status === "completed" ? "Completed" : "NEW LAUNCH"}
-                          </span>
+                          <div className="flex items-center gap-2.5">
+                            {data.layoutPlanUrl && (
+                              <a 
+                                href={data.layoutPlanUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-slate-700 hover:bg-slate-600 text-white text-[10px] font-bold px-3 py-1.5 rounded-lg transition-colors cursor-pointer flex items-center gap-1 whitespace-nowrap"
+                              >
+                                <ExternalLink className="w-3 h-3" />
+                                <span>Open in New Tab</span>
+                              </a>
+                            )}
+                            <span className="bg-[#EA580C] text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider whitespace-nowrap">
+                              {data.status === "completed" ? "Completed" : "NEW LAUNCH"}
+                            </span>
+                          </div>
                         </div>
 
                         {/* Control Strip */}
