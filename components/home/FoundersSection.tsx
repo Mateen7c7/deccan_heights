@@ -18,23 +18,6 @@ const founders: TeamMember[] = [
     linkedin: "#",
     certifications: ["RERA Certified"],
   },
-  {
-    id: "founder-2",
-    name: "Mr. Adnan Ali Khan",
-    title: "Managing Director",
-    image: "/staff/adnan.jpeg",
-    summary:
-      "Mr. Adnan Ali Khan leads operational excellence at Deccan Heights, ensuring every project meets the Gold Standard. His attention to detail and customer focus is unmatched.",
-    bio: "Mr. Adnan Ali Khan serves as Managing Director of Deccan Heights, overseeing project execution, legal compliance, and customer experience. He brings operational discipline and a commitment to delivering premium real estate with transparency and integrity.",
-    email: "adnan@deccanheights.com",
-    linkedin: "#",
-    expertises: [
-      "Operations Management",
-      "Legal Compliance",
-      "Customer Experience",
-    ],
-    certifications: ["Green Building Certified", "MBA"],
-  },
 ];
 
 export default function FoundersSection() {
@@ -51,7 +34,7 @@ export default function FoundersSection() {
             Leadership
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-charcoal-500 mt-2 mb-4">
-            Meet Our Founders
+            Meet Our Founder
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
             Guiding Deccan Heights with decades of industry experience and an
@@ -59,7 +42,7 @@ export default function FoundersSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="max-w-md mx-auto">
           {founders.map((founder, index) => (
             <motion.div
               key={founder.id}
