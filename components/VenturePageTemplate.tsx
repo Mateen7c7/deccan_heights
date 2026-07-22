@@ -121,10 +121,10 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
   const otherProjects = allPlotVentures.filter((p) => p.id !== data.id);
 
   return (
-    <main className="min-h-screen bg-[#F8F8F8] pt-[72px] md:pt-[84px] text-[#3C3C3C]">
+    <main className="min-h-screen bg-[#F8F8F8] pt-[64px] md:pt-[72px] text-[#3C3C3C]">
       
       {/* --- SUB HEADER / BREADCRUMBS --- */}
-      <div className="sticky top-[72px] md:top-[84px] z-30 bg-white border-b border-gray-200 py-3 px-6 shadow-xs">
+      <div className="sticky top-[64px] md:top-[72px] z-30 bg-white border-b border-gray-200 py-3 px-6 shadow-xs">
         <div className="container mx-auto flex items-center justify-between text-xs md:text-sm">
           <Link 
             href="/ventures" 

@@ -34,6 +34,9 @@ export default function NavBar() {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const pathname = usePathname();
 
+  const isHome = pathname === "/";
+  const isSolid = scrolled || !isHome;
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +56,7 @@ export default function NavBar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${scrolled
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${isSolid
         ? "bg-white/90  shadow-md py-2 md:py-1 lg:py-1"
         : "bg-white/0 py-4 md:py-1 lg:py-1"
         }`}
@@ -61,9 +64,9 @@ export default function NavBar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center z-50 group">
-          <div className={`relative transition-all duration-300 ${scrolled
+          <div className={`relative transition-all duration-300 ${isSolid
             ? "w-40 h-12 md:w-44 md:h-14 lg:w-48 lg:h-16"
-            : "w-60 h-30 md:w-80 md:h-40 lg:w-90 lg:h-50"
+            : "w-48 h-16 md:w-64 md:h-20 lg:w-80 lg:h-24"
             }`}>
             <Image
               src="/logo_nobg.png"
