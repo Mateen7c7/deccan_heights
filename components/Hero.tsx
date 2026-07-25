@@ -1,12 +1,27 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
+import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+const IMAGES = [
+  "/dhi.png",
+  "/dh2.png",
+  "/dh3.png",
+];
+
 const Hero = () => {
   const ref = useRef<HTMLElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % IMAGES.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [currentSlide]);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -52,27 +67,35 @@ const Hero = () => {
       className="relative h-screen min-h-[700px] w-full overflow-hidden flex items-center justify-center bg-gray-900"
     >
       {/* Background Layer with Parallax & Zoom */}
-      <motion.div style={{ y: backgroundY }} className="absolute inset-0 z-0">
-        <motion.div
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="relative w-full h-[120%] -top-[10%]" // Taller to accommodate parallax
-        >
-          <Image
-            src="/plot1.webp"
-            alt="Luxury Real Estate"
-            fill
-            className="object-cover"
-            priority
-            quality={90}
-          />
-        </motion.div>
+      <motion.div style={{ y: backgroundY }} className="absolute inset-0 z-0 select-none">
+        <AnimatePresence initial={false}>
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, scale: 1.08 }}
+            animate={{ opacity: 1, scale: 1.03 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              opacity: { duration: 1.2, ease: "easeInOut" },
+              scale: { duration: 7, ease: "easeOut" },
+            }}
+            className="absolute inset-0 w-full h-[120%] -top-[10%]"
+          >
+            <Image
+              src={IMAGES[currentSlide]}
+              alt={`Luxury Real Estate Slide ${currentSlide + 1}`}
+              fill
+              className="object-cover"
+              priority
+              quality={90}
+            />
+          </motion.div>
+        </AnimatePresence>
 
         {/* Cinematic Overlay - Darker at bottom for text readability */}
-        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/30 to-black/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/35 to-black/80 z-10 pointer-events-none" />
 
         {/* Ambient Gold Glow */}
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#C6A15B]/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#C6A15B]/10 rounded-full blur-[120px] pointer-events-none mix-blend-screen z-10" />
       </motion.div>
 
       {/* Main Content */}
@@ -168,6 +191,56 @@ const Hero = () => {
             </Link>
           </motion.div>
         </motion.div>
+      </div>
+
+      {/* Navigation Arrows */}
+      <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-20 flex justify-between px-4 md:px-8 pointer-events-none">
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + IMAGES.length) % IMAGES.length)}
+          className="pointer-events-auto flex items-center justify-center w-12 h-12 rounded-full border border-white/20 bg-black/30 text-white backdrop-blur-xs transition-all duration-300 hover:bg-[#C6A15B] hover:border-[#C6A15B] hover:scale-110 cursor-pointer shadow-lg group"
+          aria-label="Previous slide"
+        >
+          <svg
+            className="w-6 h-6 transform group-hover:-translate-x-0.5 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % IMAGES.length)}
+          className="pointer-events-auto flex items-center justify-center w-12 h-12 rounded-full border border-white/20 bg-black/30 text-white backdrop-blur-xs transition-all duration-300 hover:bg-[#C6A15B] hover:border-[#C6A15B] hover:scale-110 cursor-pointer shadow-lg group"
+          aria-label="Next slide"
+        >
+          <svg
+            className="w-6 h-6 transform group-hover:translate-x-0.5 transition-transform"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Slide Indicators */}
+      <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
+        {IMAGES.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
+              currentSlide === index
+                ? "bg-[#C6A15B] w-8 shadow-[0_0_8px_#C6A15B]"
+                : "bg-white/40 hover:bg-white/70"
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
       </div>
 
       {/* Scroll Indicator */}
