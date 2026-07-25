@@ -135,6 +135,44 @@ const leaders: TeamMember[] = [
     expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Marketing Manager"],
   },
+  {
+    id: "l11",
+    name: "Mohammed Maseehuddin",
+    title: "Chief Marketing Manager",
+    image: "/staff/Mohammed Maseehuddin.jpeg",
+    summary:
+      "Mohammed Maseehuddin is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
+    bio: "Mohammed Maseehuddin is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
+    email: "maseehuddin@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Marketing Manager"],
+  },
+  {
+    id: "l12",
+    name: "Syed Nooruddin",
+    title: "Chief Executive Officer",
+    image: "/staff/Syed Nooruddin.jpeg",
+    summary:
+      "Syed Nooruddin is the chief executive officer of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio: "Syed Nooruddin is the chief executive officer of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+    email: "nooruddin@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Leadership", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Chief Executive Officer"],
+  },{
+    id:"l13",
+    name:"Syed Zubair",
+    title:"General Manager",
+    image:"/staff/Syed Zubair.jpeg",
+    summary:
+    "Syed Zubair is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio: "Syed Zubair is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+    email: "zubair@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified General Manager"],
+  }
 
 ];
 
