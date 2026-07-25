@@ -122,7 +122,7 @@ const Hero = () => {
             </span>
             <br className="hidden md:block" />
             <span className="inline-block text-[#C6A15B]">
-              {"Plot Ventures".split(" ").map((word, i) => (
+              {"Ventures".split(" ").map((word, i) => (
                 <motion.span
                   key={i}
                   variants={wordVariants}
@@ -171,7 +171,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.98 }}
                 className="group relative px-8 py-4 bg-linear-to-r from-[#C6A15B] to-[#AA8540] text-white text-lg font-medium rounded-full shadow-xl transition-all duration-300 overflow-hidden cursor-pointer w-full sm:w-auto"
               >
-                <span className="relative z-10">View Our Plot Ventures</span>
+                <span className="relative z-10">View Our  Ventures</span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               </motion.button>
             </Link>

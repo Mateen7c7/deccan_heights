@@ -35,6 +35,45 @@ const leaders: TeamMember[] = [
     certifications: ["Green Building Certified", "MBA"],
   },
   {
+    id: "l5",
+    name: "Syed jaleel Quadri",
+    title: "Asst general manager",
+    image: "/staff/SyedjaleelQuadri.jpeg",
+    summary:
+      "Jaleel brings a dynamic approach to sales, focusing on building long-term relationships rather than just closing deals. He mentors our elite sales force.",
+    bio: "Jaleel is the asst general manager of Deccan Heights. He is responsible for the overall sales of the company. He has a background in sales and has a proven track record of success in the real estate industry.",
+    email: "jaleel@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Sales Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Sales Asst General Manager"],
+  },
+  {
+    id: "l12",
+    name: "Syed Nooruddin",
+    title: "Chief Executive Officer",
+    image: "/staff/Syed Nooruddin.jpeg",
+    summary:
+      "Syed Nooruddin is the chief executive officer of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio: "Syed Nooruddin is the chief executive officer of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+    email: "nooruddin@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Leadership", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Chief Executive Officer"],
+  },
+  {
+    id: "l6",
+    name: "Ashfak Ishaq Yin",
+    title: "Business Strategist ",
+    image: "/staff/AshfakIshaqYin.jpeg",
+    summary:
+      "Ashfak brings a dynamic approach to business, focusing on building long-term relationships rather than just closing deals. He mentors our elite business force.",
+    bio: "A Seasoned entrepreneur with a financial backbone, investor and business strategist with 30+ years of global experience across India, the Middle East, USA, Malaysia, and beyond. One who has worn many hats - CFO, Business Head, Director, Mentor, Co-founder across a remarkably diverse range of industries.Best at collaborating, building, structuring and strategically growing businesses, especially in early to mid stages.",
+    email: "ashfak@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Business Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Business Strategist"],
+  },
+  {
     id: "l3",
     name: "Syed Zakir Quadri ",
     title: "President (sales & Marketing)",
@@ -59,30 +98,33 @@ const leaders: TeamMember[] = [
     linkedin: "#",
     expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Operations Professional"],
-  }, {
-    id: "l5",
-    name: "Syed jaleel Quadri",
-    title: "Asst general manager",
-    image: "/staff/SyedjaleelQuadri.jpeg",
+  },
+
+  {
+    id: "l13",
+    name: "Syed Zubair",
+    title: "General Manager",
+    image: "/staff/Syed Zubair.jpeg",
     summary:
-      "Jaleel brings a dynamic approach to sales, focusing on building long-term relationships rather than just closing deals. He mentors our elite sales force.",
-    bio: "Jaleel is the asst general manager of Deccan Heights. He is responsible for the overall sales of the company. He has a background in sales and has a proven track record of success in the real estate industry.",
-    email: "jaleel@deccanheights.com",
+      "Syed Zubair is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio: "Syed Zubair is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+    email: "zubair@deccanheights.com",
     linkedin: "#",
-    expertises: ["Sales Strategy", "Team Leadership", "Market Analysis"],
-    certifications: ["Certified Sales Asst General Manager"],
-  }, {
-    id: "l6",
-    name: "Ashfak Ishaq Yin",
-    title: "Business Strategist ",
-    image: "/staff/AshfakIshaqYin.jpeg",
+    expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified General Manager"],
+  },
+  {
+    id: "l8",
+    name: "Gulam Mustafa",
+    title: "General Manager",
+    image: "/staff/Gulam Mustafa.jpg",
     summary:
-      "Ashfak brings a dynamic approach to business, focusing on building long-term relationships rather than just closing deals. He mentors our elite business force.",
-    bio: "A Seasoned entrepreneur with a financial backbone, investor and business strategist with 30+ years of global experience across India, the Middle East, USA, Malaysia, and beyond. One who has worn many hats - CFO, Business Head, Director, Mentor, Co-founder across a remarkably diverse range of industries.Best at collaborating, building, structuring and strategically growing businesses, especially in early to mid stages.",
-    email: "ashfak@deccanheights.com",
+      "Gulam Mustafa is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio: "Gulam Mustafa is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+    email: "mustafa@deccanheights.com",
     linkedin: "#",
-    expertises: ["Business Strategy", "Team Leadership", "Market Analysis"],
-    certifications: ["Certified Business Strategist"],
+    expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Operations Manager"],
   },
   {
     id: "l7",
@@ -99,18 +141,6 @@ const leaders: TeamMember[] = [
 
   },
   {
-    id: "l8",
-    name: "Gulam Mustafa",
-    title: "General Manager",
-    image: "/staff/Gulam Mustafa.jpg",
-    summary:
-      "Gulam Mustafa is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
-    bio: "Gulam Mustafa is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
-    email: "mustafa@deccanheights.com",
-    linkedin: "#",
-    expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
-    certifications: ["Certified Operations Manager"],
-  }, {
     id: "l9",
     name: "Imran Khan",
     title: "Chief Marketing Manager",
@@ -147,31 +177,6 @@ const leaders: TeamMember[] = [
     linkedin: "#",
     expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Marketing Manager"],
-  },
-  {
-    id: "l12",
-    name: "Syed Nooruddin",
-    title: "Chief Executive Officer",
-    image: "/staff/Syed Nooruddin.jpeg",
-    summary:
-      "Syed Nooruddin is the chief executive officer of Deccan Heights. He is responsible for the overall operations of the company.",
-    bio: "Syed Nooruddin is the chief executive officer of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
-    email: "nooruddin@deccanheights.com",
-    linkedin: "#",
-    expertises: ["Leadership", "Team Leadership", "Market Analysis"],
-    certifications: ["Certified Chief Executive Officer"],
-  },{
-    id:"l13",
-    name:"Syed Zubair",
-    title:"General Manager",
-    image:"/staff/Syed Zubair.jpeg",
-    summary:
-    "Syed Zubair is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
-    bio: "Syed Zubair is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
-    email: "zubair@deccanheights.com",
-    linkedin: "#",
-    expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
-    certifications: ["Certified General Manager"],
   }
 
 ];
