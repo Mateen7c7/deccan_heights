@@ -87,7 +87,7 @@ const PremiumPlots = () => {
       value: 15,
       suffix: "+",
       label: " Ventures",
-      subtitle: "Happy Families",
+      subtitle: "Successful Projects",
       description:
         "Join a growing community of satisfied investors and homeowners.",
       icon: (
