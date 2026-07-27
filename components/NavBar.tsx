@@ -61,20 +61,20 @@ export default function NavBar() {
         : "bg-white/0 py-4 md:py-1 lg:py-1"
         }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="container mx-auto lg:mx-0 px-6  flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center z-50 group">
           <div className={`relative transition-all duration-300 ${isSolid
-            ? "w-40 h-12 md:w-44 md:h-14 lg:w-48 lg:h-16"
-            : "w-48 h-16 md:w-64 md:h-20 lg:w-80 lg:h-24"
+            ? "w-[130px] h-[80px] md:w-[160px] md:h-[98px] lg:w-[180px] lg:h-[111px]"
+            : "w-[160px] h-[98px] md:w-[200px] md:h-[123px] lg:w-[450px] lg:h-[100px]"
             }`}>
             <Image
-              src="/logo_nobg.png"
+              src="/new_dh_logo_c.png"
               alt="Deccan Heights Logo"
               fill
-              className="object-contain object-left"
+              className="object-cover"
               priority
-              sizes="(max-width: 768px) 176px, 224px"
+              // sizes="(max-width: 768px) 300px, 500px"    
             />
           </div>
         </Link>
