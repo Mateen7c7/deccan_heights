@@ -244,7 +244,7 @@ export default function VentureCard({ venture }) {
 
                     {/* WhatsApp */}
                     <a
-                        href={`https://wa.me/917801055200?text=${encodeURIComponent(`Hi, I'm interested in ${venture.title || fullVenture.title || "Deccan Heights"}. Please provide more details.`)}`}
+                        href={`https://wa.me/918686059555?text=${encodeURIComponent(`Hi, I'm interested in ${venture.title || fullVenture.title || "Deccan Heights"}. Please provide more details.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex-1"

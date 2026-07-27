@@ -5,15 +5,15 @@ import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import { 
-  ArrowLeft, 
-  Phone, 
-  Calendar, 
-  MapPin, 
-  TrendingUp, 
-  DollarSign, 
-  ArrowRight, 
-  ShieldCheck, 
+import {
+  ArrowLeft,
+  Phone,
+  Calendar,
+  MapPin,
+  TrendingUp,
+  DollarSign,
+  ArrowRight,
+  ShieldCheck,
   Layers,
   Clock,
   CheckCircle2,
@@ -87,7 +87,7 @@ interface VentureData {
 
 const WhatsAppIcon = () => (
   <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.864.001-2.63-1.019-5.101-2.875-6.958C16.604 1.926 14.129.905 11.5.905c-5.437 0-9.86 4.418-9.863 9.862-.001 1.83.5 3.61 1.449 5.183L2.094 21.94l6.053-1.586zM17.91 14.67c-.337-.17-1.996-.985-2.305-1.096-.309-.112-.534-.168-.758.17-.224.337-.87 1.096-1.066 1.32-.197.225-.393.25-.73.08-1.037-.52-2.05-1.04-2.87-1.745-.638-.55-1.07-1.23-1.196-1.45-.126-.22-.013-.34.1-.497.102-.142.224-.282.337-.42.112-.142.15-.24.225-.39.075-.15.037-.282-.019-.393-.056-.112-.534-1.286-.73-1.765-.19-.458-.383-.396-.534-.4-.14-.007-.303-.008-.466-.008a.89.89 0 00-.645.3c-.224.24-.855.836-.855 2.036 0 1.2 1.417 2.36 1.6 2.61.19.25 2.628 4.013 6.368 5.626.889.384 1.584.614 2.127.787.893.284 1.706.244 2.348.148.715-.107 2.196-.897 2.505-1.765.309-.868.309-1.613.217-1.765-.09-.153-.337-.24-.675-.41z"/>
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.863-9.864.001-2.63-1.019-5.101-2.875-6.958C16.604 1.926 14.129.905 11.5.905c-5.437 0-9.86 4.418-9.863 9.862-.001 1.83.5 3.61 1.449 5.183L2.094 21.94l6.053-1.586zM17.91 14.67c-.337-.17-1.996-.985-2.305-1.096-.309-.112-.534-.168-.758.17-.224.337-.87 1.096-1.066 1.32-.197.225-.393.25-.73.08-1.037-.52-2.05-1.04-2.87-1.745-.638-.55-1.07-1.23-1.196-1.45-.126-.22-.013-.34.1-.497.102-.142.224-.282.337-.42.112-.142.15-.24.225-.39.075-.15.037-.282-.019-.393-.056-.112-.534-1.286-.73-1.765-.19-.458-.383-.396-.534-.4-.14-.007-.303-.008-.466-.008a.89.89 0 00-.645.3c-.224.24-.855.836-.855 2.036 0 1.2 1.417 2.36 1.6 2.61.19.25 2.628 4.013 6.368 5.626.889.384 1.584.614 2.127.787.893.284 1.706.244 2.348.148.715-.107 2.196-.897 2.505-1.765.309-.868.309-1.613.217-1.765-.09-.153-.337-.24-.675-.41z" />
   </svg>
 );
 
@@ -106,7 +106,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim()) return;
-    
+
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phone)) {
       setPhoneError("Please enter a valid 10-digit phone number");
@@ -122,12 +122,12 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
 
   return (
     <main className="min-h-screen bg-[#F8F8F8] pt-[64px] md:pt-[72px] text-[#3C3C3C]">
-      
+
       {/* --- SUB HEADER / BREADCRUMBS --- */}
       <div className="sticky top-[64px] md:top-[72px] z-30 bg-white border-b border-gray-200 py-3 px-6 shadow-xs">
         <div className="container mx-auto flex items-center justify-between text-xs md:text-sm">
-          <Link 
-            href="/ventures" 
+          <Link
+            href="/ventures"
             className="flex items-center gap-2 text-gray-500 hover:text-[#C6A15B] font-medium transition-colors cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -138,8 +138,8 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
             <span>&gt;</span>
             <span className="text-[#3C3C3C] font-semibold">{data.title}</span>
           </div>
-          <a 
-            href="tel:+917801055200" 
+          <a
+            href="tel:+918686059555"
             className="flex items-center gap-2 bg-[#C6A15B]/10 text-[#C6A15B] hover:bg-[#C6A15B] hover:text-white px-4 py-1.5 rounded-full font-bold transition-all cursor-pointer"
           >
             <Phone className="w-3.5 h-3.5" />
@@ -211,11 +211,10 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                 <button
                   key={idx}
                   onClick={() => setActiveImage(thumb)}
-                  className={`w-14 h-14 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${
-                    activeImage === thumb
+                  className={`w-14 h-14 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${activeImage === thumb
                       ? "border-[#C6A15B] scale-105 shadow-md"
                       : "border-white/20 hover:border-white/60 opacity-80 hover:opacity-100"
-                  }`}
+                    }`}
                   aria-label={`View Image ${idx + 1}`}
                 >
                   <img src={thumb} alt="" className="w-full h-full object-cover" />
@@ -230,10 +229,10 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
       <section className="py-16">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-10 items-start">
-            
+
             {/* --- LEFT COLUMN: 7 COLS --- */}
             <div className="lg:col-span-7 space-y-16">
-              
+
               {/* --- ABOUT PROJECT SECTION --- */}
               <div className="bg-white rounded-2xl border border-gray-100 p-8 shadow-xs">
                 <span className="text-xs font-bold text-[#C6A15B] uppercase tracking-widest block mb-2">Overview</span>
@@ -248,7 +247,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                 {data.aboutStats && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     {data.aboutStats.map((stat, idx) => (
-                      <div key={idx} className="bg-[#F8F8F8] rounded-xl border border-gray-150 p-5 text-center transition-all hover:shadow-xs hover:border-[#C6A15B]/30">
+                      <div key={idx} className="bg-[#F8F8F8] rounded-xl border border-gray-150 py-4 text-center transition-all hover:shadow-xs hover:border-[#C6A15B]/30">
                         <p className="text-2xl md:text-3xl font-extrabold text-[#C6A15B] tracking-tight">{stat.value}</p>
                         <p className="text-xs font-bold text-[#3C3C3C] mt-2 mb-1">{stat.label}</p>
                         {stat.sublabel && (
@@ -273,8 +272,8 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                 {data.plotSizes && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {data.plotSizes.map((sizeOpt, idx) => (
-                      <div 
-                        key={idx} 
+                      <div
+                        key={idx}
                         className="bg-white rounded-xl border border-gray-200 p-5 relative hover:border-[#C6A15B] hover:shadow-sm transition-all"
                       >
                         {sizeOpt.badge && (
@@ -301,7 +300,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                       <h4 className="text-base font-bold text-[#3C3C3C] mb-1">{data.customSize.subtitle}</h4>
                       <p className="text-xs text-gray-600 leading-relaxed">{data.customSize.description}</p>
                     </div>
-                    <button 
+                    <button
                       onClick={() => document.getElementById("enquiry-form-card")?.scrollIntoView({ behavior: "smooth" })}
                       className="px-5 py-3 bg-[#C6A15B] text-white text-xs font-bold rounded-lg hover:bg-[#3C3C3C] transition-colors shrink-0 cursor-pointer shadow-xs"
                     >
@@ -334,7 +333,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                 <span className="text-xs font-bold text-[#C6A15B] uppercase tracking-widest block pl-2">Layout Plan</span>
                 <h2 className="text-2xl md:text-3xl font-bold text-[#3C3C3C] pl-2 mb-2">
                   {data.layoutPlanUrl ? (
-                    <a 
+                    <a
                       href={data.layoutPlanUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -366,8 +365,8 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <a 
-                          href={data.layoutPlanUrl} 
+                        <a
+                          href={data.layoutPlanUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="bg-slate-700 hover:bg-slate-600 text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap"
@@ -375,8 +374,8 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                           <ExternalLink className="w-3.5 h-3.5" />
                           <span>Open in New Tab</span>
                         </a>
-                        <a 
-                          href={data.layoutPlanUrl} 
+                        <a
+                          href={data.layoutPlanUrl}
                           download
                           className="bg-[#C6A15B] hover:bg-[#b08e4f] text-white text-xs font-bold px-4 py-2 rounded-lg transition-colors cursor-pointer whitespace-nowrap"
                         >
@@ -419,7 +418,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                           </div>
                           <div className="flex items-center gap-2.5">
                             {data.layoutPlanUrl && (
-                              <a 
+                              <a
                                 href={data.layoutPlanUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -444,26 +443,26 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                             <span>Drag to pan, double click or pinch to zoom.</span>
                           </div>
                           <div className="flex items-center justify-end gap-3 font-semibold text-[#3C3C3C]">
-                            <button 
+                            <button
                               type="button"
-                              onClick={() => zoomOut()} 
+                              onClick={() => zoomOut()}
                               className="w-8 h-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 active:scale-95 transition-all cursor-pointer font-bold shadow-2xs"
                               aria-label="Zoom Out"
                             >
                               —
                             </button>
                             <span className="w-12 text-center text-xs text-gray-500 font-bold">Scale</span>
-                            <button 
+                            <button
                               type="button"
-                              onClick={() => zoomIn()} 
+                              onClick={() => zoomIn()}
                               className="w-8 h-8 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-gray-50 active:scale-95 transition-all cursor-pointer font-bold shadow-2xs"
                               aria-label="Zoom In"
                             >
                               +
                             </button>
-                            <button 
+                            <button
                               type="button"
-                              onClick={() => resetTransform()} 
+                              onClick={() => resetTransform()}
                               className="px-3 py-1.5 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 active:scale-95 transition-all cursor-pointer text-xs font-bold shadow-2xs"
                             >
                               Reset
@@ -479,8 +478,8 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                                 <Phase5 width={800} height={600} />
                               </div>
                             ) : (
-                              <img 
-                                src={data.layoutPlanUrl || "/plot1.webp"} 
+                              <img
+                                src={data.layoutPlanUrl || "/plot1.webp"}
                                 alt={`${data.title} Layout Plan`}
                                 className="max-w-full max-h-[500px] object-contain transition-transform duration-300"
                               />
@@ -505,8 +504,8 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                 {data.locationAdvantages && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {data.locationAdvantages.map((adv, idx) => (
-                      <div 
-                        key={idx} 
+                      <div
+                        key={idx}
                         className="bg-white hover:bg-[#F8F8F8] border border-gray-200 rounded-xl p-5 flex items-start gap-4 transition-all hover:border-[#C6A15B]/30"
                       >
                         <div className="w-10 h-10 rounded-lg bg-[#C6A15B]/10 flex items-center justify-center text-[#C6A15B] shrink-0 mt-0.5">
@@ -536,10 +535,10 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
 
             {/* --- RIGHT COLUMN: 3 COLS (STICKY SIDEBAR) --- */}
             <div className="lg:col-span-3 lg:sticky lg:top-[160px] space-y-6">
-              
+
               {/* Enquiry Form Card */}
-              <div 
-                id="enquiry-form-card" 
+              <div
+                id="enquiry-form-card"
                 className="bg-white rounded-2xl border border-gray-150 p-6 shadow-md"
               >
                 <h3 className="text-lg font-extrabold text-[#3C3C3C] mb-5 border-b border-gray-100 pb-3">
@@ -548,11 +547,11 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
 
                 <AnimatePresence mode="wait">
                   {!isSubmitted ? (
-                    <motion.form 
+                    <motion.form
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      onSubmit={handleSubmit} 
+                      onSubmit={handleSubmit}
                       className="space-y-4"
                     >
                       <div>
@@ -580,7 +579,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                           <p className="text-[11px] text-red-500 font-semibold mt-1">{phoneError}</p>
                         )}
                       </div>
-                      
+
                       {data.plotSizes && (
                         <div>
                           <label className="block text-xs font-bold text-gray-500 mb-1.5 uppercase">Select Plot Size</label>
@@ -608,15 +607,15 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                       </button>
 
                       <a
-                        href="tel:+917801055200"
+                        href="tel:+918686059555"
                         className="w-full py-3 bg-[#F8F8F8] border border-gray-200 text-[#3C3C3C] text-sm font-bold rounded-lg hover:bg-gray-100 transition-colors cursor-pointer flex items-center justify-center gap-2 shadow-2xs text-center"
                       >
                         <Phone className="w-4 h-4 text-gray-500" />
-                        <span>Call +91 7801055200</span>
+                        <span>Call +91 8686059555</span>
                       </a>
 
                       <a
-                        href={`https://wa.me/917801055200?text=Hi,%20I%20am%20interested%20in%20${data.title}%20for%20a%20plot%20size%20of%20${selectedSize}.`}
+                        href={`https://wa.me/918686059555?text=Hi,%20I%20am%20interested%20in%20${data.title}%20for%20a%20plot%20size%20of%20${selectedSize}.`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full py-3 bg-[#22C55E] text-white text-sm font-bold rounded-lg hover:bg-[#16A34A] transition-colors cursor-pointer flex items-center justify-center gap-2 shadow-xs text-center"
@@ -696,16 +695,16 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                     Also Explore
                   </h4>
                   {otherProjects.map((proj) => (
-                    <div 
-                      key={proj.id} 
+                    <div
+                      key={proj.id}
                       className="bg-white rounded-xl border border-gray-150 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col gap-3 p-3 group"
                     >
                       <div className="relative h-28 w-full rounded-lg overflow-hidden shrink-0">
-                        <Image 
-                          src={proj.image} 
-                          alt={proj.title} 
-                          fill 
-                          className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                        <Image
+                          src={proj.image}
+                          alt={proj.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                       <div className="flex flex-col justify-between py-1 flex-grow">
@@ -718,8 +717,8 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
                           </h5>
                           <p className="text-xs text-gray-400 mt-1">{proj.location || "Shadnagar, Hyderabad"}</p>
                         </div>
-                        <Link 
-                          href={`/ventures/${proj.slug}`} 
+                        <Link
+                          href={`/ventures/${proj.slug}`}
                           className="text-xs font-bold text-[#C6A15B] hover:text-[#3C3C3C] transition-colors mt-3 inline-flex items-center gap-1.5 cursor-pointer"
                         >
                           <span>View Project</span>
