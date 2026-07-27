@@ -177,6 +177,57 @@ const leaders: TeamMember[] = [
     linkedin: "#",
     expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
     certifications: ["Certified Marketing Manager"],
+  },{
+    id:"l14",
+    name:"Asralan Ali Khan",
+    title:"Marketing Operations Manager",
+    image:"/staff/arsalanalikhan.jpeg",
+    summary:
+      "Asralan Ali Khan is the marketing operations manager of Deccan Heights. He is responsible for the overall marketing operations of the company.",
+    bio:"Asralan Ali Khan is the marketing operations manager of Deccan Heights. He is responsible for the overall marketing operations of the company. He has a background in marketing operations and has a proven track record of success in the real estate industry.",
+    email:"asralan@deccanheights.com",
+    linkedin:"#",
+    expertises:["Marketing Operations","Team Leadership","Market Analysis"],
+    certifications:["Certified Marketing Operations Manager"],
+  },
+  {
+    id:"l15",
+    name:"Mohammed Jameeluddin",
+    title:"Lead Project Developer",
+    image:"/staff/Mohammed Jameeluddin.jpeg",
+    summary:
+      "Mohammed Jameeluddin is the lead project developer of Deccan Heights. He is responsible for the overall development of the company.",
+    bio:"Mohammed Jameeluddin is the lead project developer of Deccan Heights. He is responsible for the overall development of the company. He has a background in project development and has a proven track record of success in the real estate industry.",
+    email:"jameeluddin@deccanheights.com",
+    linkedin:"#",
+    expertises:["Project Development","Team Leadership","Market Analysis"],
+    certifications:["Certified Project Developer"],
+  },
+  {
+    id:"l16",
+    name:"Syed Wajid Hussain",
+    title:"General Manager",
+    image:"/staff/Syed Wajid Hussain.jpeg",
+    summary:
+      "Syed Wajid Hussain is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio:"Syed Wajid Hussain is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+    email:"wajid@deccanheights.com",
+    linkedin:"#",
+    expertises:["Operations Management","Team Leadership","Market Analysis"],
+    certifications:["Certified Operations Manager"],
+  },
+  {
+    id:"l17",
+    name:"Syed Majid",
+    title:"Public Relation Officer",
+    image:"/staff/Syed Majid.jpeg",
+    summary:
+      "Syed Majid is the public relation officer of Deccan Heights. He is responsible for the overall public relation of the company.",
+    bio:"Syed Majid is the public relation officer of Deccan Heights. He is responsible for the overall public relation of the company. He has a background in public relation management and has a proven track record of success in the real estate industry.",
+    email:"majid@deccanheights.com",
+    linkedin:"#",
+    expertises:["Public Relation Management","Team Leadership","Market Analysis"],
+    certifications:["Certified Public Relation Officer"],
   }
 
 ];
