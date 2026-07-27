@@ -64,9 +64,9 @@ export default function NavBar() {
       <div className="container mx-auto lg:mx-0 px-6  flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center z-50 group">
-          <div className={`relative transition-all duration-300 ${isSolid
-            ? "w-[130px] h-[80px] md:w-[160px] md:h-[98px] lg:w-[180px] lg:h-[111px]"
-            : "w-[160px] h-[98px] md:w-[200px] md:h-[123px] lg:w-[450px] lg:h-[100px]"
+          <div className={`relative transition-all duration-300  ${isSolid
+            ? "w-[130px] h-[80px] md:w-[160px] md:h-[98px] lg:w-[180px] lg:h-[50px]"
+            : "w-[160px] h-[98px] md:w-[200px] md:h-[123px] lg:w-[450px] lg:h-[100px] lg:mt-6"
             }`}>
             <Image
               src="/new_dh_logo_c.png"

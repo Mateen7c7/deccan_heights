@@ -6,9 +6,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const IMAGES = [
-  "/dhi.png",
-  "/dh2.png",
-  "/dh3.png",
+  "/bg1.png",
+  "/bg2.png",
+  "/bg3.png",
+  "/bg4.png",
+
 ];
 
 const Hero = () => {
