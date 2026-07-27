@@ -146,7 +146,7 @@ export const phase5Data: PlotVenture = {
   title: "Deccan Heights Phase 5",
   subtitle: "Invest In A Promising Future..",
   description:
-    "DECCAN HEIGHTS HOMES & RESORTS PVT LTD. group presents Deccan Heights, an elegant yet affordable group housing at Shadnagar, Hyderabad. The project \"Deccan Heights\" is located in the frontier of the Shadnagar Mandal of Ramachandrapuram Village that comes under High Rise Promotion Zone. The layout of your premium plots can be reached after a few minutes drive from 300' 6 tracks of NH-7 Bangalore Highway. So take a pleasant drive along the breezy, broad 100, wide road and there you are in terms of sheer commercial value, the prospects are unmatched.",
+    "DECCAN HEIGHTS HOMES & RESORTS PVT LTD. group presents Deccan Heights Phase 5, an elegant yet affordable group housing at Shadnagar, Hyderabad. The project \"Deccan Heights\" is located in the frontier of the Shadnagar Mandal of Ramachandrapuram Village that comes under High Rise Promotion Zone. The layout of your premium plots can be reached after a few minutes drive from 300' 6 tracks of NH-7 Bangalore Highway. So take a pleasant drive along the breezy, broad 100, wide road and there you are in terms of sheer commercial value, the prospects are unmatched.",
   image: "/deccan_heights_phase_5.PNG",
   status: "ongoing",
   badge: "New Launch",
@@ -161,11 +161,11 @@ export const phase5Data: PlotVenture = {
   ],
   aboutTitle: "About This Project",
   aboutDescription:
-    "DECCAN HEIGHTS HOMES & RESORTS PVT LTD. group presents Deccan Heights, an elegant yet affordable group housing at Shadnagar, Hyderabad. The project \"Deccan Heights\" is located in the frontier of the Shadnagar Mandal of Ramachandrapuram Village that comes under High Rise Promotion Zone. The layout of your premium plots can be reached after a few minutes drive from 300' 6 tracks of NH-7 Bangalore Highway. So take a pleasant drive along the breezy, broad 100, wide road and there you are in terms of sheer commercial value, the prospects are unmatched.",
+    "DECCAN HEIGHTS HOMES & RESORTS PVT LTD. group presents Deccan Heights Phase 5, an elegant yet affordable group housing at Shadnagar, Hyderabad. The project \"Deccan Heights Phase 5\" is located in the frontier of the Farooq Nagar Mandal of Ramachandrapuram Village that comes under High Rise Promotion Zone. The layout of your premium plots can be reached after a few minutes drive from 300 feet' 6 tracks of NH-7 Bangalore Highway. So take a pleasant drive along the breezy, broad 100 feet wide road and there you are in terms of sheer commercial value, the prospects are unmatched.",
   aboutStats: [
     { value: "₹8,500", label: "Outright price per sq.yd", sublabel: "Affordable entry investment" },
-    { value: "9 Ac", label: "Total project area", sublabel: "9 Acres 12 Guntas" },
-    { value: "EMI", label: "₹10,000/mo.", sublabel: "12-month EMI facility" },
+    { value: "9 Acres", label: "Total project area", sublabel: "9 Acres 12 Guntas" },
+    { value: "EMI", label: "₹35,000/mo.", sublabel: "24-month EMI facility" },
     { value: "100%", label: "Clear Documentation", sublabel: "Passbook eligible, clear title" },
   ],
   pricingTitle: "Plot Sizes & Pricing",
@@ -185,7 +185,7 @@ export const phase5Data: PlotVenture = {
     { label: "per sq.yd (EMI Plan)", value: "₹9,000" },
     { label: "Booking Amount", value: "₹50,000" },
     { label: "Down Payment", value: "₹2,00,000" },
-    { label: "EMI Duration", value: "12 Months" },
+    { label: "EMI Duration", value: "24 Months" },
   ],
   layoutTitle: "Project Layout Plan",
   layoutPlanUrl: "/phase5wids.svg",
