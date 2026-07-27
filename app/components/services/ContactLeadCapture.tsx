@@ -56,7 +56,7 @@ export default function ContactLeadCapture() {
             {/* Map Placeholder */}
             <div className="mt-12 h-64 w-full rounded-lg overflow-hidden relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.742188127119!2d78.4608966!3d17.4044168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ff47383a9f%3A0x6f76bdabd8b9330a!2sDeccan%20Heights%20Homes%20%26%20Resorts%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1767017021317!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.554681876109!2d78.45832167524424!3d17.404416783485736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ff47383a9f%3A0x6f76bdabd8b9330a!2sDeccan%20Heights%20Homes%20%26%20Resorts%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1785155543649!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

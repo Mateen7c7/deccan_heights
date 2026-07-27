@@ -446,16 +446,14 @@ const FAQItem = ({
         className="w-full py-6 flex items-center justify-between text-left group"
       >
         <span
-          className={`text-lg transition-colors ${
-            isOpen ? "text-[#C6A15B] font-semibold" : "text-[#3C3C3C]"
-          }`}
+          className={`text-lg transition-colors ${isOpen ? "text-[#C6A15B] font-semibold" : "text-[#3C3C3C]"
+            }`}
         >
           {question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-[#BDBDBD] transition-transform duration-300 ${
-            isOpen ? "rotate-180 text-[#C6A15B]" : "group-hover:text-[#3C3C3C]"
-          }`}
+          className={`w-5 h-5 text-[#BDBDBD] transition-transform duration-300 ${isOpen ? "rotate-180 text-[#C6A15B]" : "group-hover:text-[#3C3C3C]"
+            }`}
         />
       </button>
       <AnimatePresence>
@@ -507,7 +505,7 @@ export default function ContactPage() {
               className="relative rounded-xl overflow-hidden shadow-lg border border-[#BDBDBD]"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.742188127119!2d78.4608966!3d17.4044168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ff47383a9f%3A0x6f76bdabd8b9330a!2sDeccan%20Heights%20Homes%20%26%20Resorts%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1767017021317!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.554681876109!2d78.45832167524424!3d17.404416783485736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ff47383a9f%3A0x6f76bdabd8b9330a!2sDeccan%20Heights%20Homes%20%26%20Resorts%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1785155543649!5m2!1sen!2sin"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
@@ -553,7 +551,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-     
+
 
       {/* Agents Section */}
       <section className="py-24 px-6 md:px-12 bg-[#F8F8F8]">
@@ -619,7 +617,7 @@ export default function ContactPage() {
             <div className="flex flex-col items-center">
               <ShieldCheck className="w-10 h-10 text-[#3C3C3C] mb-2" />
               <span className="text-xs font-bold text-[#3C3C3C] tracking-widest">
-                RERA APPROVED
+                Governament APPROVED
               </span>
             </div>
             <div className="flex flex-col items-center">
@@ -667,7 +665,7 @@ export default function ContactPage() {
             Terms of Service
           </a>
           <span>•</span>
-          <span>RERA No: A1230000456</span>
+          <span>Governament No: A1230000456</span>
         </div>
         <p className="text-xs text-[#BDBDBD]/60">
           © 2024 Deccan Heights. All rights reserved. Brokerage License #987654

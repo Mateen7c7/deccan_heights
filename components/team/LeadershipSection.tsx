@@ -15,7 +15,7 @@ const leaders: TeamMember[] = [
     bio: "Mr. Arshad Ali Khan is the visionary Founder & Chairman of Deccan Heights. Starting his career in 1998, he has overseen the development of over 50 premium residential projects. His leadership style focuses on integrity, innovation, and customer-centricity.",
     email: "arshad@deccanheights.com",
     linkedin: "#",
-    certifications: ["RERA Certified"],
+    certifications: ["Governament Certified"],
   },
   {
     id: "l2",

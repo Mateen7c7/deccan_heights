@@ -122,7 +122,7 @@ Quick property search:
 
 Trust & credibility:
 
-    Logos of approvals (DTCP/RERA etc.), bank tie-ups, partner brands.
+    Logos of approvals (DTCP/Governament etc.), bank tie-ups, partner brands.
 
     Short stats (years in business, number of plots sold, families served).
 
@@ -146,7 +146,7 @@ Ongoing venture detail page (for each plot project)
 
     Project summary:
 
-        Name, tagline, RERA/approval details, location overview, starting price, status (launching / booking open).
+        Name, tagline, Governament/approval details, location overview, starting price, status (launching / booking open).
 
     ​
 

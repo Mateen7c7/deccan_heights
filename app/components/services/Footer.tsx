@@ -93,7 +93,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-[#C6A15B] transition-colors">
-                  RERA Compliance
+                  Governament Compliance
                 </a>
               </li>
               <li>

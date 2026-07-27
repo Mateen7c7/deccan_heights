@@ -38,7 +38,7 @@ const PremiumPlots = () => {
       value: 100,
       suffix: "%",
       label: " Compliant",
-      subtitle: "RERA Approved",
+      subtitle: "Governament Approved",
       description: "Fully legal and authorized plots for your peace of mind.",
       icon: (
         <svg
@@ -157,7 +157,7 @@ const PremiumPlots = () => {
           >
             Invest in a legacy that grows with time. Experience the perfect
             blend of nature, connectivity, and high appreciation potential with
-            our RERA-approved layouts.
+            our Governament-approved layouts.
           </motion.p>
         </div>
 

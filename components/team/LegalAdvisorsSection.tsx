@@ -15,7 +15,7 @@ const legalAdvisors: TeamMember[] = [
     expertises: [
       "Property Litigation",
       "Title Verification",
-      "RERA Compliance",
+      "Governament Compliance",
     ],
   },
   {

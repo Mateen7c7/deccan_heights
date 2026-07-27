@@ -161,7 +161,7 @@ Application form
 
 15. Legal & Compliance
 
-RERA compliance
+Governament compliance
 
 Licenses
 
@@ -322,7 +322,7 @@ Project Detail Page
 
 Project overview
 
-RERA details
+Governament details
 
 Location advantages
 
@@ -380,7 +380,7 @@ These important components often improve conversions but are frequently overlook
 
 A. Trust & Credibility Boosters
 
-RERA Registration Numbers
+Governament Registration Numbers
 
 Client logos
 

@@ -39,7 +39,7 @@ export default function DetailedServices() {
       {/* A. Residential Plot Sales */}
       <SectionWrapper id="residential-plots" className="bg-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-         
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -54,7 +54,7 @@ export default function DetailedServices() {
             </p>
             <ul className="space-y-4 mb-8">
               {[
-                "DTCP & RERA Approved Layouts",
+                "DTCP & Governament Approved Layouts",
                 "Strategic Locations near Highways",
                 "Clear Title Documentation",
                 "High Appreciation Potential",
@@ -65,7 +65,7 @@ export default function DetailedServices() {
                 </li>
               ))}
             </ul>
-          
+
           </motion.div>
         </div>
       </SectionWrapper>
@@ -118,7 +118,7 @@ export default function DetailedServices() {
               Request Valuation
             </button>
           </motion.div>
-          
+
         </div>
       </SectionWrapper>
 
@@ -166,7 +166,7 @@ export default function DetailedServices() {
           ))}
         </div>
 
-        
+
       </SectionWrapper>
 
       {/* D. Property Management */}
@@ -300,7 +300,7 @@ export default function DetailedServices() {
             ))}
           </motion.div>
 
-        
+
         </div>
       </SectionWrapper>
     </div>

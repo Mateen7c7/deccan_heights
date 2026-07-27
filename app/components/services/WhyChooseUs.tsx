@@ -11,7 +11,7 @@ const stats = [
 ];
 
 const features = [
-  { title: "RERA Approved", icon: Shield },
+  { title: "Governament Approved", icon: Shield },
   { title: "Award Winning", icon: Award },
   { title: "On-Time Delivery", icon: Clock },
   { title: "Expert Support", icon: Users },

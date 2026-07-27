@@ -140,11 +140,11 @@ These elements are crucial for a modern, high-converting real estate website.
 
     Client Testimonial Rotator: Prominently featured on the Home and Services pages.
 
-    Association/Affiliation Logos: (e.g., RERA registration, industry bodies, bank partnerships).
+    Association/Affiliation Logos: (e.g., Governament registration, industry bodies, bank partnerships).
 
     Team Member Profiles: Professional photos, bios, and direct contact details for key staff.
 
-    Legal/Compliance Badge: A small footer element linking to RERA/legal documentation.
+    Legal/Compliance Badge: A small footer element linking to Governament/legal documentation.
 
 3. Conversion-Focused Components (CTAs)
 
@@ -172,7 +172,7 @@ These elements are crucial for a modern, high-converting real estate website.
 
 Given your specialization in residential plots, these elements are vital to address buyer concerns and drive conversions.
 
-    RERA Compliance/Status: In many jurisdictions, this is legally required. Display the RERA registration number prominently on the site, especially on the venture pages.
+    Governament Compliance/Status: In many jurisdictions, this is legally required. Display the Governament registration number prominently on the site, especially on the venture pages.
 
     Specific Legal/Title Clearance Information: Plot buyers are highly concerned with clear title. A page section or download detailing the legal due diligence already performed by the agency (e.g., clear title status, zone approvals).
 

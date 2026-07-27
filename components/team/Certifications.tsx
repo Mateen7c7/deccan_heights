@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 // Placeholder logos - just text styled nicely or use SVGs if I had them
 const certifications = [
-  { id: 1, name: "RERA Approved", sub: "Fully Compliant" },
+  { id: 1, name: "Governament Approved", sub: "Fully Compliant" },
   { id: 2, name: "ISO 9001:2015", sub: "Quality Management" },
   { id: 3, name: "IGBC Membership", sub: "Green Building Council" },
   { id: 4, name: "CREDAI Member", sub: "Confederation of Real Estate" },

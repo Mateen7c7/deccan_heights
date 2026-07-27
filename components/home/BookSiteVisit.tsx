@@ -2,19 +2,19 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { 
-  Phone, 
-  Mail, 
-  Home, 
-  Clock, 
-  MapPin, 
-  Check, 
-  Navigation, 
-  AlertCircle, 
-  TrendingUp, 
-  Gift, 
-  FileText, 
-  CheckCircle2 
+import {
+  Phone,
+  Mail,
+  Home,
+  Clock,
+  MapPin,
+  Check,
+  Navigation,
+  AlertCircle,
+  TrendingUp,
+  Gift,
+  FileText,
+  CheckCircle2
 } from "lucide-react";
 import { allPlotVentures } from "@/data/plots";
 
@@ -50,11 +50,11 @@ const BookSiteVisit = () => {
       // Adjust to IST if necessary, but standard local time is usually what users expect
       const day = now.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
       const hour = now.getHours();
-      
+
       // Mon = 1, Sat = 6
       const isOpenDay = day >= 1 && day <= 6;
       const isOpenHour = hour >= 10 && hour < 18; // 10:00 to 17:59
-      
+
       setIsOpenNow(isOpenDay && isOpenHour);
     };
 
@@ -65,20 +65,20 @@ const BookSiteVisit = () => {
 
   const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Simple 10-digit validation
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(phone.replace(/[\s-()]/g, ""))) {
       setPhoneError("Please enter a valid 10-digit phone number");
       return;
     }
-    
+
     setPhoneError("");
     setIsSubmitting(true);
 
     // Simulate API submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+
     setIsSubmitting(false);
     setIsSuccess(true);
   };
@@ -96,7 +96,7 @@ const BookSiteVisit = () => {
   return (
     <section className="w-full bg-[#F8F8F8] py-16 px-4 md:px-8 border-t border-gray-200/50">
       <div className="container mx-auto max-w-7xl">
-        
+
         {/* Header Section */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#3C3C3C] tracking-tight">
@@ -110,7 +110,7 @@ const BookSiteVisit = () => {
 
         {/* Three Column Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-          
+
           {/* COLUMN 1: Contact Us Directly & Why Act Now */}
           <div className="flex flex-col gap-8 justify-between">
             {/* Contact Card */}
@@ -118,11 +118,11 @@ const BookSiteVisit = () => {
               <h3 className="text-lg font-bold text-[#3C3C3C] mb-2">
                 Contact Us Directly
               </h3>
-              
+
               {/* Call Us Now */}
-              <button 
+              <button
                 type="button"
-                onClick={() => window.location.href = "tel:+917801052288"}
+                onClick={() => window.location.href = "tel:+918686059555"}
                 className="w-full bg-[#C6A15B] hover:bg-[#a48446] text-white p-4 rounded-xl flex items-center gap-4 transition-colors cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50"
               >
                 <div className="w-10 h-10 bg-white/15 rounded-lg flex items-center justify-center shrink-0">
@@ -130,14 +130,29 @@ const BookSiteVisit = () => {
                 </div>
                 <div>
                   <div className="text-[10px] uppercase tracking-wider text-white/70 font-semibold">Call Us Now</div>
-                  <div className="text-lg font-bold">7801052288</div>
+                  <div className="text-lg font-bold">8686059555</div>
+                </div>
+              </button>
+
+              {/* Call Us Now */}
+              <button
+                type="button"
+                onClick={() => window.location.href = "tel:+918639004881"}
+                className="w-full bg-[#C6A15B] hover:bg-[#a48446] text-white p-4 rounded-xl flex items-center gap-4 transition-colors cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50"
+              >
+                <div className="w-10 h-10 bg-white/15 rounded-lg flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <div className="text-[10px] uppercase tracking-wider text-white/70 font-semibold">Call Us Now</div>
+                  <div className="text-lg font-bold">8639004881</div>
                 </div>
               </button>
 
               {/* WhatsApp Us */}
-              <button 
+              <button
                 type="button"
-                onClick={() => window.open("https://wa.me/917801052288?text=Hi,%20I'm%20interested%20in%20booking%20a%20free%20site%20visit%20with%20Deccan%20Heights.", "_blank")}
+                onClick={() => window.open("https://wa.me/918328120257?text=Hi,%20I'm%20interested%20in%20booking%20a%20free%20site%20visit%20with%20Deccan%20Heights.", "_blank")}
                 className="w-full bg-[#25D366] hover:bg-[#1ebd53] text-white p-4 rounded-xl flex items-center gap-4 transition-colors cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-[#25D366]/50"
               >
                 <div className="w-10 h-10 bg-white/15 rounded-lg flex items-center justify-center shrink-0">
@@ -149,9 +164,9 @@ const BookSiteVisit = () => {
               </button>
 
               {/* Email Us */}
-              <button 
+              <button
                 type="button"
-                onClick={() => window.location.href = "mailto:hkmcbuildersanddevelopers@gmail.com"}
+                onClick={() => window.location.href = "mailto:deccanheights@gmail.com"}
                 className="w-full bg-[#F8F9FA] hover:bg-gray-200/50 border border-gray-200/60 text-[#3C3C3C] p-4 rounded-xl flex items-center gap-4 transition-colors cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-gray-300"
               >
                 <div className="w-10 h-10 bg-[#C6A15B]/10 rounded-lg flex items-center justify-center shrink-0">
@@ -160,7 +175,7 @@ const BookSiteVisit = () => {
                 <div className="overflow-hidden">
                   <div className="text-[10px] uppercase tracking-wider text-[#3C3C3C]/60 font-semibold">Email Us</div>
                   <div className="text-xs md:text-sm font-bold truncate text-[#3C3C3C] mt-0.5">
-                    hkmcbuildersanddevelopers@gmail.com
+                    deccanheights@gmail.com
                   </div>
                 </div>
               </button>
@@ -222,9 +237,9 @@ const BookSiteVisit = () => {
                   <h3 className="text-lg font-bold text-[#3C3C3C] mb-4">
                     Send Enquiry
                   </h3>
-                  
+
                   <form onSubmit={handleFormSubmit} className="space-y-4 flex-1">
-                    
+
                     {/* Name & Phone Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
@@ -359,7 +374,7 @@ const BookSiteVisit = () => {
 
                   {/* Subtext */}
                   <p className="text-[10px] text-gray-400 text-center mt-3 select-none leading-normal">
-                    By submitting, you agree to be contacted by HKMC Builders. No spam, ever.
+                    By submitting, you agree to be contacted by Deccan Heights. No spam, ever.
                   </p>
                 </motion.div>
               ) : (
@@ -396,14 +411,14 @@ const BookSiteVisit = () => {
               {/* Map embed */}
               <div className="w-full h-[180px] bg-gray-100 relative shrink-0">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.2435732104526!2d78.4590209!3d17.4001925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb975d0458df8f%3A0xe104cfcb0b40eb0!2sLakdikapul%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.554681876109!2d78.45832167524424!3d17.404416783485736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ff47383a9f%3A0x6f76bdabd8b9330a!2sDeccan%20Heights%20Homes%20%26%20Resorts%20PVT.%20LTD.!5e1!3m2!1sen!2sin!4v1785155543649!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen={false}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="HKMC Office Location Map"
+                  title="Deccan Heights Office Location Map"
                   className="absolute inset-0 w-full h-full"
                 ></iframe>
               </div>
@@ -416,16 +431,16 @@ const BookSiteVisit = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-[#3C3C3C]">
-                      HKMC Builders & Developers Pvt. Ltd.
+                      Deccan Heights Homes & Resorts PVT. LTD.
                     </h4>
                     <p className="text-xs text-gray-500 leading-normal mt-1">
-                      Lakdikapul, Hyderabad, Telangana – 500004
+                      Road No. 12, Banjara Hills, Hyderabad
                     </p>
                   </div>
                 </div>
 
                 <button
-                  onClick={() => window.open("https://maps.google.com/?q=HKMC+Builders+&+Developers+Pvt.+Ltd.+Lakdikapul+Hyderabad", "_blank")}
+                  onClick={() => window.open("https://maps.app.goo.gl/kvUhbBVAWYTbLWsx6", "_blank")}
                   className="w-full bg-[#F8F9FA] hover:bg-gray-200/50 border border-gray-200/60 text-[#C6A15B] py-2.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5"
                 >
                   <Navigation className="w-3.5 h-3.5" />
@@ -443,7 +458,7 @@ const BookSiteVisit = () => {
                     Office Hours
                   </h3>
                 </div>
-                
+
                 <div className="flex justify-between items-center text-xs md:text-sm text-[#3C3C3C] py-2">
                   <span className="text-gray-500 font-medium">Monday – Saturday</span>
                   <span className="font-bold text-[#C6A15B]">10 AM – 6 PM</span>

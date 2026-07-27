@@ -149,7 +149,7 @@ export default function VenturePageTemplate({ data }: { data: VentureData }) {
       </div>
 
       {/* --- HERO SECTION --- */}
-      <section className="relative h-[55vh] min-h-[450px] w-full overflow-hidden flex items-end pb-10 bg-[#3C3C3C]">
+      <section className="relative h-[55vh] min-h-[600px] w-full overflow-hidden flex items-end pb-10 bg-[#3C3C3C]">
         <div className="absolute inset-0 z-0">
           <AnimatePresence mode="wait">
             <motion.div

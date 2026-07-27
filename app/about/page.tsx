@@ -148,7 +148,7 @@ const StorySection = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Our Mission</h3>
                 <p className="text-slate-300">
-                  To provide clear-titled, RERA-approved properties in strategic
+                  To provide clear-titled, Governament-approved properties in strategic
                   locations, ensuring absolute peace of mind and maximum ROI for
                   our customers.
                 </p>
@@ -205,9 +205,9 @@ const WhyChooseUs = () => {
     },
     {
       icon: <ShieldCheck className="w-6 h-6" />,
-      title: "RERA Approved",
+      title: "Governament Approved",
       description:
-        "We differ from the rest by strictly adhering to RERA norms. Your investment is protected by the highest regulatory standards.",
+        "We differ from the rest by strictly adhering to Governament norms. Your investment is protected by the highest regulatory standards.",
     },
     {
       icon: <Users className="w-6 h-6" />,
@@ -286,7 +286,7 @@ export default function AboutPage() {
       <WhyChooseUs />
       {/* 
         Reusing TrustValue for the "Certifications & Compliance" requirement 
-        as it prominently features RERA, Years of Experience etc.
+        as it prominently features Governament, Years of Experience etc.
       */}
       <div className="bg-white">
         <TrustValue />

@@ -320,7 +320,7 @@ export const phase4Data: PlotVenture = {
   status: "ongoing",
   badge: "95% Sold Out",
   location: "Shadnagar, Hyderabad, Telangana",
-  priceRange: "₹9,00,000/sq.yd",
+  priceRange: "₹9,000/sq.yd",
   roiHighlight: "ROI: High Appreciation",
   thumbnails: ["/deccan_heights_phase_4.PNG"],
   stats: [
