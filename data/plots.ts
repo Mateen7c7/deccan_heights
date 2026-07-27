@@ -51,31 +51,31 @@ export interface PlotVenture {
   priceRange?: string;
   roiHighlight?: string;
   thumbnails?: string[];
-  
+
   // Simple stats/metadata
   stats?: PlotStat[];
-  
+
   // About section
   aboutTitle?: string;
   aboutDescription?: string;
   aboutStats?: AboutStat[];
-  
+
   // Plot sizes & pricing
   pricingTitle?: string;
   plotSizes?: PlotSizeOption[];
   customSize?: CustomSizeInfo;
   paymentPlans?: PaymentPlanOption[];
-  
+
   // Layout plan section
   layoutTitle?: string;
   layoutPlanUrl?: string;
   mapPageUrl?: string;
   mapEmbedUrl?: string;
-  
+
   // Location Advantages section
   locationTitle?: string;
   locationAdvantages?: LocationAdvantage[];
-  
+
   // Quote
   quoteText?: string;
 
@@ -147,13 +147,13 @@ export const phase5Data: PlotVenture = {
   subtitle: "Invest In A Promising Future..",
   description:
     "DECCAN HEIGHTS HOMES & RESORTS PVT LTD. group presents Deccan Heights, an elegant yet affordable group housing at Shadnagar, Hyderabad. The project \"Deccan Heights\" is located in the frontier of the Shadnagar Mandal of Ramachandrapuram Village that comes under High Rise Promotion Zone. The layout of your premium plots can be reached after a few minutes drive from 300' 6 tracks of NH-7 Bangalore Highway. So take a pleasant drive along the breezy, broad 100, wide road and there you are in terms of sheer commercial value, the prospects are unmatched.",
-  image: "/plot1.webp",
+  image: "/deccan_heights_phase_5.PNG",
   status: "ongoing",
   badge: "New Launch",
   location: "Shadnagar, Hyderabad, Telangana",
   priceRange: "₹8,500/sq.yd",
   roiHighlight: "ROI: High Appreciation",
-  thumbnails: ["/plot1.webp", "/plot2.webp", "/plot3.webp"],
+  thumbnails: ["/deccan_heights_phase_5.PNG"],
   stats: [
     { label: "Plot Size", value: "9 acres" },
     { label: "Starting Price", value: "₹8500 per Sq.yard" },
@@ -170,10 +170,10 @@ export const phase5Data: PlotVenture = {
   ],
   pricingTitle: "Plot Sizes & Pricing",
   plotSizes: [
-    { size: "100 sq.yd", label: "Total investment", price: "₹8,50,000", rate: "@ ₹8,500/sq.yd", badge: "New Launch" },
-    { size: "200 sq.yd", label: "Total investment", price: "₹17,00,000", rate: "@ ₹8,500/sq.yd", badge: "New Launch" },
-    { size: "300 sq.yd", label: "Total investment", price: "₹25,50,000", rate: "@ ₹8,500/sq.yd", badge: "New Launch" },
-    { size: "603 sq.yd", label: "Total investment", price: "₹51,25,500", rate: "@ ₹8,500/sq.yd", badge: "New Launch" },
+    { size: "121 sq.yd", label: "Total investment", price: "₹10,28,500", rate: "@ ₹8,500/sq.yd", badge: "New Launch" },
+    { size: "242 sq.yd", label: "Total investment", price: "₹20,57,000", rate: "@ ₹8,500/sq.yd", badge: "New Launch" },
+    // { size: "300 sq.yd", label: "Total investment", price: "₹25,50,000", rate: "@ ₹8,500/sq.yd", badge: "New Launch" },
+    // { size: "603 sq.yd", label: "Total investment", price: "₹51,25,500", rate: "@ ₹8,500/sq.yd", badge: "New Launch" },
   ],
   customSize: {
     title: "Custom Size",
@@ -309,20 +309,20 @@ export const phase2Data: PlotVenture = {
   ],
 };
 
-export const phase3Data: PlotVenture = {
-  id: "phase-3",
-  slug: "phase-3",
-  title: "Deccan Heights Phase 3",
+export const phase4Data: PlotVenture = {
+  id: "phase-4",
+  slug: "phase-4",
+  title: "Deccan Heights Phase 4",
   subtitle: "Premium open plots with world-class amenities.",
   description:
-    "Deccan Heights Phase 3 is a premium residential layout located in the high-growth corridor of Shadnagar, Hyderabad. Connected via a 100' wide road just minutes from the NH-7 Bangalore Highway, Phase 3 is designed for exceptional living and high returns. Spanning a prime area with clear documentation and excellent infrastructure, it stands as an outstanding opportunity for investors and homeowners alike.",
-  image: "/plot3.webp",
+    "Deccan Heights Phase 4 is a premium residential layout located in the high-growth corridor of Shadnagar, Hyderabad. Connected via a 100' wide road just minutes from the NH-7 Bangalore Highway, Phase 3 is designed for exceptional living and high returns. Spanning a prime area with clear documentation and excellent infrastructure, it stands as an outstanding opportunity for investors and homeowners alike.",
+  image: "/deccan_heights_phase_4.PNG",
   status: "ongoing",
-  badge: "New Launch",
+  badge: "95% Sold Out",
   location: "Shadnagar, Hyderabad, Telangana",
-  priceRange: "₹8,000/sq.yd",
+  priceRange: "₹9,00,000/sq.yd",
   roiHighlight: "ROI: High Appreciation",
-  thumbnails: ["/plot3.webp", "/plot4.webp", "/plot1.webp"],
+  thumbnails: ["/deccan_heights_phase_4.PNG"],
   stats: [
     { label: "Plot Size", value: "12 acres" },
     { label: "Starting Price", value: "₹8000 per Sq.yard" },
@@ -330,7 +330,7 @@ export const phase3Data: PlotVenture = {
   ],
   aboutTitle: "About This Project",
   aboutDescription:
-    "Deccan Heights Phase 3 offers beautifully developed premium plots at Shadnagar. The project is situated at the frontier of Shadnagar Mandal, coming under the High Rise Promotion Zone. The layout has excellent connectivity, located a short drive from the 300' 6-track NH-7 Bangalore Highway. With high commercial value and rapid infrastructure growth in the vicinity, this venture is perfect for immediate investment.",
+    "Deccan Heights Phase 4 offers beautifully developed premium plots at Shadnagar. The project is situated at the frontier of Shadnagar Mandal, coming under the High Rise Promotion Zone. The layout has excellent connectivity, located a short drive from the 300' 6-track NH-7 Bangalore Highway. With high commercial value and rapid infrastructure growth in the vicinity, this venture is perfect for immediate investment.",
   aboutStats: [
     { value: "₹8,00,000", label: "Outright starting price", sublabel: "Affordable entry investment" },
     { value: "12 Ac", label: "Total project area", sublabel: "Mahadevpur Village" },
@@ -339,10 +339,10 @@ export const phase3Data: PlotVenture = {
   ],
   pricingTitle: "Plot Sizes & Pricing",
   plotSizes: [
-    { size: "100 sq.yd", label: "Total investment", price: "₹8,00,000", rate: "@ ₹8,000/sq.yd", badge: "New Launch" },
-    { size: "200 sq.yd", label: "Total investment", price: "₹16,00,000", rate: "@ ₹8,000/sq.yd", badge: "New Launch" },
-    { size: "300 sq.yd", label: "Total investment", price: "₹24,00,000", rate: "@ ₹8,000/sq.yd", badge: "New Launch" },
-    { size: "500 sq.yd", label: "Total investment", price: "₹40,00,000", rate: "@ ₹8,000/sq.yd", badge: "New Launch" },
+    { size: "121 sq.yd", label: "Total investment", price: "₹10,89,000", rate: "@ ₹9,000/sq.yd", badge: "New Launch" },
+    { size: "242 sq.yd", label: "Total investment", price: "₹21,78,000", rate: "@ ₹9,000/sq.yd", badge: "New Launch" },
+    // { size: "300 sq.yd", label: "Total investment", price: "₹24,00,000", rate: "@ ₹9,000/sq.yd", badge: "New Launch" },
+    // { size: "500 sq.yd", label: "Total investment", price: "₹40,00,000", rate: "@ ₹9,000/sq.yd", badge: "New Launch" },
   ],
   customSize: {
     title: "Custom Size",
@@ -350,7 +350,7 @@ export const phase3Data: PlotVenture = {
     description: "Custom plot sizes are available on request. Contact us to discuss your requirement.",
   },
   paymentPlans: [
-    { label: "per sq.yd (Outright)", value: "₹8,000" },
+    { label: "per sq.yd (Outright)", value: "₹9,000" },
     { label: "per sq.yd (EMI Plan)", value: "₹8,500" },
     { label: "Booking Amount", value: "₹50,000" },
     { label: "Down Payment", value: "₹2,00,000" },
@@ -367,7 +367,7 @@ export const phase3Data: PlotVenture = {
     { title: "Industrial Parks", description: "Borders Apparel Park, Textile Park, and Aero Hub developments." },
     { title: "Approved & Secure", description: "100% clear title property with registration eligibility." },
   ],
-  quoteText: "Deccan Heights Phase 3 represents our continuous promise of delivering high-appreciation properties. Located in a high-demand, high-growth sector of Shadnagar, it is the perfect destination for your hard-earned capital.",
+  quoteText: "Deccan Heights Phase 4 represents our continuous promise of delivering high-appreciation properties. Located in a high-demand, high-growth sector of Shadnagar, it is the perfect destination for your hard-earned capital.",
   amenities: [
     "Cricket Net Facility",
     "Tennis Court",
@@ -399,13 +399,13 @@ export const balapurBandraData: PlotVenture = {
   subtitle: "A Reasonable Lavish Life",
   description:
     "Balapur Bandra is our premium gated community project, offering both luxurious villa plots and residential open plots. Located in Mallapur, near the Rajiv Gandhi International Airport, the project offers a serene, pollution-free living environment while maintaining close proximity to key commercial hubs and highways. Designed with 100% Vaastu compliance, clear titles, and premium amenities like underground drainage, water supply, and beautifully landscaped parks, it represents a golden investment opportunity with a special buy back policy.",
-  image: "/balapur_bandra_hero.png",
+  image: "/Balapur_Bandra.PNG",
   status: "ongoing",
-  badge: "New Launch",
+  badge: "Just 15% Left",
   location: "Mallapur, Near RGI Airport, Hyderabad, Telangana",
   priceRange: "₹25,000/sq.yd",
   roiHighlight: "ROI: High Appreciation",
-  thumbnails: ["/balapur_bandra_hero.png", "/plot2.webp", "/plot3.webp"],
+  thumbnails: ["/Balapur_Bandra.PNG"],
   stats: [
     { label: "Plot Size", value: "150 - 400 sq.yds" },
     { label: "Starting Price", value: "₹25,000 per Sq.yard" },
@@ -422,10 +422,10 @@ export const balapurBandraData: PlotVenture = {
   ],
   pricingTitle: "Plot Sizes & Pricing",
   plotSizes: [
-    { size: "150 sq.yd", label: "Total investment", price: "₹18,75,000", rate: "@ ₹25,000/sq.yd", badge: "Premium" },
-    { size: "200 sq.yd", label: "Total investment", price: "₹25,00,000", rate: "@ ₹25,000/sq.yd", badge: "Premium" },
-    { size: "300 sq.yd", label: "Total investment", price: "₹37,50,000", rate: "@ ₹25,000/sq.yd", badge: "Most Popular" },
-    { size: "400 sq.yd", label: "Total investment", price: "₹50,00,000", rate: "@ ₹25,000/sq.yd", badge: "Luxury" },
+    { size: "150 sq.yd", label: "Total investment", price: "₹37,50,000", rate: "@ ₹25,000/sq.yd", badge: "Premium" },
+    { size: "200 sq.yd", label: "Total investment", price: "₹50,00,000", rate: "@ ₹25,000/sq.yd", badge: "Premium" },
+    { size: "300 sq.yd", label: "Total investment", price: "₹75,00,000", rate: "@ ₹25,000/sq.yd", badge: "Most Popular" },
+    { size: "400 sq.yd", label: "Total investment", price: "₹1,00,00,000", rate: "@ ₹25,000/sq.yd", badge: "Luxury" },
   ],
   customSize: {
     title: "Custom Plot Sizes",
@@ -473,40 +473,40 @@ export const balapurBandraData: PlotVenture = {
   ],
 };
 
-export const phase4Data: PlotVenture = {
-  id: "phase-4",
-  slug: "phase-4",
-  title: "Deccan Heights Phase 4",
+export const phase123Data: PlotVenture = {
+  id: "phase-1-2-3",
+  slug: "phase-3",
+  title: "Deccan Heights Phase 1, 2 & 3",
   subtitle: "Nature in your home..",
   description:
-    "Deccan Heights Phase 4 is a premium gated community layout at Shadnagar, Hyderabad, located in the frontier of Shadnagar Mandal of Ramachandrapuram Village. Developed as an elegant yet affordable group housing project, it is just a few minutes drive from the NH-7 Bangalore Highway. The project spans 65 acres of open plots and farm plots with excellent infrastructure, including blacktop roads, landscaped parks, overhead water tanks, and underground drainage. With 95% of plots sold out and 90% development completed, it is a highly appreciated investment destination.",
-  image: "/phase4_hero.png",
+    "Deccan Heights Phase 1, 2 & 3 is a premium gated community layout at Shadnagar, Hyderabad, located in the frontier of Shadnagar Mandal of Ramachandrapuram Village. Developed as an elegant yet affordable group housing project, it is just a few minutes drive from the NH-7 Bangalore Highway. The project spans 65 acres of open plots and farm plots with excellent infrastructure, including blacktop roads, landscaped parks, overhead water tanks, and underground drainage. With 95% of plots sold out and 90% development completed, it is a highly appreciated investment destination.",
+  image: "/deccan_heights_phase 1,2&3.PNG",
   status: "ongoing",
-  badge: "95% Sold Out",
+  badge: "Sold Out",
   location: "Shadnagar, Hyderabad, Telangana",
-  priceRange: "₹9,000/sq.yd",
-  roiHighlight: "90% Developed",
-  thumbnails: ["/phase4_hero.png", "/plot1.webp", "/plot2.webp"],
+  priceRange: "₹10,000/sq.yd",
+  roiHighlight: "100% Developed",
+  thumbnails: ["/deccan_heights_phase 1,2&3.PNG"],
   stats: [
     { label: "Plot Size", value: "121 - 1000 sq.yds" },
-    { label: "Starting Price", value: "₹9,000 per Sq.yard" },
+    { label: "Starting Price", value: "₹10,000 per Sq.yard" },
     { label: "Location", value: "Shadnagar" },
   ],
   aboutTitle: "About This Project",
   aboutDescription:
-    "Deccan Heights Phase 4 is a premium gated community layout at Shadnagar, Hyderabad, located in the frontier of Shadnagar Mandal of Ramachandrapuram Village. Developed as an elegant yet affordable group housing project, it is just a few minutes drive from the NH-7 Bangalore Highway. The project spans 65 acres of open plots and farm plots with excellent infrastructure, including blacktop roads, landscaped parks, overhead water tanks, and underground drainage. With 95% of plots sold out and 90% development completed, it is a highly appreciated investment destination.",
+    "Deccan Heights Phase 1, 2 & 3 is a premium gated community layout at Shadnagar, Hyderabad, located in the frontier of Shadnagar Mandal of Ramachandrapuram Village. Developed as an elegant yet affordable group housing project, it is just a few minutes drive from the NH-7 Bangalore Highway. The project spans 65 acres of open plots and farm plots with excellent infrastructure, including blacktop roads, landscaped parks, overhead water tanks, and underground drainage. With 95% of plots sold out and 90% development completed, it is a highly appreciated investment destination.",
   aboutStats: [
-    { value: "₹9,000", label: "Price per sq.yd", sublabel: "Affordable farm plot entry" },
+    { value: "₹10,000", label: "Price per sq.yd", sublabel: "Affordable farm plot entry" },
     { value: "65 Ac", label: "Total project area", sublabel: "Large open plot development" },
     { value: "95%", label: "Plots Sold Out", sublabel: "High demand community" },
     { value: "90%", label: "Development Done", sublabel: "Ready for immediate registry" },
   ],
   pricingTitle: "Plot Sizes & Pricing",
   plotSizes: [
-    { size: "121 sq.yd", label: "Starting investment", price: "₹10,89,000", rate: "@ ₹9,000/sq.yd", badge: "Best Value" },
-    { size: "200 sq.yd", label: "Standard plot size", price: "₹18,00,000", rate: "@ ₹9,000/sq.yd", badge: "Popular" },
-    { size: "500 sq.yd", label: "Premium farm plot", price: "₹45,00,000", rate: "@ ₹9,000/sq.yd", badge: "Farm Plot" },
-    { size: "1000 sq.yd", label: "Large estate plot", price: "₹90,00,000", rate: "@ ₹9,000/sq.yd", badge: "Executive" },
+    { size: "100 sq.yd", label: "Starting investment", price: "₹10,00,000", rate: "@ ₹10,000/sq.yd", badge: "Best Value" },
+    { size: "200 sq.yd", label: "Standard plot size", price: "₹20,00,000", rate: "@ ₹10,000/sq.yd", badge: "Popular" },
+    { size: "500 sq.yd", label: "Premium farm plot", price: "₹50,00,000", rate: "@ ₹10,000/sq.yd", badge: "Farm Plot" },
+    { size: "1000 sq.yd", label: "Large estate plot", price: "₹1,00,00,000", rate: "@ ₹10,000/sq.yd", badge: "Executive" },
   ],
   customSize: {
     title: "Custom Sizes",
@@ -514,7 +514,7 @@ export const phase4Data: PlotVenture = {
     description: "Custom plot sizes ranging up to 1000 sq.yds are available on request to fit your farmhouse designs. Contact us to reserve your custom plot.",
   },
   paymentPlans: [
-    { label: "per sq.yd (Outright)", value: "₹9,000" },
+    { label: "per sq.yd (Outright)", value: "₹10,000" },
     { label: "per sq.yd (EMI Plan)", value: "₹9,500" },
     { label: "Booking Amount", value: "₹1,00,000" },
     { label: "Down Payment", value: "₹2,00,000" },
@@ -531,7 +531,7 @@ export const phase4Data: PlotVenture = {
     { title: "Mega Townships", description: "Surrounded by major developers like DLF, My Home, and AP Housing Board." },
     { title: "Industrial Growth", description: "Proximity to Apparel Park, Textile Park, SONY Electronics Park, and Elkatta IT Park." },
   ],
-  quoteText: "Deccan Heights Phase 4 is a completed proof-of-concept of our high-quality development standards, offering immediate registration and strong growth potential near the Bangalore Highway.",
+  quoteText: "Deccan Heights Phase 1, 2 & 3 is a completed proof-of-concept of our high-quality development standards, offering immediate registration and strong growth potential near the Bangalore Highway.",
   amenities: [
     "Grand Entrance Arch",
     "30 Feet Black Top Roads",
@@ -553,7 +553,7 @@ export const phase4Data: PlotVenture = {
   ],
 };
 
-export const allPlotVentures: PlotVenture[] = [phase5Data, phase4Data, phase3Data, balapurBandraData, phase2Data];
+export const allPlotVentures: PlotVenture[] = [phase5Data, phase123Data, phase4Data, balapurBandraData, phase2Data];
 
 export const ongoingVentures: VentureListing[] = [
   {
@@ -561,7 +561,7 @@ export const ongoingVentures: VentureListing[] = [
     title: "Deccan Heights Phase 5",
     description:
       "Experience luxury living in the heart of nature with our premium plots designed for your dream home. A perfect blend of tranquility and modern amenities.",
-    image: "/plot1.webp",
+    image: "/deccan_heights_phase_5.PNG",
     link: "/ventures/phase-1",
     stats: [
       { label: "Area", value: "9 Acres" },
@@ -571,11 +571,11 @@ export const ongoingVentures: VentureListing[] = [
   },
   {
     id: 2,
-    title: "Deccan Heights Phase 3",
+    title: "Deccan Heights Phase 4",
     description:
       "A premium residential gated community layout offering highly appreciated plots with world-class amenities and high ROI potential.",
-    image: "/plot3.webp",
-    link: "/ventures/phase-3",
+    image: "/deccan_heights_phase_4.PNG",
+    link: "/ventures/phase-4",
     stats: [
       { label: "Area", value: "12 Acres" },
       { label: "Price", value: "₹8000" },
@@ -587,7 +587,7 @@ export const ongoingVentures: VentureListing[] = [
     title: "Balapur Bandra",
     description:
       "A premium gated community offering luxury villa plots and residential open plots in Mallapur, near Rajiv Gandhi International Airport.",
-    image: "/balapur_bandra_hero.png",
+    image: "/Balapur_Bandra.PNG",
     link: "/ventures/balapur-bandra",
     stats: [
       { label: "Area", value: "Survey 144" },
@@ -597,11 +597,11 @@ export const ongoingVentures: VentureListing[] = [
   },
   {
     id: 4,
-    title: "Deccan Heights Phase 4",
+    title: "Deccan Heights Phase 1, 2 & 3",
     description:
-      "A premium 65-acre gated community offering farm plots and residential plots in Shadnagar with 90% completed infrastructure.",
-    image: "/phase4_hero.png",
-    link: "/ventures/phase-4",
+      "A premium 65-acre gated community offering farm plots and residential plots in Shadnagar with 100% completed infrastructure.",
+    image: "/deccan_heights_phase 1,2&3.PNG",
+    link: "/ventures/phase-3",
     stats: [
       { label: "Area", value: "65 Acres" },
       { label: "Price", value: "₹9000" },
@@ -616,7 +616,7 @@ export const activeHomeVentures: VentureListing[] = [
     title: "Deccan Heights Phase 5",
     description:
       "Experience luxury living in the heart of nature with our premium plots designed for your dream home. A perfect blend of tranquility and modern amenities.",
-    image: "/plot1.webp",
+    image: "/deccan_heights_phase_5.PNG",
     link: "/ventures/phase-1",
     stats: [
       { label: "Area", value: "1200 Sq.ft" },
@@ -626,11 +626,11 @@ export const activeHomeVentures: VentureListing[] = [
   },
   {
     id: 2,
-    title: "Deccan Heights Phase 3",
+    title: "Deccan Heights Phase 4",
     description:
       "A premium residential gated community layout offering highly appreciated plots with world-class amenities and high ROI potential.",
-    image: "/plot3.webp",
-    link: "/ventures/phase-3",
+    image: "/deccan_heights_phase_4.PNG",
+    link: "/ventures/phase-4",
     stats: [
       { label: "Area", value: "12 Acres" },
       { label: "Price", value: "₹8000+" },
@@ -642,7 +642,7 @@ export const activeHomeVentures: VentureListing[] = [
     title: "Balapur Bandra",
     description:
       "A premium gated community offering luxury villa plots and residential open plots in Mallapur, near Rajiv Gandhi International Airport.",
-    image: "/balapur_bandra_hero.png",
+    image: "/Balapur_Bandra.PNG",
     link: "/ventures/balapur-bandra",
     stats: [
       { label: "Area", value: "Survey 144" },
@@ -652,11 +652,11 @@ export const activeHomeVentures: VentureListing[] = [
   },
   {
     id: 4,
-    title: "Deccan Heights Phase 4",
+    title: "Deccan Heights Phase 1, 2 & 3",
     description:
       "A premium 65-acre gated community offering farm plots and residential plots in Shadnagar with 90% completed infrastructure.",
-    image: "/phase4_hero.png",
-    link: "/ventures/phase-4",
+    image: "/deccan_heights_phase 1,2&3.PNG",
+    link: "/ventures/phase-3",
     stats: [
       { label: "Area", value: "65 Acres" },
       { label: "Price", value: "₹9000+" },
@@ -749,7 +749,7 @@ export const completedProjects: CompletedProject[] = [
   },
   {
     id: 10,
-    title: "Deccan Heights Phase 3",
+    title: "Deccan Heights Phase 4",
     description:
       "A successful expansion of the Deccan Heights family with 100% occupancy.",
     location: "Shadnagar",
@@ -758,7 +758,7 @@ export const completedProjects: CompletedProject[] = [
   },
   {
     id: 11,
-    title: "Deccan Heights Phase 4",
+    title: "Deccan Heights Phase 1, 2 & 3",
     description:
       "Modern living integrated with nature, delivering happiness to hundreds of families.",
     location: "Shadnagar",

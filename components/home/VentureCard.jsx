@@ -54,7 +54,7 @@ export default function VentureCard({ venture }) {
     let priceDisplay = "₹8,500";
     let unitDisplay = "per sq. yard";
     const priceStr = fullVenture.priceRange || venture.stats?.find(s => s.label === "Price")?.value || "₹8,500";
-    
+
     if (priceStr.includes("/")) {
         const parts = priceStr.split("/");
         priceDisplay = parts[0];
@@ -80,21 +80,21 @@ export default function VentureCard({ venture }) {
         "Gated Community Layout",
         "Clear Title Property",
         "High Appreciation Potential",
-        "Telangana Passbook Eligible"
+        "Premium Amenities"
     ];
     const ventureHighlights = (fullVenture.id === "phase-5" || fullVenture.slug === "phase-1")
         ? [
             "Gated Community Layout",
             "100 Feet Road Facing",
             "Clear Title Property",
-            "Telangana Passbook Eligible"
+            "Premium Amenities"
         ]
         : (fullVenture.id === "phase-2"
             ? [
                 "Gated Community Layout",
                 "Clubhouse Access",
                 "Clear Title Property",
-                "Telangana Passbook Eligible"
+                "Premium Amenities"
             ]
             : defaultHighlights);
 
@@ -114,7 +114,7 @@ export default function VentureCard({ venture }) {
                     sizes="(max-width: 768px) 100vw, 50vw"
                     priority={fullVenture.id === "phase-5"}
                 />
-                
+
                 {/* Badges Overlays */}
                 <div className="absolute top-4 left-4 z-10">
                     <span className="rounded-md bg-[#FF7A00] px-3.5 py-1.5 text-xs font-bold text-white shadow-sm uppercase tracking-wider">
@@ -156,9 +156,8 @@ export default function VentureCard({ venture }) {
                                     e.stopPropagation();
                                     setCurrentImageIndex(idx);
                                 }}
-                                className={`h-2 w-2 rounded-full transition-all duration-300 cursor-pointer ${
-                                    idx === currentImageIndex ? "bg-white w-5" : "bg-white/50"
-                                }`}
+                                className={`h-2 w-2 rounded-full transition-all duration-300 cursor-pointer ${idx === currentImageIndex ? "bg-white w-5" : "bg-white/50"
+                                    }`}
                             />
                         ))}
                     </div>
@@ -205,8 +204,8 @@ export default function VentureCard({ venture }) {
                     </p>
                     <div className="grid grid-cols-2 gap-2.5">
                         {sizes.map((sizeOpt, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="flex items-center justify-center rounded-lg bg-[#F4F5F7] py-2.5 px-3 text-xs font-semibold text-[#3C3C3C] shadow-xs"
                             >
                                 <span className="font-extrabold text-[#0f2e82]">{sizeOpt.size}</span>
@@ -214,7 +213,7 @@ export default function VentureCard({ venture }) {
                                 <span className="text-gray-500 font-medium">{sizeOpt.price}</span>
                             </div>
                         ))}
-                        
+
                         {/* Custom Size */}
                         <div className="col-span-2 flex items-center justify-center rounded-lg border border-[#C6A15B]/30 bg-[#C6A15B]/5 py-2.5 px-3 text-xs font-extrabold text-[#C6A15B] transition-all hover:bg-[#C6A15B]/10 cursor-pointer">
                             Custom Size <span className="mx-1.5 text-[#C6A15B]/50">·</span> Available
@@ -244,7 +243,7 @@ export default function VentureCard({ venture }) {
                     </Link>
 
                     {/* WhatsApp */}
-                    <a 
+                    <a
                         href={`https://wa.me/917801055200?text=${encodeURIComponent(`Hi, I'm interested in ${venture.title || fullVenture.title || "Deccan Heights"}. Please provide more details.`)}`}
                         target="_blank"
                         rel="noopener noreferrer"
