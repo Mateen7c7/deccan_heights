@@ -23,6 +23,8 @@ import {
   Calendar,
 } from "lucide-react";
 
+import { allPlotVentures } from "@/data/plots";
+
 // --- ANIMATION VARIANTS ---
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -157,17 +159,27 @@ const Header = () => (
 const ContactForm = () => {
   const [formState, setFormState] = useState({
     name: "",
-    email: "",
     phone: "",
-    type: "Buying",
-    address: "",
+    email: "",
+    project: "",
+    plotSize: "",
     message: "",
   });
+  const [phoneError, setPhoneError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Simple 10-digit validation
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(formState.phone.replace(/[\s-()]/g, ""))) {
+      setPhoneError("Please enter a valid 10-digit phone number");
+      return;
+    }
+
+    setPhoneError("");
     setIsSubmitting(true);
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1500));
@@ -186,17 +198,26 @@ const ContactForm = () => {
           <CheckCircle className="w-10 h-10 text-[#C6A15B]" />
         </div>
         <h3 className="text-3xl font-bold text-[#3C3C3C] mb-4">
-          Message Sent!
+          Site Visit Booked!
         </h3>
         <p className="text-[#BDBDBD] text-lg max-w-md">
-          Thank you for reaching out. One of our agents will get back to you
-          within 2-4 hours.
+          Thank you for your interest. One of our consultants will call you within 2 hours to coordinate and confirm your complimentary site visit.
         </p>
         <button
-          onClick={() => setIsSuccess(false)}
+          onClick={() => {
+            setFormState({
+              name: "",
+              phone: "",
+              email: "",
+              project: "",
+              plotSize: "",
+              message: "",
+            });
+            setIsSuccess(false);
+          }}
           className="mt-8 px-8 py-3 bg-[#C6A15B] text-white font-semibold rounded-lg hover:bg-[#b08d4b] transition-colors"
         >
-          Send Another Message
+          Send Another Enquiry
         </button>
       </motion.div>
     );
@@ -211,6 +232,11 @@ const ContactForm = () => {
       variants={staggerContainer}
       className="bg-white p-8 md:p-10 rounded-2xl shadow-2xl shadow-black/5 border border-[#BDBDBD]/20"
     >
+      <h3 className="text-2xl font-bold text-[#3C3C3C] mb-6 font-serif">
+        Send Enquiry
+      </h3>
+
+      {/* Full Name & Phone */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <motion.div variants={fadeInUp}>
           <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
@@ -219,7 +245,7 @@ const ContactForm = () => {
           <input
             required
             type="text"
-            placeholder="John Doe"
+            placeholder="Your name"
             className="w-full px-4 py-3 rounded-lg border border-[#BDBDBD] focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all placeholder:text-gray-300"
             value={formState.name}
             onChange={(e) =>
@@ -229,81 +255,103 @@ const ContactForm = () => {
         </motion.div>
         <motion.div variants={fadeInUp}>
           <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
-            Email Address *
+            Phone *
           </label>
           <input
             required
-            type="email"
-            placeholder="john@example.com"
-            className="w-full px-4 py-3 rounded-lg border border-[#BDBDBD] focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all placeholder:text-gray-300"
-            value={formState.email}
-            onChange={(e) =>
-              setFormState({ ...formState, email: e.target.value })
-            }
-          />
-        </motion.div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <motion.div variants={fadeInUp}>
-          <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
-            Phone Number
-          </label>
-          <input
             type="tel"
-            placeholder="+91 98765 43210"
-            className="w-full px-4 py-3 rounded-lg border border-[#BDBDBD] focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all placeholder:text-gray-300"
+            placeholder="10-digit number"
+            className={`w-full px-4 py-3 rounded-lg border ${phoneError ? "border-red-500" : "border-[#BDBDBD]"} focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all placeholder:text-gray-300`}
             value={formState.phone}
-            onChange={(e) =>
-              setFormState({ ...formState, phone: e.target.value })
-            }
+            onChange={(e) => {
+              setFormState({ ...formState, phone: e.target.value });
+              if (phoneError) setPhoneError("");
+            }}
           />
-        </motion.div>
-        <motion.div variants={fadeInUp}>
-          <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
-            Inquiry Type
-          </label>
-          <div className="relative">
-            <select
-              className="w-full px-4 py-3 rounded-lg border border-[#BDBDBD] focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all appearance-none bg-white text-[#3C3C3C]"
-              value={formState.type}
-              onChange={(e) =>
-                setFormState({ ...formState, type: e.target.value })
-              }
-            >
-              <option>Buying a Property</option>
-              <option>Selling a Property</option>
-              <option>Renting</option>
-              <option>General Inquiry</option>
-            </select>
-            <ChevronDown className="absolute right-4 top-3.5 w-5 h-5 text-[#BDBDBD] pointer-events-none" />
-          </div>
+          {phoneError && (
+            <p className="text-xs text-red-500 mt-1 font-medium">
+              {phoneError}
+            </p>
+          )}
         </motion.div>
       </div>
 
+      {/* Email Address */}
       <motion.div variants={fadeInUp} className="mb-6">
         <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
-          Property Address (Optional)
+          Email Address
         </label>
         <input
-          type="text"
-          placeholder="Enter address if relevant"
+          type="email"
+          placeholder="your@email.com"
           className="w-full px-4 py-3 rounded-lg border border-[#BDBDBD] focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all placeholder:text-gray-300"
-          value={formState.address}
+          value={formState.email}
           onChange={(e) =>
-            setFormState({ ...formState, address: e.target.value })
+            setFormState({ ...formState, email: e.target.value })
           }
         />
       </motion.div>
 
-      <motion.div variants={fadeInUp} className="mb-6">
+      {/* Project & Plot Size */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <motion.div variants={fadeInUp}>
+          <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
+            Project
+          </label>
+          <div className="relative">
+            <select
+              className="w-full px-4 py-3 rounded-lg border border-[#BDBDBD] focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all appearance-none bg-white text-[#3C3C3C]"
+              value={formState.project}
+              onChange={(e) =>
+                setFormState({ ...formState, project: e.target.value })
+              }
+            >
+              <option value="">Select Project</option>
+              {allPlotVentures.map((venture) => (
+                <option key={venture.id} value={venture.title}>
+                  {venture.title}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="absolute right-4 top-[18px] w-5 h-5 text-[#BDBDBD] pointer-events-none" />
+          </div>
+        </motion.div>
+        <motion.div variants={fadeInUp}>
+          <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
+            Plot Size
+          </label>
+          <div className="relative">
+            <select
+              className="w-full px-4 py-3 rounded-lg border border-[#BDBDBD] focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all appearance-none bg-white text-[#3C3C3C]"
+              value={formState.plotSize}
+              onChange={(e) =>
+                setFormState({ ...formState, plotSize: e.target.value })
+              }
+            >
+              <option value="">Select Size</option>
+              <option value="120 sq.yd">120 sq.yd</option>
+              <option value="150 sq.yd">150 sq.yd</option>
+              <option value="200 sq.yd">200 sq.yd</option>
+              <option value="240 sq.yd">240 sq.yd</option>
+              <option value="300 sq.yd">300 sq.yd</option>
+              <option value="400 sq.yd">400 sq.yd</option>
+              <option value="500 sq.yd">500 sq.yd</option>
+              <option value="1000 sq.yd">1000 sq.yd</option>
+              <option value="Custom Size">Custom Size</option>
+            </select>
+            <ChevronDown className="absolute right-4 top-[18px] w-5 h-5 text-[#BDBDBD] pointer-events-none" />
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Message */}
+      <motion.div variants={fadeInUp} className="mb-8">
         <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
-          Message *
+          Message (Optional)
         </label>
         <textarea
-          required
           rows={4}
-          placeholder="How can we assist you today?"
+          placeholder="Any specific requirements or questions..."
           className="w-full px-4 py-3 rounded-lg border border-[#BDBDBD] focus:border-[#C6A15B] focus:ring-1 focus:ring-[#C6A15B] outline-none transition-all placeholder:text-gray-300 resize-none"
           value={formState.message}
           onChange={(e) =>
@@ -311,39 +359,6 @@ const ContactForm = () => {
           }
         />
       </motion.div>
-
-      {/* <motion.div variants={fadeInUp} className="mb-8">
-        <label className="block text-sm font-semibold text-[#3C3C3C] mb-2">
-          Upload Documents (Optional)
-        </label>
-        <div className="border-2 border-dashed border-[#BDBDBD] rounded-lg p-6 text-center hover:border-[#C6A15B] transition-colors cursor-pointer group">
-          <Upload className="w-8 h-8 mx-auto text-[#BDBDBD] group-hover:text-[#C6A15B] mb-2 transition-colors" />
-          <p className="text-sm text-[#BDBDBD] group-hover:text-[#3C3C3C]">
-            Click to upload PDF or Images
-          </p>
-        </div>
-      </motion.div> */}
-
-      {/* <motion.div variants={fadeInUp} className="flex items-center gap-3 mb-8">
-        <div className="w-6 h-6 border rounded bg-gray-100 flex items-center justify-center text-xs text-gray-500">
-          
-          <span>🤖</span>
-        </div>
-        <span className="text-xs text-[#BDBDBD]">
-          I am not a robot (CAPTCHA Placeholder)
-        </span>
-        <div className="ml-auto flex items-center gap-2">
-          <input
-            type="checkbox"
-            required
-            id="gdpr"
-            className="accent-[#C6A15B] w-4 h-4"
-          />
-          <label htmlFor="gdpr" className="text-xs text-[#BDBDBD]">
-            Accept GDPR & Privacy Policy
-          </label>
-        </div>
-      </motion.div> */}
 
       <motion.button
         variants={fadeInUp}
@@ -356,7 +371,7 @@ const ContactForm = () => {
           <span className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         ) : (
           <>
-            Send Message <ArrowRight className="w-5 h-5" />
+            <Home className="w-5 h-5" /> Book Free Site Visit
           </>
         )}
       </motion.button>
