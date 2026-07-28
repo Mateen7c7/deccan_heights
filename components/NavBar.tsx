@@ -99,7 +99,7 @@ export default function NavBar() {
                     <motion.span
                       className={`text-sm lg:text-base xl:text-lg font-medium transition-colors duration-300 ${isActive
                         ? "text-gold-500"
-                        : "text-charcoal-500 group-hover:text-gold-500"
+                        : "text-gold-500 group-hover:text-gold-500"
                         }`}
                       whileHover={{ scale: 1.05 }}
                     >
@@ -112,7 +112,7 @@ export default function NavBar() {
                       className={`transition-transform duration-300 ${hoveredLink === link.name ? "rotate-180" : ""
                         } ${isActive
                           ? "text-gold-500"
-                          : "text-charcoal-500 group-hover:text-gold-500"
+                          : "text-gold-500 group-hover:text-gold-500"
                         }`}
                     />
                   )}
@@ -143,7 +143,7 @@ export default function NavBar() {
                             href={sub.href}
                             className={`block px-5 py-3 text-sm font-medium transition-colors ${pathname === sub.href
                               ? "text-gold-500 bg-gold-50/50"
-                              : "text-charcoal-500 hover:text-gold-500 hover:bg-gray-50"
+                              : "text-gold-500 hover:text-gold-500 hover:bg-gray-50"
                               }`}
                           >
                             {sub.name}
@@ -162,7 +162,7 @@ export default function NavBar() {
         <div className="md:hidden z-50">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-charcoal-500 hover:text-gold-500 transition-colors focus:outline-none"
+            className="text-gold-500 hover:text-gold-500 transition-colors focus:outline-none"
             aria-label="Toggle Menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -196,7 +196,7 @@ export default function NavBar() {
                         href={link.href}
                         className={`text-2xl font-medium tracking-wide ${pathname === link.href
                           ? "text-gold-500"
-                          : "text-charcoal-500"
+                          : "text-gold-500"
                           }`}
                         onClick={() => !hasSubmenu && setIsOpen(false)}
                       >
@@ -211,7 +211,7 @@ export default function NavBar() {
                             href={sub.href}
                             className={`text-lg font-medium ${pathname === sub.href
                               ? "text-gold-500"
-                              : "text-charcoal-400"
+                              : "text-gold-400"
                               }`}
                             onClick={() => setIsOpen(false)}
                           >
