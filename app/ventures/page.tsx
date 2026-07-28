@@ -1,13 +1,59 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import VentureCard from "../../components/home/VentureCard";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+import { CheckCircle2 } from "lucide-react";
+import { databases, DATABASE_ID, COLLECTION_ID, ID } from "@/lib/appwrite";
 
 import { ongoingVentures, completedProjects } from "@/data/plots";
 
 export default function VenturesPage() {
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [location, setLocation] = useState("Shadnagar");
+  const [phoneError, setPhoneError] = useState("");
+  const [submitError, setSubmitError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phone.replace(/[\s-()]/g, ""))) {
+      setPhoneError("Please enter a valid 10-digit phone number");
+      return;
+    }
+
+    setPhoneError("");
+    setSubmitError("");
+    setIsSubmitting(true);
+
+    try {
+      await databases.createDocument(
+        DATABASE_ID,
+        COLLECTION_ID,
+        ID.unique(),
+        {
+          full_name: fullName,
+          phone: phone,
+          email: '',
+          project: location,
+          plot_size: '',
+          message: 'Pre-launch Access Request',
+        }
+      );
+      setIsSuccess(true);
+    } catch (err: any) {
+      console.error("Appwrite Submission Error:", err);
+      setSubmitError(err?.message || "Failed to submit request. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-[#F8F8F8]">
       {/* --- HERO SECTION --- */}
@@ -135,48 +181,120 @@ export default function VenturesPage() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100"
+              className="bg-white p-8 md:p-10 rounded-2xl shadow-xl border border-gray-100 min-h-[420px] flex flex-col justify-center"
             >
-              <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium text-[#3C3C3C] mb-2">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="John Doe"
-                    className="w-full px-4 py-3 bg-[#F8F8F8] border border-[#BDBDBD]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-[#3C3C3C] mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 bg-[#F8F8F8] border border-[#BDBDBD]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-[#3C3C3C] mb-2">
-                    Interested Location
-                  </label>
-                  <select className="w-full px-4 py-3 bg-[#F8F8F8] border border-[#BDBDBD]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50 transition-all text-[#3C3C3C]">
-                    <option>Shadnagar</option>
-                    <option>Chevella</option>
-                    <option>Moinabad</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <button className="w-full py-4 bg-[#C6A15B] text-white font-bold rounded-lg hover:bg-[#3C3C3C] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                  Get Pre-Launch Access
-                </button>
-                <p className="text-xs text-center text-gray-400 mt-4">
-                  By submitting, you agree to receive project updates. We
-                  respect your privacy.
-                </p>
-              </form>
+              <AnimatePresence mode="wait">
+                {!isSuccess ? (
+                  <motion.form
+                    key="ventures-form"
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <div>
+                      <label className="block text-sm font-medium text-[#3C3C3C] mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        placeholder="John Doe"
+                        className="w-full px-4 py-3 bg-[#F8F8F8] border border-[#BDBDBD]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50 transition-all text-[#3C3C3C]"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-[#3C3C3C] mb-2">
+                        Phone Number *
+                      </label>
+                      <input
+                        type="tel"
+                        required
+                        value={phone}
+                        onChange={(e) => {
+                          setPhone(e.target.value);
+                          if (phoneError) setPhoneError("");
+                        }}
+                        placeholder="10-digit number"
+                        className={`w-full px-4 py-3 bg-[#F8F8F8] border ${phoneError ? "border-red-500" : "border-[#BDBDBD]/30"} rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50 transition-all text-[#3C3C3C]`}
+                      />
+                      {phoneError && (
+                        <p className="text-xs text-red-500 mt-1 font-medium">
+                          {phoneError}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-[#3C3C3C] mb-2">
+                        Interested Location
+                      </label>
+                      <select
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value)}
+                        className="w-full px-4 py-3 bg-[#F8F8F8] border border-[#BDBDBD]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C6A15B]/50 transition-all text-[#3C3C3C]"
+                      >
+                        <option value="Shadnagar">Shadnagar</option>
+                        <option value="Chevella">Chevella</option>
+                        <option value="Moinabad">Moinabad</option>
+                        <option value="Other">Other</option>
+                      </select>
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full py-4 bg-[#C6A15B] text-white font-bold rounded-lg hover:bg-[#3C3C3C] transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer flex items-center justify-center gap-2 disabled:opacity-50"
+                    >
+                      {isSubmitting ? (
+                        <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      ) : (
+                        "Get Pre-Launch Access"
+                      )}
+                    </button>
+                    {submitError && (
+                      <p className="text-sm text-red-500 text-center font-medium">
+                        {submitError}
+                      </p>
+                    )}
+                    <p className="text-xs text-center text-gray-400 mt-4">
+                      By submitting, you agree to receive project updates. We respect your privacy.
+                    </p>
+                  </motion.form>
+                ) : (
+                  <motion.div
+                    key="ventures-success"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="text-center p-6 flex flex-col items-center justify-center"
+                  >
+                    <div className="w-16 h-16 bg-[#C6A15B]/10 rounded-full flex items-center justify-center mb-4">
+                      <CheckCircle2 className="w-8 h-8 text-[#C6A15B]" />
+                    </div>
+                    <h3 className="text-xl font-bold text-[#3C3C3C] mb-2">
+                      Access Requested!
+                    </h3>
+                    <p className="text-gray-500 text-sm mb-6 max-w-sm">
+                      Thank you for your interest. One of our sales specialists will contact you shortly with exclusive pre-launch details.
+                    </p>
+                    <button
+                      onClick={() => {
+                        setFullName("");
+                        setPhone("");
+                        setLocation("Shadnagar");
+                        setPhoneError("");
+                        setSubmitError("");
+                        setIsSuccess(false);
+                      }}
+                      className="px-6 py-2.5 bg-[#C6A15B]/10 hover:bg-[#C6A15B]/20 text-[#C6A15B] text-xs font-bold rounded-lg transition-colors cursor-pointer"
+                    >
+                      Request Another Access
+                    </button>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           </div>
         </div>

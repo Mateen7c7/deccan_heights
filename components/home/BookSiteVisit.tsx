@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { databases, DATABASE_ID, COLLECTION_ID, ID } from "@/lib/appwrite";
 import {
   Phone,
   Mail,
@@ -39,6 +40,7 @@ const BookSiteVisit = () => {
   const [selectedSize, setSelectedSize] = useState("");
   const [message, setMessage] = useState("");
   const [phoneError, setPhoneError] = useState("");
+  const [submitError, setSubmitError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isOpenNow, setIsOpenNow] = useState(true);
@@ -74,13 +76,30 @@ const BookSiteVisit = () => {
     }
 
     setPhoneError("");
+    setSubmitError("");
     setIsSubmitting(true);
 
-    // Simulate API submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-
-    setIsSubmitting(false);
-    setIsSuccess(true);
+    try {
+      await databases.createDocument(
+        DATABASE_ID,
+        COLLECTION_ID,
+        ID.unique(),
+        {
+          full_name: fullName,
+          phone: phone,
+          email: email || '',
+          project: selectedProject,
+          plot_size: selectedSize,
+          message: message || '',
+        }
+      );
+      setIsSuccess(true);
+    } catch (err: any) {
+      console.error("Appwrite Submission Error:", err);
+      setSubmitError(err?.message || "Failed to submit enquiry. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetForm = () => {
@@ -90,6 +109,7 @@ const BookSiteVisit = () => {
     setSelectedProject("");
     setSelectedSize("");
     setMessage("");
+    setSubmitError("");
     setIsSuccess(false);
   };
 
@@ -370,6 +390,11 @@ const BookSiteVisit = () => {
                         </>
                       )}
                     </button>
+                    {submitError && (
+                      <p className="text-[11px] text-red-500 mt-2 text-center font-medium">
+                        {submitError}
+                      </p>
+                    )}
                   </form>
 
                   {/* Subtext */}

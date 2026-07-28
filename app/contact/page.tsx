@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { databases, DATABASE_ID, COLLECTION_ID, ID } from "@/lib/appwrite";
 import Image from "next/image";
 import {
   Phone,
@@ -166,6 +167,7 @@ const ContactForm = () => {
     message: "",
   });
   const [phoneError, setPhoneError] = useState("");
+  const [submitError, setSubmitError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
@@ -180,11 +182,30 @@ const ContactForm = () => {
     }
 
     setPhoneError("");
+    setSubmitError("");
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSuccess(true);
+
+    try {
+      await databases.createDocument(
+        DATABASE_ID,
+        COLLECTION_ID,
+        ID.unique(),
+        {
+          full_name: formState.name,
+          phone: formState.phone,
+          email: formState.email || '',
+          project: formState.project,
+          plot_size: formState.plotSize,
+          message: formState.message || '',
+        }
+      );
+      setIsSuccess(true);
+    } catch (err: any) {
+      console.error("Appwrite Submission Error:", err);
+      setSubmitError(err?.message || "Failed to submit enquiry. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -213,6 +234,7 @@ const ContactForm = () => {
               plotSize: "",
               message: "",
             });
+            setSubmitError("");
             setIsSuccess(false);
           }}
           className="mt-8 px-8 py-3 bg-[#C6A15B] text-white font-semibold rounded-lg hover:bg-[#b08d4b] transition-colors"
@@ -375,6 +397,11 @@ const ContactForm = () => {
           </>
         )}
       </motion.button>
+      {submitError && (
+        <p className="text-sm text-red-500 mt-3 text-center font-semibold">
+          {submitError}
+        </p>
+      )}
     </motion.form>
   );
 };
@@ -388,7 +415,7 @@ const ContactInfoItems = () => (
         icon: MapPin,
         title: "Visit Us",
         content:
-          "Deccan Heights Homes & Resorts PVT. LTD., Road No. 12, Banjara Hills, Hyderabad",
+          "Downtown Mall, Unit 4 & 5, Ground floor, Veer Nagar, Lakdikapul, Hyderabad, Telangana 500004",
       },
       {
         icon: Clock,
