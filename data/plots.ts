@@ -230,84 +230,7 @@ export const phase5Data: PlotVenture = {
   ],
 };
 
-export const phase2Data: PlotVenture = {
-  id: "phase-2",
-  slug: "phase-2",
-  title: "Deccan Heights Phase II",
-  subtitle: "Future-ready smart community for the modern investor.",
-  description:
-    "Phase II elevates the standard of living with enhanced amenities and strategic positioning. Designed as a premium gated community, it offers a secure environment with world-class infrastructure. Whether you are looking for immediate construction or long-term capital appreciation, Phase II stands as a beacon of growth in the Shadnagar region.",
-  image: "/plot2.webp",
-  status: "completed",
-  badge: "Completed",
-  location: "Shadnagar, Hyderabad, Telangana",
-  priceRange: "₹7,500/sq.yd",
-  roiHighlight: "Expected ROI: High Appreciation",
-  thumbnails: ["/plot2.webp", "/plot1.webp", "/plot3.webp"],
-  stats: [
-    { label: "Plot Size", value: "1500 Sq.ft" },
-    { label: "Starting Price", value: "₹35L+" },
-    { label: "Location", value: "Shadnagar" },
-  ],
-  aboutTitle: "About This Project",
-  aboutDescription:
-    "Phase II elevates the standard of living with enhanced amenities and strategic positioning. Designed as a premium gated community, it offers a secure environment with world-class infrastructure. Whether you are looking for immediate construction or long-term capital appreciation, Phase II stands as a beacon of growth in the Shadnagar region.",
-  aboutStats: [
-    { value: "₹7,500", label: "Outright price per sq.yd", sublabel: "Affordable entry investment" },
-    { value: "15 Ac", label: "Total project area", sublabel: "15 Acres (Gated Community)" },
-    { value: "EMI", label: "₹8,000/mo.", sublabel: "12-month EMI facility" },
-    { value: "100%", label: "Clear Documentation", sublabel: "Passbook eligible, clear title" },
-  ],
-  pricingTitle: "Plot Sizes & Pricing",
-  plotSizes: [
-    { size: "150 sq.yd", label: "Total investment", price: "₹11,25,000", rate: "@ ₹7,500/sq.yd", badge: "Premium" },
-    { size: "200 sq.yd", label: "Total investment", price: "₹15,00,000", rate: "@ ₹7,500/sq.yd", badge: "Premium" },
-    { size: "300 sq.yd", label: "Total investment", price: "₹22,50,000", rate: "@ ₹7,500/sq.yd", badge: "Premium" },
-    { size: "500 sq.yd", label: "Total investment", price: "₹37,50,000", rate: "@ ₹7,500/sq.yd", badge: "Premium" },
-  ],
-  customSize: {
-    title: "Custom Size",
-    subtitle: "Need a different plot size?",
-    description: "Custom plot sizes are available on request. Contact us to discuss your requirement.",
-  },
-  paymentPlans: [
-    { label: "per sq.yd (Outright)", value: "₹7,500" },
-    { label: "per sq.yd (EMI Plan)", value: "₹8,000" },
-    { label: "Booking Amount", value: "₹50,000" },
-    { label: "Down Payment", value: "₹2,00,000" },
-    { label: "EMI Duration", value: "12 Months" },
-  ],
-  layoutTitle: "Project Layout Plan",
-  layoutPlanUrl: "/phase5wids.svg",
-  locationTitle: "Location Advantages",
-  locationAdvantages: [
-    { title: "2 Mins from NH-44", description: "Extremely close to National Highway 44 for easy commuting." },
-    { title: "Established Residential Zones", description: "Adjacent to thriving neighborhoods with existing residential communities." },
-    { title: "Near Microsoft Data Center", description: "Just 15 minutes away from the upcoming Microsoft Data Center." },
-    { title: "Corporate Facilities", description: "Close to leading corporate hospitals and international schools." },
-    { title: "Quick Access to ORR", description: "Conveniently connected to the Outer Ring Road for citywide access." },
-    { title: "High Appreciation Zone", description: "Positioned in a high-demand corridor with continuous infrastructure growth." },
-  ],
-  quoteText: "Deccan Heights Phase II is a testament to our quality development, offering premium infrastructure and high ROI potential. Secure your investment in Shadnagar today.",
-  amenities: [
-    "Grand Entrance Arch with Gate",
-    "Clubhouse Membership Access",
-    "Landscaped Gardens & Gazebos",
-    "Children's Play Area",
-    "Water Harvesting Pits",
-    "Overhead Water Tank",
-    "Solar Street Lighting",
-    "Curbed Stones for Roads",
-  ],
-  locationHighlights: [
-    "2 Mins from National Highway 44",
-    "Adjacent to Established Residential Zones",
-    "15 Mins to Microsoft Data Center",
-    "Near Corporate Hospitals & Schools",
-    "Quick Access to Outer Ring Road (ORR)",
-    "High Appreciation Potential Zone",
-  ],
-};
+
 
 export const phase4Data: PlotVenture = {
   id: "phase-4",
@@ -553,7 +476,7 @@ export const phase123Data: PlotVenture = {
   ],
 };
 
-export const allPlotVentures: PlotVenture[] = [phase5Data, phase123Data, phase4Data, balapurBandraData, phase2Data];
+export const allPlotVentures: PlotVenture[] = [phase5Data, phase123Data, phase4Data, balapurBandraData,];
 
 export const ongoingVentures: VentureListing[] = [
   {

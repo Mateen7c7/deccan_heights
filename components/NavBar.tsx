@@ -61,12 +61,12 @@ export default function NavBar() {
         : "bg-white/0 py-4 md:py-1 lg:py-1"
         }`}
     >
-      <div className="container mx-auto lg:mx-0 px-6  flex items-center justify-between">
+      <div className=" w-full px-5 lg:mx-0 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center z-50 group">
           <div className={`relative transition-all duration-300  ${isSolid
-            ? "w-[130px] h-[80px] md:w-[160px] md:h-[98px] lg:w-[180px] lg:h-[50px]"
-            : "w-[160px] h-[98px] md:w-[200px] md:h-[123px] lg:w-[450px] lg:h-[100px] lg:mt-6"
+            ? "w-[300px] h-[60px] md:w-[160px] md:h-[98px] lg:w-[180px] lg:h-[50px]"
+            : "w-[300px] h-[60px] md:w-[300px] md:h-[123px] lg:w-[450px] lg:h-[100px] lg:mt-6"
             }`}>
             <Image
               src="/new_dh_logo_c.png"
