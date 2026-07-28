@@ -49,73 +49,147 @@ export default function GalleryPage() {
           </motion.p>
         </div>
 
-        {/* Featured Video Section (Full Width Card) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-gold-500/30 transition-all duration-300 group mb-16"
-        >
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-gold-500/10 text-gold-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
-              <Tv className="w-6 h-6" />
-            </div>
+        {/* Featured Video Section (Two Landscape Cards Side by Side) */}
+        <div className="mb-12 text-center lg:text-left">
+          <h2 className="text-2xl md:text-3xl font-bold text-charcoal-500 mb-2">Featured Presentations</h2>
+          <p className="text-gray-500 text-sm md:text-base">Comprehensive video walkthroughs detailing building specifications, accessibility, and workspace layouts.</p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+          {/* Main Walkthrough Video Card 1 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-gold-500/30 transition-all duration-300 group flex flex-col justify-between"
+          >
             <div>
-              <span className="text-gold-500 text-xs font-bold uppercase tracking-wider block">
-                Featured Presentation
-              </span>
-              <h3 className="text-2xl md:text-3xl font-bold text-charcoal-500">
-                Brigade Deccan Heights Walkthrough
-              </h3>
-            </div>
-          </div>
-
-          {/* Grid Layout for Video and details on desktop */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            {/* Video Container */}
-            <div className="lg:col-span-7 relative w-full aspect-video rounded-2xl overflow-hidden shadow-md bg-black">
-              <iframe
-                src="https://www.youtube.com/embed/OfabpSvNZF0"
-                title="Brigade Deccan Heights Walkthrough"
-                className="absolute inset-0 w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              ></iframe>
-            </div>
-
-            {/* Video Information */}
-            <div className="lg:col-span-5 flex flex-col justify-between">
-              <div>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-charcoal-500/5 text-charcoal-500 text-xs font-medium rounded-full">
-                    <MapPin className="w-3.5 h-3.5 text-gold-500" /> Yeshwanthpur, Bangalore
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-charcoal-500/5 text-charcoal-500 text-xs font-medium rounded-full">
-                    <Building className="w-3.5 h-3.5 text-gold-500" /> Commercial Office Space
-                  </span>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-gold-500/10 text-gold-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                  <Tv className="w-6 h-6" />
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
-                  Take a detailed tour of Brigade Deccan Heights, a premier Grade-A commercial office development. Perfectly positioned at the gateway of North Bengaluru, this project offers high-performance workspaces, world-class amenities, and gold-standard energy efficiency for modern corporate requirements.
-                </p>
+                <div>
+                  <span className="text-gold-500 text-xs font-bold uppercase tracking-wider block">
+                    Featured Tour
+                  </span>
+                  <h3 className="text-xl md:text-2xl font-bold text-charcoal-500">
+                    Brigade Deccan Heights Walkthrough
+                  </h3>
+                </div>
               </div>
 
-              {/* Key Features List */}
-              <div className="border-t border-gray-100 pt-6">
-                <h4 className="text-xs font-semibold text-charcoal-500 uppercase tracking-wider mb-4">
-                  Key Specifications & Highlights
-                </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
-                  {highlights.map((highlight, index) => (
-                    <li key={index} className="flex items-start gap-2.5 text-sm text-gray-600">
-                      <CheckCircle2 className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Video Container */}
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md bg-black mb-6">
+                <iframe
+                  src="https://www.youtube.com/embed/OfabpSvNZF0"
+                  title="Brigade Deccan Heights Walkthrough"
+                  className="absolute inset-0 w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-charcoal-500/5 text-charcoal-500 text-xs font-medium rounded-full">
+                  <MapPin className="w-3.5 h-3.5 text-gold-500" /> Yeshwanthpur, Bangalore
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-charcoal-500/5 text-charcoal-500 text-xs font-medium rounded-full">
+                  <Building className="w-3.5 h-3.5 text-gold-500" /> Commercial Office Space
+                </span>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                Take a detailed tour of Brigade Deccan Heights, a premier Grade-A commercial office development. Perfectly positioned at the gateway of North Bengaluru, this project offers high-performance workspaces, world-class amenities, and gold-standard energy efficiency for modern corporate requirements.
+              </p>
             </div>
-          </div>
-        </motion.div>
+
+            {/* Key Features List */}
+            <div className="border-t border-gray-100 pt-6 mt-auto">
+              <h4 className="text-xs font-semibold text-charcoal-500 uppercase tracking-wider mb-4">
+                Key Specifications & Highlights
+              </h4>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {highlights.map((highlight, index) => (
+                  <li key={index} className="flex items-start gap-2.5 text-xs text-gray-600">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 shrink-0 mt-0.5" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+
+          {/* Walkthrough Video Card 2 */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-gray-100 hover:shadow-2xl hover:border-gold-500/30 transition-all duration-300 group flex flex-col justify-between"
+          >
+            <div>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 bg-gold-500/10 text-gold-500 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                  <Tv className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-gold-500 text-xs font-bold uppercase tracking-wider block">
+                    Property Showcase
+                  </span>
+                  <h3 className="text-xl md:text-2xl font-bold text-charcoal-500">
+                    Deccan Heights Virtual Tour
+                  </h3>
+                </div>
+              </div>
+
+              {/* Video Container */}
+              <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md bg-black mb-6">
+                <iframe
+                  src="https://www.youtube.com/embed/2TvNiqvHzIM"
+                  title="Deccan Heights Virtual Tour"
+                  className="absolute inset-0 w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-charcoal-500/5 text-charcoal-500 text-xs font-medium rounded-full">
+                  <MapPin className="w-3.5 h-3.5 text-gold-500" /> Yeshwanthpur, Bangalore
+                </span>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-charcoal-500/5 text-charcoal-500 text-xs font-medium rounded-full">
+                  <Building className="w-3.5 h-3.5 text-gold-500" /> Site & Architecture Tour
+                </span>
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm">
+                Explore the exterior architectural elements, site location advantages, surrounding infrastructure, and development highlights of Deccan Heights. This walkthrough focuses on the location connectivity, parking details, and modern facade.
+              </p>
+            </div>
+
+            {/* Location & Amenity Details */}
+            <div className="border-t border-gray-100 pt-6 mt-auto">
+              <h4 className="text-xs font-semibold text-charcoal-500 uppercase tracking-wider mb-4">
+                Location & Amenity Advantages
+              </h4>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <li className="flex items-start gap-2.5 text-xs text-gray-600">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 shrink-0 mt-0.5" />
+                  <span>Centralized high-speed lift lobbies</span>
+                </li>
+                <li className="flex items-start gap-2.5 text-xs text-gray-600">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 shrink-0 mt-0.5" />
+                  <span>Ample parking spaces for employees & visitors</span>
+                </li>
+                <li className="flex items-start gap-2.5 text-xs text-gray-600">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 shrink-0 mt-0.5" />
+                  <span>Premium entry gateway & security systems</span>
+                </li>
+                <li className="flex items-start gap-2.5 text-xs text-gray-600">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-gold-500 shrink-0 mt-0.5" />
+                  <span>Landscape design & eco-friendly seating spots</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
 
         {/* Section Divider & Title */}
         <div className="mb-10 text-center lg:text-left">
