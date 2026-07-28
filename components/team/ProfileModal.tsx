@@ -157,17 +157,14 @@ export default function ProfileModal({
 
                 {/* Contact Actions */}
                 <div className="pt-6 border-t border-gray-100 flex flex-wrap gap-4">
-                  <button className="flex-1 px-6 py-3 bg-gold-500 text-white font-semibold rounded shadow hover:bg-gold-600 transition-colors uppercase text-sm tracking-wide">
+                  <a
+                    href={`https://wa.me/918328120257?text=${encodeURIComponent(`Hi, I'd like to schedule a meeting with ${member.name}.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 px-6 py-3 bg-gold-500 text-white font-semibold rounded shadow hover:bg-gold-600 transition-colors uppercase text-sm tracking-wide text-center"
+                  >
                     Schedule Meeting
-                  </button>
-                  {member.email && (
-                    <a
-                      href={`mailto:${member.email}`}
-                      className="px-6 py-3 border border-gray-300 text-charcoal-500 font-medium rounded hover:bg-gray-50 transition-colors uppercase text-sm tracking-wide"
-                    >
-                      Email Agent
-                    </a>
-                  )}
+                  </a>
                   {member.phone && (
                     <a
                       href={`tel:${member.phone}`}
