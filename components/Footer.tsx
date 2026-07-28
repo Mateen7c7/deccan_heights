@@ -126,12 +126,12 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-silver-500">
                 <Phone className="shrink-0 text-gold-500" size={18} />
-                <span className="text-sm">+91 95158 87213</span>
+                <span className="text-sm">+918328120257</span>
               </div>
               <div className="flex items-center gap-3 text-silver-500">
                 <Mail className="shrink-0 text-gold-500" size={18} />
-                <a 
-                  href="mailto:deccanheightsofficial@gmail.com" 
+                <a
+                  href="mailto:deccanheightsofficial@gmail.com"
                   className="text-sm hover:text-gold-500 transition-colors"
                 >
                   deccanheightsofficial@gmail.com
