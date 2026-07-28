@@ -127,7 +127,12 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3 text-silver-500">
                 <Mail className="shrink-0 text-gold-500" size={18} />
-                <span className="text-sm">info@deccanheights.com</span>
+                <a 
+                  href="mailto:deccanheightsofficial@gmail.com" 
+                  className="text-sm hover:text-gold-500 transition-colors"
+                >
+                  deccanheightsofficial@gmail.com
+                </a>
               </div>
             </div>
           </div>

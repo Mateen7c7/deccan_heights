@@ -122,7 +122,12 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-[#C6A15B] shrink-0" />
-                <span>info@deccanheights.com</span>
+                <a 
+                  href="mailto:deccanheightsofficial@gmail.com" 
+                  className="hover:text-[#C6A15B] transition-colors"
+                >
+                  deccanheightsofficial@gmail.com
+                </a>
               </li>
             </ul>
           </div>

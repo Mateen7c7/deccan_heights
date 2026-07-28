@@ -166,7 +166,7 @@ const BookSiteVisit = () => {
               {/* Email Us */}
               <button
                 type="button"
-                onClick={() => window.location.href = "mailto:deccanheights@gmail.com"}
+                onClick={() => window.location.href = "mailto:deccanheightsofficial@gmail.com"}
                 className="w-full bg-[#F8F9FA] hover:bg-gray-200/50 border border-gray-200/60 text-[#3C3C3C] p-4 rounded-xl flex items-center gap-4 transition-colors cursor-pointer text-left focus:outline-none focus:ring-2 focus:ring-gray-300"
               >
                 <div className="w-10 h-10 bg-[#C6A15B]/10 rounded-lg flex items-center justify-center shrink-0">
@@ -175,7 +175,7 @@ const BookSiteVisit = () => {
                 <div className="overflow-hidden">
                   <div className="text-[10px] uppercase tracking-wider text-[#3C3C3C]/60 font-semibold">Email Us</div>
                   <div className="text-xs md:text-sm font-bold truncate text-[#3C3C3C] mt-0.5">
-                    deccanheights@gmail.com
+                    deccanheightsofficial@gmail.com
                   </div>
                 </div>
               </button>

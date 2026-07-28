@@ -45,9 +45,12 @@ export default function ContactLeadCapture() {
                   <Mail className="text-[#C6A15B] w-6 h-6" />
                   <div>
                     <p className="font-semibold text-white">Email</p>
-                    <p className="text-gray-400 text-sm">
-                      hello@deccanheights.com
-                    </p>
+                    <a 
+                      href="mailto:deccanheightsofficial@gmail.com" 
+                      className="text-gray-400 text-sm hover:text-[#C6A15B] transition-colors"
+                    >
+                      deccanheightsofficial@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
