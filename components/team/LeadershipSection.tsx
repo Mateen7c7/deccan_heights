@@ -9,7 +9,7 @@ const leaders: TeamMember[] = [
     id: "l1",
     name: "Mr. Arshad Ali Khan",
     title: "Founder & Chairman",
-    image: "/staff/Arshad ali khan.jpeg",
+    image: "/staff/Arshad Ali Khan.PNG",
     summary:
       "With over 25 years of experience in luxury real estate, Mr. Arshad Ali Khan has shaped the skyline of Deccan. His vision for sustainable, premium living helps drive our mission forward.",
     bio: "Mr. Arshad Ali Khan is the visionary Founder & Chairman of Deccan Heights. Starting his career in 1998, he has overseen the development of over 50 premium residential projects. His leadership style focuses on integrity, innovation, and customer-centricity.",
@@ -90,7 +90,7 @@ const leaders: TeamMember[] = [
     id:"l16",
     name:"Syed Wajid Hussain",
     title:"General Manager",
-    image:"/staff/Syed Wajid Hussain.jpeg",
+    image:"/staff/Syed Wajid Hussain.PNG",
     summary:
       "Syed Wajid Hussain is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
     bio:"Syed Wajid Hussain is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
@@ -103,7 +103,7 @@ const leaders: TeamMember[] = [
     id: "l4",
     name: "Mohammed irshad Ahmed",
     title: "General manager",
-    image: "/staff/MohammedirshadAhmed.jpeg",
+    image: "/staff/MohammedirshadAhmed.PNG",
     summary:
       "Mohammed irshad Ahmed is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
     bio: "Mohammed irshad Ahmed is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",

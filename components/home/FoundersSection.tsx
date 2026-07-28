@@ -10,7 +10,7 @@ const founders: TeamMember[] = [
     id: "founder-1",
     name: "Mr. Arshad Ali Khan",
     title: "Founder & Chairman",
-    image: "/staff/Arshad ali khan.jpeg",
+    image: "/staff/Arshad Ali Khan.PNG",
     summary:
       "With over 25 years of experience in luxury real estate, Mr. Arshad Ali Khan has shaped the skyline of Deccan. His vision for sustainable, premium living drives our mission forward.",
     bio: "Mr. Arshad Ali Khan is the visionary Founder & Chairman of Deccan Heights. Starting his career in 1998, he has overseen the development of over 50 premium residential projects. His leadership style focuses on integrity, innovation, and customer-centricity.",
