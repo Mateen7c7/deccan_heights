@@ -48,8 +48,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="block">
-              <h2 className="text-2xl font-bold font-serif tracking-wide text-white">
+              {/* <h2 className="text-2xl font-bold font-serif tracking-wide text-white">
                 DECCAN <span className="text-gold-500">HEIGHTS</span>
+              </h2> */}
+              <h2 className="text-2xl font-bold text-white mb-6">
+                <img src="/new_dh_logo_c.png" alt="image" height={60} width={300} />
               </h2>
             </Link>
             <p className="text-silver-500 text-sm leading-relaxed max-w-xs">

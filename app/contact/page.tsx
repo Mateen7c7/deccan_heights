@@ -570,7 +570,7 @@ export default function ContactPage() {
 
 
       {/* Agents Section */}
-      <section className="py-24 px-6 md:px-12 bg-[#F8F8F8]">
+      {/* <section className="py-24 px-6 md:px-12 bg-[#F8F8F8]">
         <div className="container mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -595,7 +595,7 @@ export default function ContactPage() {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Social Proof */}
       <section className="py-24 px-6 md:px-12 bg-white">

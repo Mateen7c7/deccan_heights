@@ -20,6 +20,7 @@ export default function Footer() {
             <h2 className="text-2xl font-bold text-white mb-6">
               Deccan Heights
             </h2>
+            
             <p className="text-sm leading-relaxed mb-6">
               Elevating lifestyles with premium real estate solutions. From
               plots to holiday homes, we build trust and quality.
