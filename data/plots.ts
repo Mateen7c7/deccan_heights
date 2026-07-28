@@ -668,7 +668,7 @@ export const activeHomeVentures: VentureListing[] = [
 export const completedProjects: CompletedProject[] = [
   {
     id: 1,
-    title: "Basheera Bagh",
+    title: "Basheer Bagh",
     description:
       "A premium residential development offering modern amenities and strategic connectivity.",
     location: "Hyderabad",
@@ -695,7 +695,7 @@ export const completedProjects: CompletedProject[] = [
   },
   {
     id: 4,
-    title: "Brindawaan Nagar",
+    title: "Brindawan Colony",
     description:
       "A serene residential layout designed for peaceful living within city reach.",
     location: "Hyderabad",
@@ -713,7 +713,7 @@ export const completedProjects: CompletedProject[] = [
   },
   {
     id: 6,
-    title: "5th Revenue Qutub",
+    title: "5th Avenue Kottur",
     description:
       "High-demand plots featuring excellent urban connectivity and essential services.",
     location: "Qutubullapur",
@@ -722,7 +722,7 @@ export const completedProjects: CompletedProject[] = [
   },
   {
     id: 7,
-    title: "Golden Villa Balapur",
+    title: "Golden Villas Balapur",
     description:
       "Luxury villa plots in the tranquil environment of Balapur, perfect for homeowners.",
     location: "Balapur",
@@ -730,35 +730,8 @@ export const completedProjects: CompletedProject[] = [
     status: "Completed",
   },
   {
-    id: 8,
-    title: "Deccan Heights Phase 1",
-    description:
-      "The foundation of our excellence, Phase 1 set the standard for quality layouts.",
-    location: "Shadnagar",
-    year: "Completed",
-    status: "Completed",
-  },
-  {
-    id: 9,
-    title: "Deccan Heights Phase 2",
-    description:
-      "Continuing our legacy of providing secure and premium gated communities.",
-    location: "Shadnagar",
-    year: "Completed",
-    status: "Completed",
-  },
-  {
-    id: 10,
-    title: "Deccan Heights Phase 4",
-    description:
-      "A successful expansion of the Deccan Heights family with 100% occupancy.",
-    location: "Shadnagar",
-    year: "Completed",
-    status: "Completed",
-  },
-  {
     id: 11,
-    title: "Deccan Heights Phase 1, 2 & 3",
+    title: "Deccan Heights Phase 1, 2 ,3 & 4",
     description:
       "Modern living integrated with nature, delivering happiness to hundreds of families.",
     location: "Shadnagar",
