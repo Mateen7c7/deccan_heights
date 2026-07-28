@@ -75,7 +75,7 @@ const leaders: TeamMember[] = [
   },
   {
     id: "l13",
-    name: "Syed Zubair",
+    name: "Syed Zubairuddin",
     title: "General Manager",
     image: "/staff/Syed Zubair.jpeg",
     summary:
@@ -166,31 +166,6 @@ const leaders: TeamMember[] = [
 
   },
   {
-    id: "l9",
-    name: "Imran Khan",
-    title: "Chief Marketing Manager",
-    image: "/staff/ImranKhan.jpg",
-    summary:
-      "Imran Khan is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
-    bio: "Imran Khan is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
-    email: "imran@deccanheights.com",
-    linkedin: "#",
-    expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
-    certifications: ["Certified Marketing Manager"],
-  }, {
-    id: "l10",
-    name: "Mohammed Abdul Mujeeb",
-    title: "Chief Marketing Manager",
-    image: "/staff/Mohammed abdul mujeeb.jpg",
-    summary:
-      "Mohammed Abdul Mujeeb is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
-    bio: "Mohammed Abdul Mujeeb is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
-    email: "mujeeb@deccanheights.com",
-    linkedin: "#",
-    expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
-    certifications: ["Certified Marketing Manager"],
-  },
-  {
     id: "l11",
     name: "Mohammed Maseehuddin",
     title: "Chief Marketing Manager",
@@ -215,6 +190,32 @@ const leaders: TeamMember[] = [
     linkedin:"#",
     expertises:["Project Development","Team Leadership","Market Analysis"],
     certifications:["Certified Project Developer"],
+  }
+  ,
+  {
+    id: "l9",
+    name: "Imran Khan",
+    title: "Chief Marketing Manager",
+    image: "/staff/ImranKhan.jpg",
+    summary:
+      "Imran Khan is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
+    bio: "Imran Khan is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
+    email: "imran@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Marketing Manager"],
+  }, {
+    id: "l10",
+    name: "Mohammed Abdul Mujeeb",
+    title: "Chief Marketing Manager",
+    image: "/staff/Mohammed abdul mujeeb.jpg",
+    summary:
+      "Mohammed Abdul Mujeeb is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company.",
+    bio: "Mohammed Abdul Mujeeb is the chief marketing manager of Deccan Heights. He is responsible for the overall marketing of the company. He has a background in marketing and has a proven track record of success in the real estate industry.",
+    email: "mujeeb@deccanheights.com",
+    linkedin: "#",
+    expertises: ["Marketing Strategy", "Team Leadership", "Market Analysis"],
+    certifications: ["Certified Marketing Manager"],
   },
   {
     id:"l17",
