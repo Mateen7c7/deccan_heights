@@ -6,10 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const IMAGES = [
-  "/bg1.png",
-  "/bg2.png",
-  "/bg3.png",
-  "/bg4.png",
+  "/bg1.PNG",
+  "/bg2.PNG",
+  "/bg3.PNG",
+  "/bg4.PNG",
 
 ];
 
