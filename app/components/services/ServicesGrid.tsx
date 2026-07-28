@@ -35,14 +35,14 @@ const services = [
   },
   {
     id: "property-management",
-    title: "Property Management",
+    title: "Building Mantenance",
     description:
       "Comprehensive care for your property including maintenance and tenant management.",
     icon: Key,
   },
   {
     id: "construction",
-    title: "Construction & Projects",
+    title: "Construction & Interior Designing",
     description:
       "Turnkey construction solutions and professional project management services.",
     icon: Hammer,
@@ -103,7 +103,7 @@ export default function ServicesGrid() {
               <p className="text-[#3C3C3C]/70 mb-6 leading-relaxed text-sm">
                 {service.description}
               </p>
-             
+
             </motion.div>
           ))}
         </div>

@@ -11,7 +11,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services | Deccan Heights",
   description:
-    "Explore our comprehensive real estate services including plot sales, property management, construction, and resort investments.",
+    "Explore our comprehensive real estate services including plot sales, Building Mantenance, construction, and Resort Developments.",
 };
 
 export default function ServicesPage() {

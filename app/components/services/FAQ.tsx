@@ -25,9 +25,9 @@ const faqs = [
   },
   {
     category: "Management",
-    question: "What does your property management service cover?",
+    question: "What does your Building Mantenance service cover?",
     answer:
-      "Our service covers tenant screening, rent collection, regular maintenance, property inspections, and legal agreement renewals.",
+      "Our service covers Man power supply , rent collection, Anual Property Maintenance, property inspections, and legal agreement renewals.",
   },
   {
     category: "Investment",

@@ -367,7 +367,7 @@ const ContactForm = () => {
 const ContactInfoItems = () => (
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
     {[
-      { icon: Phone, title: "Call Us", content: "+91 40 1234 5678" },
+      { icon: Phone, title: "Call Us", content: "+918328120257" },
       { icon: Mail, title: "Email Us", content: "deccanheightsofficial@gmail.com" },
       {
         icon: MapPin,
@@ -395,15 +395,15 @@ const ContactInfoItems = () => (
         <div>
           <h4 className="text-lg font-bold text-[#3C3C3C]">{item.title}</h4>
           {item.title === "Email Us" ? (
-            <a 
-              href={`mailto:${item.content}`} 
+            <a
+              href={`mailto:${item.content}`}
               className="text-[#BDBDBD] hover:text-[#C6A15B] transition-colors mt-1 block"
             >
               {item.content}
             </a>
           ) : item.title === "Call Us" ? (
-            <a 
-              href={`tel:${item.content.replace(/\s+/g, '')}`} 
+            <a
+              href={`tel:${item.content.replace(/\s+/g, '')}`}
               className="text-[#BDBDBD] hover:text-[#C6A15B] transition-colors mt-1 block"
             >
               {item.content}

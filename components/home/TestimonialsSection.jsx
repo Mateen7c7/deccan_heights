@@ -42,7 +42,7 @@ const reviews = [
     },
     {
         id: 5,
-        name: "Vikram Singh",
+        name: "Abdul Samad",
         role: "Retired Officer",
         property: "Farm Land",
         review: "Highly professional team, very happy with my plot. The development is exactly as promised.",

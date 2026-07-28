@@ -169,7 +169,7 @@ export default function DetailedServices() {
 
       </SectionWrapper>
 
-      {/* D. Property Management */}
+      {/* D. Building Mantenance */}
       <SectionWrapper
         id="property-management"
         className="bg-[#3C3C3C] text-white"
@@ -185,7 +185,7 @@ export default function DetailedServices() {
               Hassle-Free Ownership
             </h3>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Comprehensive Property Management
+              Comprehensive Building Mantenance
             </h2>
             <p className="text-gray-300 mb-8 max-w-md">
               Let us handle the day-to-day operations while you enjoy the
@@ -198,10 +198,10 @@ export default function DetailedServices() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              "Tenant Screening",
+              "Man power supply ",
               "Rent Collection",
-              "Regular Maintenance",
-              "Financial Reporting",
+              "Anual Property Maintenance",
+              "Property Operations Maintenance & Enery Consultants",
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -221,7 +221,7 @@ export default function DetailedServices() {
 
       {/* E. Construction */}
       <SectionWrapper id="construction" className="bg-[#F8F8F8]">
-        <Heading title="Construction & Projects" subtitle="Build With Us" />
+        <Heading title="Construction & Interior Designing" subtitle="Build With Us" />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -238,6 +238,26 @@ export default function DetailedServices() {
                 From architectural design to final finishing, we manage the
                 entire construction lifecycle with precision and quality
                 materials.
+              </p>
+              <button className="w-full py-3 border-2 border-[#3C3C3C] text-[#3C3C3C] font-bold rounded hover:bg-[#3C3C3C] hover:text-white transition-all">
+                Request Estimate
+              </button>
+            </div>
+          </motion.div>
+
+           <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-1"
+          >
+            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col">
+              <Hammer className="w-12 h-12 text-[#C6A15B] mb-6" />
+              <h3 className="text-2xl font-bold text-[#3C3C3C] mb-4">
+                Interior Designing
+              </h3>
+              <p className="text-[#3C3C3C]/70 mb-8 grow">
+                Transform your space with our expert interior design services. We blend aesthetics and functionality to create interiors that reflect your unique style and enhance your lifestyle.
               </p>
               <button className="w-full py-3 border-2 border-[#3C3C3C] text-[#3C3C3C] font-bold rounded hover:bg-[#3C3C3C] hover:text-white transition-all">
                 Request Estimate
@@ -268,7 +288,7 @@ export default function DetailedServices() {
         <div className="flex flex-col items-center">
           <Heading
             title="Holiday & Resort Properties"
-            subtitle="Leisure Investment"
+            subtitle="Development And Management"
           />
 
           <motion.div

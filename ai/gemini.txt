@@ -24,7 +24,7 @@ Assisting customers in selling properties
 Assisting customers in buying properties
 
 
-Property management
+Building Mantenance
 
 
 Construction management
@@ -94,7 +94,7 @@ Each secondary service should have a dedicated landing page to capture specific 
 
     Buying Properties (Service Page)
 
-    Property Management (Service Page)
+    Building Mantenance (Service Page)
 
     Construction Management (Service Page)
 

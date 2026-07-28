@@ -35,7 +35,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="text-lg md:text-2xl text-[#BDBDBD] mb-10 max-w-3xl mx-auto font-light"
         >
-          From plots to property management, we deliver tailored solutions for
+          From plots to Building Mantenance, we deliver tailored solutions for
           your journey.
         </motion.p>
 

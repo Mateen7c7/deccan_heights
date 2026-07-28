@@ -8,7 +8,7 @@ import { TeamMember } from "./types";
 const salesTeam: TeamMember[] = [
   {
     id: "s1",
-    name: "Vikram Singh",
+    name: "Abdul Samad",
     title: "Senior Property Consultant",
     department: "Residential Sales",
     image: "/team/agent-male.png",
@@ -104,11 +104,10 @@ export default function SalesTeamSection() {
               <button
                 key={filter}
                 onClick={() => setActiveFilter(filter)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  activeFilter === filter
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${activeFilter === filter
                     ? "bg-gold-500 text-white shadow-md transform scale-105"
                     : "bg-white text-gray-500 border border-gray-200 hover:border-gold-500 hover:text-gold-500"
-                }`}
+                  }`}
               >
                 {filter}
               </button>

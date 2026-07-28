@@ -9,7 +9,7 @@ export default function ContactLeadCapture() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 overflow-hidden bg-white rounded-2xl shadow-xl border border-gray-100">
           {/* Contact Form */}
-          
+
 
           {/* Side Panel / Map */}
           <div className="bg-[#3C3C3C] p-8 md:p-12 text-white flex flex-col justify-between relative overflow-hidden">
@@ -37,7 +37,11 @@ export default function ContactLeadCapture() {
                   <Phone className="text-[#C6A15B] w-6 h-6" />
                   <div>
                     <p className="font-semibold text-white">Phone</p>
-                    <p className="text-gray-400 text-sm">+91 40 1234 5678</p>
+                    <p className="text-gray-400 text-sm">+918328120257</p>
+                  </div>
+                   <div>
+                    <p className="font-semibold text-white">Phone</p>
+                    <p className="text-gray-400 text-sm">+918639004881</p>
                   </div>
                 </div>
 
@@ -45,8 +49,8 @@ export default function ContactLeadCapture() {
                   <Mail className="text-[#C6A15B] w-6 h-6" />
                   <div>
                     <p className="font-semibold text-white">Email</p>
-                    <a 
-                      href="mailto:deccanheightsofficial@gmail.com" 
+                    <a
+                      href="mailto:deccanheightsofficial@gmail.com"
                       className="text-gray-400 text-sm hover:text-[#C6A15B] transition-colors"
                     >
                       deccanheightsofficial@gmail.com

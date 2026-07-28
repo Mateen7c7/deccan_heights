@@ -4,9 +4,9 @@ import { motion } from "motion/react";
 import { Shield, Award, Clock, Users } from "lucide-react";
 
 const stats = [
-  { value: "200+", label: "Projects Completed" },
-  { value: "10+", label: "Years Experience" },
-  { value: "5000+", label: "Happy Families" },
+  { value: "15+", label: "Projects Completed" },
+  { value: "20+", label: "Years Experience" },
+  { value: "15000+", label: "Happy Families" },
   { value: "100%", label: "Legal Transparency" },
 ];
 

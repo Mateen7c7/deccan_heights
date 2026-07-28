@@ -1,4 +1,4 @@
-A high-converting real estate plots website should revolve around your two active ventures and strong lead capture on every key page. Below is a structured, agency-grade sitemap and feature list tailored for a residential plot-focused business with secondary services like buying/selling support, property management, and construction.
+A high-converting real estate plots website should revolve around your two active ventures and strong lead capture on every key page. Below is a structured, agency-grade sitemap and feature list tailored for a residential plot-focused business with secondary services like buying/selling support, Building Mantenance, and construction.
 
 ​
 Primary sitemap structure
@@ -23,7 +23,7 @@ Primary sitemap structure
 
         Buy a Property
 
-        Property Management
+        Building Mantenance
 
         Construction & Project Management
 

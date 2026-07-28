@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Rajesh Kumar",
     role: "Villa Owner",
-    text: "Deccan Heights made finding our dream holiday home seamless. The transparency and professionalism were unmatched.",
+    text: "Deccan Heights made finding our dream  home seamless. The transparency and professionalism were unmatched.",
     stars: 5,
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
     stars: 5,
   },
   {
-    name: "Vikram Singh",
+    name: "Abdul Samad",
     role: "Property Seller",
     text: "Their marketing team is exceptional. My property was sold within weeks at the price I wanted.",
     stars: 4,
@@ -52,11 +52,10 @@ export default function Testimonials() {
                 {[...Array(5)].map((_, si) => (
                   <Star
                     key={si}
-                    className={`w-4 h-4 ${
-                      si < t.stars
+                    className={`w-4 h-4 ${si < t.stars
                         ? "text-[#C6A15B] fill-[#C6A15B]"
                         : "text-gray-300"
-                    }`}
+                      }`}
                   />
                 ))}
               </div>
