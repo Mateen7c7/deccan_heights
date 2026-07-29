@@ -594,7 +594,7 @@ export const completedProjects: CompletedProject[] = [
     title: "Basheer Bagh",
     description:
       "A premium residential development offering modern amenities and strategic connectivity.",
-    location: "Hyderabad",
+    location: "Moinabad",
     year: "Completed",
     status: "Completed",
   },
@@ -603,7 +603,7 @@ export const completedProjects: CompletedProject[] = [
     title: "Clock Tower Colony",
     description:
       "Centrally located residential project with focus on community living and accessibility.",
-    location: "Secunderabad",
+    location: "Shadnagar",
     year: "Completed",
     status: "Completed",
   },
@@ -621,7 +621,7 @@ export const completedProjects: CompletedProject[] = [
     title: "Brindawan Colony",
     description:
       "A serene residential layout designed for peaceful living within city reach.",
-    location: "Hyderabad",
+    location: "Mogiligidda , Shadnagar",
     year: "Completed",
     status: "Completed",
   },
@@ -639,7 +639,7 @@ export const completedProjects: CompletedProject[] = [
     title: "5th Avenue Kottur",
     description:
       "High-demand plots featuring excellent urban connectivity and essential services.",
-    location: "Qutubullapur",
+    location: "Kottur",
     year: "Completed",
     status: "Completed",
   },
