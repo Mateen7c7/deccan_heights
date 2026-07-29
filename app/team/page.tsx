@@ -5,10 +5,15 @@ import LegalAdvisorsSection from "@/components/team/LegalAdvisorsSection";
 import Certifications from "@/components/team/Certifications";
 import ContactCTA from "@/components/team/ContactCTA";
 
-export const metadata = {
-  title: "Our Team | Deccan Heights",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Team",
   description:
     "Meet the experienced leadership, sales, and legal experts behind Deccan Heights. Committed to excellence and trust in real estate.",
+  alternates: {
+    canonical: "/team",
+  },
 };
 
 export default function TeamPage() {

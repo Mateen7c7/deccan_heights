@@ -4,9 +4,12 @@ import { Metadata } from "next";
 import { balapurBandraData } from "@/data/plots";
 
 export const metadata: Metadata = {
-  title: "Balapur Bandra - Deccan Heights",
+  title: "Balapur Bandra Gated Community Plots",
   description:
-    "Luxurious gated community villas & residential plots at Mallapur, Near RGI Airport.",
+    "Luxurious gated community villas & residential plots at Mallapur, Near RGI Airport. Invest in Hyderabad's fastest-growing residential hub.",
+  alternates: {
+    canonical: "/ventures/balapur-bandra",
+  },
 };
 
 export default function BalapurBandraPage() {

@@ -9,9 +9,12 @@ import Footer from "../components/services/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services | Deccan Heights",
+  title: "Our Services",
   description:
-    "Explore our comprehensive real estate services including plot sales, Building Mantenance, construction, and Resort Developments.",
+    "Explore our comprehensive real estate services including plot sales, building maintenance, construction, and resort developments.",
+  alternates: {
+    canonical: "/services",
+  },
 };
 
 export default function ServicesPage() {
