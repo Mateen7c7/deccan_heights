@@ -89,15 +89,19 @@ const leaders: TeamMember[] = [
   {
     id: "l16",
     name: "Syed Wajid Hussain",
-    title: "General Manager",
+    title: "Vice President (Sales & Marketing)",
     image: "/staff/Syed Wajid Hussain.PNG",
     summary:
-      "Syed Wajid Hussain is the general manager of Deccan Heights. He is responsible for the overall operations of the company.",
-    bio: "Syed Wajid Hussain is the general manager of Deccan Heights. He is responsible for the overall operations of the company. He has a background in operations management and has a proven track record of success in the real estate industry.",
+      "Syed Wajid Hussain is the vice president of sales and marketing of Deccan Heights. He is responsible for the overall operations of the company.",
+    bio: "Syed Wajid Hussain is the vice president of sales and marketing of Deccan Heights. He is responsible for the overall operations of the company. He has a background in sales and marketing and has a proven track record of success in the real estate industry.",
     email: "wajid@deccanheights.com",
     linkedin: "#",
-    expertises: ["Operations Management", "Team Leadership", "Market Analysis"],
-    certifications: ["Certified Operations Manager"],
+    expertises: [
+      "Sales and Marketing Management",
+      "Team Leadership",
+      "Market Analysis",
+    ],
+    certifications: ["Certified Sales and Marketing Professional"],
   },
   {
     id: "l4",
